@@ -14,7 +14,7 @@
 
 ## 🎓 I'm a Freelance IT Consultant & Software Engineer
 
-- 🔭 I’m currently building my [Fiverr](https://www.fiverr.com/harryioan/) Gigs.
+- 🔭 I’m currently works as TechLead.
 - 🌱 I’m currently learning Agile & Python. 
 - 👯 I’m looking to collaborate with anyone on any project.
 - 💬 Ask me anything about from <a href="https://github.com/oyi77/oyi77/issues" title="Issues">Here</a>
