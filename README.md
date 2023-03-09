@@ -1,14 +1,15 @@
-### Hi there 👋
-
-
-## Hi there 👋 I'm [Oyi77][website] a.k.a Paijo 😀
-![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77)
-
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Paijo+a.k.a+oyi77....;Nice+to+meet+you!&center=true&size=30">
+  </a>
+</h1>
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20web%20and%20app%20developer;Experienced%20UI%2FUX%20Designer;10%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=440&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" /></a>
+    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;5%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=440&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" /></a>
 </p>
+![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77)
+
 
 
 
@@ -17,7 +18,7 @@
 - 🔭 I’m currently building my [Fiverr](https://www.fiverr.com/harryioan/) Gigs.
 - 🌱 I’m currently learning Agile & Python. 
 - 👯 I’m looking to collaborate with anyone on any project.
-- 💬 Ask me about anything
+- 💬 Ask me anything about from <a href="https://github.com/oyi77/oyi77/issues" title="Issues">Here</a>
 - 🤖 I am a [Python](https://www.python.org/) Bot & ML Specialist. How may AI help you?
 
 ## :email: Find me on:
@@ -59,33 +60,26 @@
 
 
 
-## :trophy: My Github Stats:
 
-<!--
-![GitHub stats](https://readme-stats-cfgj2cxdy.vercel.app/api?username=CharalambosIoannou&count_private=true&show_icons=true&theme=tokyonight)
-![Top Langs](https://readme-stats-cfgj2cxdy.vercel.app/api/top-langs/?username=CharalambosIoannou&hide=php&theme=tokyonight)
--->
-<div>
-<a href="https://github-readme-stats.vercel.app/api?username=oyi77&theme=tokyonight">
-  <img  align="left" src="https://github-readme-stats.vercel.app/api?username=oyi77&count_private=true&show_icons=true&theme=tokyonight" />
-</a>
-<a href="https://github-readme-stats.vercel.app/api/top-langs/?username=oyi77&hide=php&theme=tokyonight">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=oyi77&hide=php&theme=tokyonight" />
-</a>
-</div>
-
-<details> 
-  <summary><h2>📊 My Github Stats and Activity</h2></summary>
+ <h2>:trophy: My Github Stats and Activity</h2>
 
   <h3>🔥 Streak Stats</h3>
-
-  <!-- GitHub Readme Streak Stats - https://github.com/DenverCoder1/github-readme-streak-stats -->
+  <div align="center">
   <p>
     <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
       <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="oyi77's streak" src="https://streak-stats.demolab.com/?user=oyi77&theme=monokai-metallian&hide_border=true"/>
     </a>
-    <p>🔥 Get streak stats for your profile at <a href="https://git.io/streak-stats">git.io/streak-stats</a></p>
   </p>
+  <p>
+  <a href="https://github.com/anuraghazra/github-readme-stats" title="Go to Source">
+      <img align="right" width=390 src="https://github-readme-stats.vercel.app/api?username=zumrudu-anka&show_icons=true&theme=react&border_color=61dafb&hide_border=true" />
+    </a>
+  </p>
+  </div>
+  
+  <h3>🏆 Oyi77 lab's Github Tier</h3>
+
+<a href="https://app.dooboo.io/oyi77"><img src="https://server.dooboo.io/github-stats/oyi77" width="600" /></a>
 
   <h3>💻 GitHub Profile Stats</h3>
 
@@ -108,13 +102,6 @@
 
   <!--END_SECTION:activity-->
 
-</details>
-
-<details> 
-  <summary><h2>🏷️ Holopin Badges</h2></summary>
-
-  <p><a href="https://holopin.io/@oyi77"><img src="https://holopin.me/oyi77" alt="@oyi77&#39;s Holopin board"></a></p>
-</details>
 
 
 
