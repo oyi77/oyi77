@@ -1,17 +1,16 @@
+
 <h1 align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Paijo+a.k.a+oyi77....;Nice+to+meet+you!&center=true&size=30">
-  </a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=2000&pause=1000&center=true&vCenter=true&repeat=false&width=435&lines=Hello+There+%F0%9F%91%8B!;%F0%9F%A4%96I+am+Paijo+a.k.a+Oyi77%F0%9F%A4%96" alt="Typing SVG" /></a>
 </h1>
 <p align="center">
   <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;5%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=440&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" /></a>
+    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;5%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=500&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" /></a>
 </p>
-[![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77)
 
 
 
+![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77)
 
 ## 🎓 I'm a Freelance IT Consultant & Software Engineer
 
@@ -63,32 +62,27 @@
 
  <h2>:trophy: My Github Stats and Activity</h2>
 
-  <h3>🔥 Streak Stats</h3>
+  <h3 align="center">🔥 Streak Stats</h3>
   <div align="center">
   <p>
     <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
       <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="oyi77's streak" src="https://streak-stats.demolab.com/?user=oyi77&theme=monokai-metallian&hide_border=true"/>
     </a>
   </p>
-  <p>
-  <a href="https://github.com/anuraghazra/github-readme-stats" title="Go to Source">
-      <img align="right" width=390 src="https://github-readme-stats.vercel.app/api?username=zumrudu-anka&show_icons=true&theme=react&border_color=61dafb&hide_border=true" />
-    </a>
-  </p>
   </div>
   
-  <h3>🏆 Oyi77 lab's Github Tier</h3>
-
-<a href="https://app.dooboo.io/oyi77"><img src="https://server.dooboo.io/github-stats/oyi77" width="600" /></a>
-
-  <h3>💻 GitHub Profile Stats</h3>
+  <h3 align="center">🏆 Oyi77 lab's Github Tier</h3>
+<div align="center">
+<a href="https://app.dooboo.io/oyi77"><img src="https://server.dooboo.io/github-stats/oyi77" width="400" /></a>
+</div>
+  <h3 align="center">💻 GitHub Profile Stats</h3>
 
   <!-- https://github.com/anuraghazra/github-readme-stats -->
-
+<div align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="oyi77's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=oyi77&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
   <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="DenverCoder1's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=oyi77&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff" height="192px"/></a>
   <br/>
-
+</div>
   <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
   
   <!-- https://github.com/ashutosh00710/github-readme-activity-graph -->
