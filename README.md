@@ -89,7 +89,7 @@
 
   <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="DenverCoder1's Activity Graph" src="https://github-readme-activity-graph.cyclic.app/graph/?username=oyi77&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
 
-  <h3>⚡ Recent GitHub Activity</h3>
+  <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
@@ -98,9 +98,6 @@
 4. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 5. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 <!--RECENT_ACTIVITY:end-->
-  <!--RECENT_ACTIVITY:last_update-->
-Last Updated: Friday, March 10th, 2023, 9:35:40 AM
-<!--RECENT_ACTIVITY:last_update_end-->
   
   <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-5%20hrs%2023%20mins-blue)
