@@ -103,7 +103,69 @@ Last Updated: Friday, March 10th, 2023, 9:35:40 AM
 <!--RECENT_ACTIVITY:last_update_end-->
   
   <!--START_SECTION:waka-->
-  <!--END_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-5%20hrs%2023%20mins-blue)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-14-blue)
+
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-5.8%20million%20lines%20of%20code-blue)
+
+**🐱 My GitHub Data** 
+
+> 📦 79.1 kB Used in GitHub's Storage 
+ > 
+> 🏆 276 Contributions in the Year 2023
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 42 Public Repositories 
+ > 
+> 🔑 4 Private Repositories 
+ > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                91 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   09.61 % 
+🌆 Daytime                179 commits         █████░░░░░░░░░░░░░░░░░░░░   18.90 % 
+🌃 Evening                611 commits         ████████████████░░░░░░░░░   64.52 % 
+🌙 Night                  66 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   06.97 % 
+```
+📅 **I'm Most Productive on Thursday** 
+
+```text
+Monday                   44 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.65 % 
+Tuesday                  76 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   08.03 % 
+Wednesday                84 commits          ██░░░░░░░░░░░░░░░░░░░░░░░   08.87 % 
+Thursday                 579 commits         ███████████████░░░░░░░░░░   61.14 % 
+Friday                   102 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.77 % 
+Saturday                 39 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   04.12 % 
+Sunday                   23 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.43 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Jakarta
+
+💬 Programming Languages: 
+TypeScript               2 hrs 45 mins       ██████████████████████░░░   86.40 % 
+JSON                     26 mins             ███░░░░░░░░░░░░░░░░░░░░░░   13.60 % 
+
+🐱‍💻 Projects: 
+homeage-web              2 hrs 53 mins       ███████████████████████░░   90.64 % 
+capacitor-nextjs         17 mins             ██░░░░░░░░░░░░░░░░░░░░░░░   09.36 % 
+
+💻 Operating System: 
+Windows                  3 hrs 11 mins       █████████████████████████   100.00 % 
+```
+
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/oyi77/oyi77/main/assets/bar_graph.png)
+
+
+ Last Updated on 10/03/2023 09:57:05 UTC
+<!--END_SECTION:waka-->
 
 
 
