@@ -96,7 +96,7 @@
 2. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 3. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
-5. 🔱 Forked [oyi77/recent-activity](https://github.com/oyi77/recent-activity) from [Readme-Workflows/recent-activity](https://github.com/Readme-Workflows/recent-activity)<br>
+5. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
