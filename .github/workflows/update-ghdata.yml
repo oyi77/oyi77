@@ -28,3 +28,4 @@ jobs:
           SHOW_LOC_CHART: "True"
           SHOW_DAYS_OF_WEEK: "True"
           SHOW_SHORT_INFO: "True"
+          SHOW_PROFILE_VIEWS: "False"
