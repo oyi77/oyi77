@@ -19,9 +19,7 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKA_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           SHOW_OS: "True"
-          SHOW_PROJECTS: "True"
           SHOW_UPDATED_DATE: "True"
-          SHOW_PROFILE_VIEWS: "True"
           SHOW_EDITORS: "False"
           SHOW_LANGUAGE: "True"
           SHOW_LANGUAGE_PER_REPO: "False"
