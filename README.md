@@ -92,11 +92,11 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
-2. ⬆️ Pushed 1 commit(s) to [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
-3. 📔 Created new repository [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
-4. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
-5. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
+1. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
+2. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
+3. ⬆️ Pushed 1 commit(s) to [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
+4. ⬆️ Pushed 1 commit(s) to [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
+5. 📔 Created new repository [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
