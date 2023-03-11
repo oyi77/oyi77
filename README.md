@@ -96,7 +96,7 @@
 2. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 3. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
-5. ⬆️ Pushed 1 commit(s) to [oyi77/HS_Solution](https://github.com/oyi77/HS_Solution)<br>
+5. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
