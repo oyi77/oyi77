@@ -92,8 +92,8 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
-2. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
+1. ⭐ Starred [HwangTaehyun/github-readme-stats](https://github.com/HwangTaehyun/github-readme-stats)<br>
+2. ⭐ Starred [HwangTaehyun/github-repository-contribution-stats](https://github.com/HwangTaehyun/github-repository-contribution-stats)<br>
 3. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 5. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
