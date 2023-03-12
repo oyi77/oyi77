@@ -94,7 +94,7 @@
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 2. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
-3. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
+3. ❌ Closed PR [#1419](https://github.com/nukeop/nuclear/pull/1419) in [nukeop/nuclear](https://github.com/nukeop/nuclear)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 5. ⬆️ Pushed 1 commit(s) to [oyi77/oyi77](https://github.com/oyi77/oyi77)<br>
 <!--RECENT_ACTIVITY:end-->
