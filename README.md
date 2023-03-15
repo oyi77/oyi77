@@ -96,7 +96,6 @@
   <!--RECENT_ACTIVITY:start-->
 1. ⭐ Starred [HwangTaehyun/github-readme-stats](https://github.com/HwangTaehyun/github-readme-stats)<br>
 2. ⭐ Starred [HwangTaehyun/github-repository-contribution-stats](https://github.com/HwangTaehyun/github-repository-contribution-stats)<br>
-3. ❌ Closed PR [#1419](https://github.com/nukeop/nuclear/pull/1419) in [nukeop/nuclear](https://github.com/nukeop/nuclear)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
