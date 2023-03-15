@@ -12,13 +12,15 @@
 
 ![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77)
 
-## 🎓 I'm a Freelance IT Consultant & Software Engineer
+## 🎓 I'm a IT Professional & Software Engineer
 
 - 🔭 I’m currently works as TechLead.
 - 🌱 I’m currently learning Agile & Python. 
 - 👯 I’m looking to collaborate with anyone on any project.
 - 💬 Ask me anything about from <a href="https://github.com/oyi77/oyi77/issues" title="Issues">Here</a>
 - 🤖 I am a [Python](https://www.python.org/) Bot & ML Specialist. How may AI help you?
+- 🌐 Website : [Tutorial Work](https://tutorialwork.my.id)
+- 📷 Instagram : [@jasatugasyuk](https://instagram.com/jasatugasyuk)
 
 ## :email: Find me on:
 
