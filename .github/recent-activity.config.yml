@@ -14,7 +14,7 @@ settings:
   commit_email: "14921983+oyi77@users.noreply.github.com"
   line_prefix: "{NUM}. "
   ignored_repos:
-    - username/repo
+    - oyi77/oyi77
 messages:
   comments: "💬 Commented on {ID} in {REPO}"
   push: "⬆️ Pushed {AMOUNT} commit(s) to {REPO}"
