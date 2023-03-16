@@ -94,8 +94,9 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [HwangTaehyun/github-readme-stats](https://github.com/HwangTaehyun/github-readme-stats)<br>
-2. ⭐ Starred [HwangTaehyun/github-repository-contribution-stats](https://github.com/HwangTaehyun/github-repository-contribution-stats)<br>
+1. 🔱 Forked [oyi77/TalentHunters](https://github.com/oyi77/TalentHunters) from [joeyism/linkedin_scraper](https://github.com/joeyism/linkedin_scraper)<br>
+2. ⭐ Starred [HwangTaehyun/github-readme-stats](https://github.com/HwangTaehyun/github-readme-stats)<br>
+3. ⭐ Starred [HwangTaehyun/github-repository-contribution-stats](https://github.com/HwangTaehyun/github-repository-contribution-stats)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
