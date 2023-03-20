@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [oyi77/TalentHunters](https://github.com/oyi77/TalentHunters) from [joeyism/linkedin_scraper](https://github.com/joeyism/linkedin_scraper)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
