@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ❗️ Opened issue [#3](https://github.com/pentagridsec/smsgate/issues/3) in [pentagridsec/smsgate](https://github.com/pentagridsec/smsgate)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
