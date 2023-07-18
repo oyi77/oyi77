@@ -95,7 +95,10 @@
 
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
-2. 📔 Created new repository [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
+2. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
+3. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
+4. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
+5. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
