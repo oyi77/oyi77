@@ -94,7 +94,7 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
+1. ❗️ Opened issue [#4](https://github.com/pentagridsec/smsgate/issues/4) in [pentagridsec/smsgate](https://github.com/pentagridsec/smsgate)<br>
 2. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
 3. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/BMICalculator](https://github.com/oyi77/BMICalculator)<br>
