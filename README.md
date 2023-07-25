@@ -95,7 +95,6 @@
 
   <!--RECENT_ACTIVITY:start-->
 1. 📔 Created new repository [oyi77/simple_api_player](https://github.com/oyi77/simple_api_player)<br>
-2. ❗️ Opened issue [#4](https://github.com/pentagridsec/smsgate/issues/4) in [pentagridsec/smsgate](https://github.com/pentagridsec/smsgate)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
