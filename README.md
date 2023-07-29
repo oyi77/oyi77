@@ -96,7 +96,6 @@
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 2 commit(s) to [oyi77/github-explorer](https://github.com/oyi77/github-explorer)<br>
 2. 🎉 Merged PR [#2](https://github.com/oyi77/github-explorer/pull/2) in [oyi77/github-explorer](https://github.com/oyi77/github-explorer)<br>
-3. 💪 Opened PR [#2](https://github.com/oyi77/github-explorer/pull/2) in [oyi77/github-explorer](https://github.com/oyi77/github-explorer)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
