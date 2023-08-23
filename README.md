@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 📔 Created new repository [oyi77/python-gsm-modem](https://github.com/oyi77/python-gsm-modem)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
