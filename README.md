@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 📔 Created new repository [oyi77/express-store-api](https://github.com/oyi77/express-store-api)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
