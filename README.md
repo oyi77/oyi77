@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [oyi77/godot](https://github.com/oyi77/godot) from [godotengine/godot](https://github.com/godotengine/godot)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
