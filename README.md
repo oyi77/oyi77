@@ -95,7 +95,6 @@
 
   <!--RECENT_ACTIVITY:start-->
 1. ❗️ Opened issue [#690](https://github.com/datarhei/restreamer/issues/690) in [datarhei/restreamer](https://github.com/datarhei/restreamer)<br>
-2. ⭐ Starred [datarhei/restreamer](https://github.com/datarhei/restreamer)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
