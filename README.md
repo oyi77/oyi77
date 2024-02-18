@@ -94,6 +94,8 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
+1. 🔱 Forked [oyi77/SHPxBOT](https://github.com/oyi77/SHPxBOT) from [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
+2. ⭐ Starred [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
