@@ -97,7 +97,6 @@
 1. ⬆️ Pushed 1 commit(s) to [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
 2. ✌️ Released [Release v.5.0.2](https://github.com/jokogendeng77/SHPxBOT/releases/tag/v.5.0.2) in [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
 3. ⬆️ Pushed 1 commit(s) to [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
-4. ⬆️ Pushed 1 commit(s) to [jokogendeng77/SaringProxy](https://github.com/jokogendeng77/SaringProxy)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
