@@ -98,7 +98,6 @@
 2. ✌️ Released [Release v.5.0.2](https://github.com/jokogendeng77/SHPxBOT/releases/tag/v.5.0.2) in [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
 3. ⬆️ Pushed 1 commit(s) to [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
 4. ⬆️ Pushed 1 commit(s) to [jokogendeng77/SaringProxy](https://github.com/jokogendeng77/SaringProxy)<br>
-5. 🔱 Forked [oyi77/MultiMirrorScreen](https://github.com/oyi77/MultiMirrorScreen) from [barry-ran/QtScrcpy](https://github.com/barry-ran/QtScrcpy)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
