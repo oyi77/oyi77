@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [oyi77/degen-bot-v2](https://github.com/oyi77/degen-bot-v2) from [exileqeq/degen-bot-v2](https://github.com/exileqeq/degen-bot-v2)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
