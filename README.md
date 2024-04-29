@@ -95,7 +95,6 @@
 
   <!--RECENT_ACTIVITY:start-->
 1. 🔱 Forked [oyi77/degen-bot-v2](https://github.com/oyi77/degen-bot-v2) from [exileqeq/degen-bot-v2](https://github.com/exileqeq/degen-bot-v2)<br>
-2. 🔱 Forked [oyi77/sol-sniper-bot](https://github.com/oyi77/sol-sniper-bot) from [vittal1964/sol-sniper-bot](https://github.com/vittal1964/sol-sniper-bot)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
