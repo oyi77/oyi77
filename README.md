@@ -96,7 +96,6 @@
   <!--RECENT_ACTIVITY:start-->
 1. ✌️ Released [Release v.5.0.35](https://github.com/jokogendeng77/SHPxBOT/releases/tag/v.5.0.35) in [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
 2. ⬆️ Pushed 1 commit(s) to [jokogendeng77/SHPxBOT](https://github.com/jokogendeng77/SHPxBOT)<br>
-3. ⬆️ Pushed 1 commit(s) to [jokogendeng77/KARINAxBOT](https://github.com/jokogendeng77/KARINAxBOT)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
