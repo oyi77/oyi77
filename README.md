@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [yaron4u/EnigmaCracker](https://github.com/yaron4u/EnigmaCracker)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
