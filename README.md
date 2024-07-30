@@ -97,7 +97,6 @@
 1. ⭐ Starred [yaron4u/EnigmaCracker](https://github.com/yaron4u/EnigmaCracker)<br>
 2. ⭐ Starred [Pymmdrza/Pyromid](https://github.com/Pymmdrza/Pyromid)<br>
 3. ⭐ Starred [Pymmdrza/Dumper-Mnemonic](https://github.com/Pymmdrza/Dumper-Mnemonic)<br>
-4. ⭐ Starred [Pymmdrza/AttackAIO_Crypto](https://github.com/Pymmdrza/AttackAIO_Crypto)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
