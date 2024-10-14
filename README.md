@@ -94,6 +94,8 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
+1. 🔱 Forked [oyi77/BSC-AutoCryptoTrade](undefined) from [jokogendeng77/BSC-AutoCryptoTrade](https://github.com/jokogendeng77/BSC-AutoCryptoTrade)<br>
+2. ⭐ Starred [jokogendeng77/BSC-AutoCryptoTrade](https://github.com/jokogendeng77/BSC-AutoCryptoTrade)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
