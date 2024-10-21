@@ -95,7 +95,6 @@
 
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [jokogendeng77/BSC-AutoCryptoTrade](https://github.com/jokogendeng77/BSC-AutoCryptoTrade)<br>
-2. ⬆️ Pushed 1 commit(s) to [jokogendeng77/BSC-AutoCryptoTrade](https://github.com/jokogendeng77/BSC-AutoCryptoTrade)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
