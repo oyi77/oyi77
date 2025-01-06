@@ -97,15 +97,13 @@
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C351%20hrs%2012%20mins-blue)
-
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-8.9%20million%20lines%20of%20code-blue)
 
 **🐱 My GitHub Data** 
 
 > 📦 265.0 kB Used in GitHub's Storage 
  > 
-> 🏆 139 Contributions in the Year 2025
+> 🏆 143 Contributions in the Year 2025
  > 
 > 💼 Opted to Hire
  > 
@@ -113,50 +111,12 @@
  > 
 > 🔑 8 Private Repositories 
  > 
-**I'm an Early 🐤** 
-
-```text
-🌞 Morning                4380 commits        ██████░░░░░░░░░░░░░░░░░░░   24.98 % 
-🌆 Daytime                4423 commits        ██████░░░░░░░░░░░░░░░░░░░   25.22 % 
-🌃 Evening                4802 commits        ███████░░░░░░░░░░░░░░░░░░   27.38 % 
-🌙 Night                  3932 commits        ██████░░░░░░░░░░░░░░░░░░░   22.42 % 
-```
-📅 **I'm Most Productive on Thursday** 
-
-```text
-Monday                   2642 commits        ████░░░░░░░░░░░░░░░░░░░░░   15.07 % 
-Tuesday                  2532 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.44 % 
-Wednesday                2456 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.00 % 
-Thursday                 2950 commits        ████░░░░░░░░░░░░░░░░░░░░░   16.82 % 
-Friday                   2508 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.30 % 
-Saturday                 2212 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.61 % 
-Sunday                   2237 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.76 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Jakarta
-
-💬 Programming Languages: 
-JavaScript               46 mins             ███████████████████████░░   91.08 % 
-Git Config               4 mins              ██░░░░░░░░░░░░░░░░░░░░░░░   08.92 % 
-
-🐱‍💻 Projects: 
-SHPxBOT                  48 mins             ████████████████████████░   94.96 % 
-BOT JANGKRIK SHOPEE      2 mins              █░░░░░░░░░░░░░░░░░░░░░░░░   05.04 % 
-
-💻 Operating System: 
-Windows                  51 mins             █████████████████████████   100.00 % 
-```
-
 **Timeline**
 
 ![Lines of Code chart](https://raw.githubusercontent.com/oyi77/oyi77/main/assets/bar_graph.png)
 
 
- Last Updated on 06/01/2025 17:32:57 UTC
+ Last Updated on 06/01/2025 18:44:13 UTC
 <!--END_SECTION:waka-->
 
 
