@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [MrTuxx/SocialPwned](https://github.com/MrTuxx/SocialPwned)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
