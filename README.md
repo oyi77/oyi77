@@ -97,13 +97,15 @@
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C546%20hrs%2036%20mins-blue)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C546%20hrs%208%20mins-blue)
 
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-17.6%20million%20lines%20of%20code-blue)
 
 **🐱 My GitHub Data** 
 
 > 📦 620.3 kB Used in GitHub's Storage 
+ > 
+> 🏆 3,494 Contributions in the Year 2025
  > 
 > 💼 Opted to Hire
  > 
@@ -116,7 +118,7 @@
 ```text
 🌞 Morning                7286 commits        ███████░░░░░░░░░░░░░░░░░░   27.41 % 
 🌆 Daytime                7296 commits        ███████░░░░░░░░░░░░░░░░░░   27.45 % 
-🌃 Evening                6862 commits        ██████░░░░░░░░░░░░░░░░░░░   25.82 % 
+🌃 Evening                6863 commits        ██████░░░░░░░░░░░░░░░░░░░   25.82 % 
 🌙 Night                  5135 commits        █████░░░░░░░░░░░░░░░░░░░░   19.32 % 
 ```
 📅 **I'm Most Productive on Friday** 
@@ -127,7 +129,7 @@ Tuesday                  3950 commits        ████░░░░░░░�
 Wednesday                3443 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.95 % 
 Thursday                 4285 commits        ████░░░░░░░░░░░░░░░░░░░░░   16.12 % 
 Friday                   4816 commits        █████░░░░░░░░░░░░░░░░░░░░   18.12 % 
-Saturday                 3440 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.94 % 
+Saturday                 3441 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.95 % 
 Sunday                   2716 commits        ███░░░░░░░░░░░░░░░░░░░░░░   10.22 % 
 ```
 
@@ -159,7 +161,7 @@ Windows                  7 hrs 35 mins       ███████████�
 ![Lines of Code chart](https://raw.githubusercontent.com/oyi77/oyi77/main/assets/bar_graph.png)
 
 
- Last Updated on 17/05/2025 16:41:13 UTC
+ Last Updated on 17/05/2025 17:29:53 UTC
 <!--END_SECTION:waka-->
 
 
