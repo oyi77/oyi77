@@ -94,6 +94,7 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
+1. ⭐ Starred [shivaya-dav/DogeRat](https://github.com/shivaya-dav/DogeRat)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
