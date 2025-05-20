@@ -94,7 +94,10 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [shivaya-dav/DogeRat](https://github.com/shivaya-dav/DogeRat)<br>
+1. ⭐ Starred [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock)<br>
+2. ⭐ Starred [public-apis/public-apis](https://github.com/public-apis/public-apis)<br>
+3. ⭐ Starred [comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)<br>
+4. ⭐ Starred [shivaya-dav/DogeRat](https://github.com/shivaya-dav/DogeRat)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
