@@ -98,7 +98,6 @@
 2. ⬆️ Pushed 2 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
 3. 📔 Created new repository [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
 4. ⭐ Starred [sherlock-project/sherlock](https://github.com/sherlock-project/sherlock)<br>
-5. ⭐ Starred [public-apis/public-apis](https://github.com/public-apis/public-apis)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
