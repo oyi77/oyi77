@@ -96,7 +96,6 @@
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
 2. ⬆️ Pushed 2 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
-3. 📔 Created new repository [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
