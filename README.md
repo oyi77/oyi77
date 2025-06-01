@@ -94,11 +94,11 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [devanshbatham/ParamSpider](https://github.com/devanshbatham/ParamSpider)<br>
-2. 🔱 Forked [oyi77/TelegramBots](https://github.com/oyi77/TelegramBots) from [TeamUltroid/Ultroid](https://github.com/TeamUltroid/Ultroid)<br>
-3. ⭐ Starred [TeamUltroid/Ultroid](https://github.com/TeamUltroid/Ultroid)<br>
-4. ⭐ Starred [feder-cr/Jobs_Applier_AI_Agent_AIHawk](https://github.com/feder-cr/Jobs_Applier_AI_Agent_AIHawk)<br>
-5. ⭐ Starred [langgenius/dify](https://github.com/langgenius/dify)<br>
+1. ⭐ Starred [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog)<br>
+2. 🔱 Forked [oyi77/network-scanners](https://github.com/oyi77/network-scanners) from [ivre/ivre](https://github.com/ivre/ivre)<br>
+3. ⭐ Starred [ivre/ivre](https://github.com/ivre/ivre)<br>
+4. ⭐ Starred [devanshbatham/ParamSpider](https://github.com/devanshbatham/ParamSpider)<br>
+5. 🔱 Forked [oyi77/TelegramBots](https://github.com/oyi77/TelegramBots) from [TeamUltroid/Ultroid](https://github.com/TeamUltroid/Ultroid)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
