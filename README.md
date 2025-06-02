@@ -95,10 +95,10 @@
 
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
-2. ⭐ Starred [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog)<br>
-3. 🔱 Forked [oyi77/network-scanners](https://github.com/oyi77/network-scanners) from [ivre/ivre](https://github.com/ivre/ivre)<br>
-4. ⭐ Starred [ivre/ivre](https://github.com/ivre/ivre)<br>
-5. ⭐ Starred [devanshbatham/ParamSpider](https://github.com/devanshbatham/ParamSpider)<br>
+2. ⬆️ Pushed 1 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
+3. ⭐ Starred [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog)<br>
+4. 🔱 Forked [oyi77/network-scanners](https://github.com/oyi77/network-scanners) from [ivre/ivre](https://github.com/ivre/ivre)<br>
+5. ⭐ Starred [ivre/ivre](https://github.com/ivre/ivre)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
