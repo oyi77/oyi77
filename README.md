@@ -97,7 +97,6 @@
 1. ⬆️ Pushed 1 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
 2. ⬆️ Pushed 1 commit(s) to [oyi77/ad-clickers](https://github.com/oyi77/ad-clickers)<br>
 3. ⭐ Starred [trufflesecurity/trufflehog](https://github.com/trufflesecurity/trufflehog)<br>
-4. 🔱 Forked [oyi77/network-scanners](https://github.com/oyi77/network-scanners) from [ivre/ivre](https://github.com/ivre/ivre)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
