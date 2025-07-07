@@ -94,8 +94,8 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
-2. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
+1. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
+2. 📔 Created new repository [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
 3. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
 5. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
