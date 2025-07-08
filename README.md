@@ -94,11 +94,11 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
-2. 📔 Created new repository [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
-3. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
-4. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
-5. ⬆️ Pushed 1 commit(s) to [oyi77/berkahkarya-compro](https://github.com/oyi77/berkahkarya-compro)<br>
+1. ❌ Closed PR [#1](https://github.com/oyi77/forex-trader/pull/1) in [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
+2. ⬆️ Pushed 2 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
+3. 🎉 Merged PR [#2](https://github.com/oyi77/forex-trader/pull/2) in [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
+4. 💪 Opened PR [#2](https://github.com/oyi77/forex-trader/pull/2) in [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
+5. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
