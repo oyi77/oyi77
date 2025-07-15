@@ -96,7 +96,6 @@
   <!--RECENT_ACTIVITY:start-->
 1. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
 2. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
-3. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
