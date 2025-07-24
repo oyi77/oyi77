@@ -1,0 +1,102 @@
+# Jekyll configuration for GitHub Pages
+title: Paijo (Oyi77) - TechLead & Full-Stack Developer
+description: TechLead and Full-Stack Developer with 5+ years of experience in Python, JavaScript, and modern web technologies
+author: Paijo (Oyi77)
+email: mbahkoe.pendekar@gmail.com
+url: "https://oyi77.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include files
+include:
+  - _pages
+  - _posts
+  - _projects
+
+# Pagination
+paginate: 6
+paginate_path: "/blog/page:num/"
+
+# Social media
+social:
+  github: oyi77
+  linkedin: fikriizzuddin
+  instagram: jasatugasyuk
+  website: https://tutorialwork.my.id
+
+# SEO
+google_analytics: ""
+google_verification: ""
+bing_verification: ""
+
+# Comments
+disqus:
+  shortname: ""
+
+# Sharing
+share:
+  twitter: true
+  facebook: true
+  linkedin: true
+  reddit: true
+
+# Theme settings
+theme_settings:
+  # Meta
+  title: "Paijo (Oyi77)"
+  avatar: "assets/images/avatar.jpg"
+  favicon: "assets/favicon.ico"
+  
+  # Header and footer text
+  header_text: "TechLead & Full-Stack Developer"
+  footer_text: "© 2025 Paijo (Oyi77). All rights reserved."
+  
+  # Social icons
+  social_icons:
+    - name: "github"
+      url: "https://github.com/oyi77"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/fikriizzuddin/"
+    - name: "instagram"
+      url: "https://instagram.com/jasatugasyuk"
+    - name: "envelope"
+      url: "mailto:mbahkoe.pendekar@gmail.com" 
