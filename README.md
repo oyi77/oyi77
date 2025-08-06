@@ -94,9 +94,10 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 📔 Created new repository [oyi77/flexliving-dashboard](https://github.com/oyi77/flexliving-dashboard)<br>
-2. 📔 Created new repository [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
-3. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
+1. 📔 Created new repository [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
+2. 📔 Created new repository [oyi77/flexliving-dashboard](https://github.com/oyi77/flexliving-dashboard)<br>
+3. 📔 Created new repository [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
+4. ⬆️ Pushed 1 commit(s) to [oyi77/forex-trader](https://github.com/oyi77/forex-trader)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
