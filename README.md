@@ -94,11 +94,11 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
-2. ⬆️ Pushed 1 commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
-3. ⬆️ Pushed 1 commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
-4. ⬆️ Pushed 1 commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
-5. ⬆️ Pushed 1 commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
+1. ⬆️ Pushed undefined commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
+2. ⬆️ Pushed undefined commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
+3. ⬆️ Pushed undefined commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
+4. ⬆️ Pushed undefined commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
+5. ⬆️ Pushed undefined commit(s) to [oyi77/wifi-jammer](https://github.com/oyi77/wifi-jammer)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
