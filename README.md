@@ -94,11 +94,11 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed 1 commit(s) to [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
-2. ⬆️ Pushed 1 commit(s) to [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
-3. ⬆️ Pushed 1 commit(s) to [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
-4. ⬆️ Pushed 1 commit(s) to [oyi77/tt-bot](https://github.com/oyi77/tt-bot)<br>
-5. ⬆️ Pushed 1 commit(s) to [oyi77/tt-bot](https://github.com/oyi77/tt-bot)<br>
+1. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
+2. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
+3. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
+4. ⬆️ Pushed 1 commit(s) to [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
+5. ⬆️ Pushed 1 commit(s) to [oyi77/ai-job-apply](https://github.com/oyi77/ai-job-apply)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
