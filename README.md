@@ -94,8 +94,8 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#5](https://github.com/oyi77/telegram-ai-trade/pull/5) in [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
-2. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
+1. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
+2. 💪 Opened PR [#5](https://github.com/oyi77/telegram-ai-trade/pull/5) in [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
 3. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
 4. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
 5. ⬆️ Pushed 1 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
