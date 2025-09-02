@@ -98,7 +98,6 @@
 2. 💪 Opened PR [#7](https://github.com/oyi77/telegram-ai-trade/pull/7) in [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
 3. ⬆️ Pushed 33 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
 4. 🎉 Merged PR [#6](https://github.com/oyi77/telegram-ai-trade/pull/6) in [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
-5. ⬆️ Pushed 4 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
