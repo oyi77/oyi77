@@ -94,11 +94,11 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 💪 Opened PR [#929](https://github.com/holdex/trial/pull/929) in [holdex/trial](https://github.com/holdex/trial)<br>
-2. ⬆️ Pushed 2 commit(s) to [oyi77/trial](https://github.com/oyi77/trial)<br>
-3. 🎉 Merged PR [#1](https://github.com/oyi77/trial/pull/1) in [oyi77/trial](https://github.com/oyi77/trial)<br>
-4. 💪 Opened PR [#1](https://github.com/oyi77/trial/pull/1) in [oyi77/trial](https://github.com/oyi77/trial)<br>
-5. 🔱 Forked [oyi77/trial](https://github.com/oyi77/trial) from [holdex/trial](https://github.com/holdex/trial)<br>
+1. ⬆️ Pushed 21 commit(s) to [oyi77/telegram-ai-trade](https://github.com/oyi77/telegram-ai-trade)<br>
+2. 💪 Opened PR [#929](https://github.com/holdex/trial/pull/929) in [holdex/trial](https://github.com/holdex/trial)<br>
+3. ⬆️ Pushed 2 commit(s) to [oyi77/trial](https://github.com/oyi77/trial)<br>
+4. 🎉 Merged PR [#1](https://github.com/oyi77/trial/pull/1) in [oyi77/trial](https://github.com/oyi77/trial)<br>
+5. 💪 Opened PR [#1](https://github.com/oyi77/trial/pull/1) in [oyi77/trial](https://github.com/oyi77/trial)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
