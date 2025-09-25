@@ -94,7 +94,6 @@
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ✔️ Closed issue [#4](https://github.com/jokogendeng77/BSC-AutoCryptoTrade/issues/4) in [jokogendeng77/BSC-AutoCryptoTrade](https://github.com/jokogendeng77/BSC-AutoCryptoTrade)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
