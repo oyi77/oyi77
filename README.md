@@ -75,6 +75,24 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 
 ## 🛠️ Technologies & Tools
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python Programming Language - 5+ years experience" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript Programming Language - Full-stack development" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" alt="Node.js Runtime - Backend API development" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL Database - Database design and optimization" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap Framework - Responsive UI development" height="40" style="vertical-align:top; margin:4px">
+<img src="https://cdn-icons-png.flaticon.com/512/5969/5969346.png" alt="Unity Game Engine - Game development" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git Version Control - Version control and collaboration" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="Visual Studio Code - Primary development environment" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" alt="Terminal - Command-line expertise" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" alt="Linux Operating System - System administration" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png" alt="Windows Operating System - Cross-platform development" height="40" style="vertical-align:top; margin:4px">
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" alt="GitHub - Code repository and collaboration" height="40" style="vertical-align:top; margin:4px">
+</p>
+
+<details>
+<summary><b>📋 Detailed Technology Breakdown</b></summary>
+
 ### Programming Languages
 **Backend & Core:**
 - **Python** - 5+ years | Machine Learning, Backend APIs, Automation, Bot Development
@@ -106,24 +124,14 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 - **Cloud Platforms** - Deployment and hosting solutions
 - **Linux/Unix** - System administration and server management
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python Programming Language - 5+ years experience" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript Programming Language - Full-stack development" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" alt="Node.js Runtime - Backend API development" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL Database - Database design and optimization" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap Framework - Responsive UI development" height="40" style="vertical-align:top; margin:4px">
-<img src="https://cdn-icons-png.flaticon.com/512/5969/5969346.png" alt="Unity Game Engine - Game development" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git Version Control - Version control and collaboration" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="Visual Studio Code - Primary development environment" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" alt="Terminal - Command-line expertise" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" alt="Linux Operating System - System administration" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png" alt="Windows Operating System - Cross-platform development" height="40" style="vertical-align:top; margin:4px">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" alt="GitHub - Code repository and collaboration" height="40" style="vertical-align:top; margin:4px">
-</p>
+</details>
 
 <br />
 
 ## 🏷️ Expertise & Topics
+
+<details>
+<summary><b>🔍 View All Keywords & Topics</b></summary>
 
 **Primary Expertise:**
 `python` `javascript` `fullstack` `machine-learning` `techlead` `web-development` `backend-development` `frontend-development` `nodejs` `api-development` `database-design` `agile` `devops` `automation` `bot-development` `software-engineering` `technical-leadership`
@@ -134,7 +142,16 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 **Roles & Skills:**
 `techlead` `full-stack-developer` `python-developer` `javascript-developer` `ml-engineer` `backend-engineer` `software-engineer` `it-consultant` `remote-developer`
 
+</details>
+
 ## 🚀 Featured Projects
+
+**snap-perpetual-trading** | **solxdap** | **mighty-bear-idGenerator**
+
+*Explore more projects on my [GitHub profile](https://github.com/oyi77?tab=repositories)*
+
+<details>
+<summary><b>📁 View Project Details</b></summary>
 
 ### Recent Active Projects
 
@@ -159,9 +176,17 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 - **8,464 Contributions** in 2025 - Consistent development activity
 - **20.4 Million Lines of Code** - Extensive coding experience
 
-*Explore more projects on my [GitHub profile](https://github.com/oyi77?tab=repositories)*
+</details>
 
 ## 🏆 Key Achievements & Professional Highlights
+
+- **5+ Years** professional experience | **TechLead** role | **8,464 Contributions** in 2025
+- **73 Public Repositories** | **20 Private Repositories** | **1,721+ Hours** coding time | **20.4 Million Lines of Code**
+- **Full-Stack Development** | **Machine Learning Specialist** | **Technical Leadership**
+- 💼 **Opted to Hire** on GitHub | 🌐 **Remote Work** experienced
+
+<details>
+<summary><b>📊 View Detailed Achievements & Metrics</b></summary>
 
 ### Experience & Metrics
 - **5+ Years** of professional software engineering experience
@@ -191,6 +216,8 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 - **Primary Languages**: Python (22.06%), JavaScript (19.44%), Markdown (17.69%)
 - **Development Environment**: Mac OS (100% of tracked time)
 
+</details>
+
 <br />
 
 ## 📊 My Github Stats and Activity
@@ -218,16 +245,11 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 
 **🐱 My GitHub Data** 
 
-> 📦 673.4 kB Used in GitHub's Storage 
-> 
-> 🏆 8,464 Contributions in the Year 2025 
-> 
-> 💼 Opted to Hire 
-> 
-> 📜 73 Public Repositories 
-> 
-> 🔑 20 Private Repositories 
-> 
+> 📦 673.4 kB Used in GitHub's Storage | 🏆 8,464 Contributions in 2025 | 💼 Opted to Hire | 📜 73 Public Repositories | 🔑 20 Private Repositories
+
+<details>
+<summary><b>📈 View Detailed Coding Statistics</b></summary>
+
 **I'm a Night 🦉** 
 
 ```text
@@ -247,7 +269,6 @@ Friday                   4870 commits        ███░░░░░░░░�
 Saturday                 3960 commits        ██░░░░░░░░░░░░░░░░░░░░░░░   09.20 % 
 Sunday                   5521 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.83 % 
 ```
-
 
 📊 **This Week I Spent My Time On** 
 
@@ -276,8 +297,9 @@ Mac                      10 hrs 18 mins      ███████████�
 
 ![Lines of Code Timeline Chart - oyi77's coding activity timeline showing lines of code written over time](https://raw.githubusercontent.com/oyi77/oyi77/main/assets/bar_graph.png)
 
+</details>
 
- Last Updated on 28/10/2025 18:47:59 UTC
+Last Updated on 28/10/2025 18:47:59 UTC
 <!--END_SECTION:waka-->
 
 
