@@ -36,17 +36,17 @@ export default function Taskbar() {
   const openWindows = windows.filter((w) => !w.minimized);
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 h-12 glass border-t border-cyan-500/20 flex items-center justify-between px-4 z-50">
+    <div className="fixed bottom-0 left-0 right-0 h-14 bg-gradient-to-r from-cartoon-orange to-cartoon-yellow border-t-4 border-cartoon-purple flex items-center justify-between px-4 z-50 shadow-lg">
       <div className="flex items-center gap-2">
         {openWindows.map((window) => (
           <TaskbarItem key={window.id} window={window} />
         ))}
       </div>
 
-      <div className="flex items-center gap-4 text-sm text-text-light">
-        <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4 text-sm font-bold text-white drop-shadow-md">
+        <div className="flex items-center gap-2 bg-white/20 px-3 py-1 rounded-full">
           <span>{formatDate(time)}</span>
-          <span className="text-neon-cyan font-mono">{formatTime(time)}</span>
+          <span className="font-mono">{formatTime(time)}</span>
         </div>
       </div>
     </div>

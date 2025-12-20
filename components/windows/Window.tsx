@@ -132,20 +132,25 @@ export default function Window({ window: win, children }: WindowProps) {
       style={{ zIndex: win.zIndex }}
     >
       <motion.div
-        className="glass rounded-lg overflow-hidden pointer-events-auto shadow-2xl"
+        className="bg-white/95 backdrop-blur-md rounded-2xl overflow-hidden pointer-events-auto cartoon-shadow border-4 border-cartoon-orange"
         style={{
           ...windowStyle,
           position: 'absolute',
         }}
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        transition={{ duration: 0.2 }}
+        initial={{ scale: 0.8, opacity: 0, y: 50 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.8, opacity: 0, y: 50 }}
+        transition={{ 
+          type: "spring",
+          stiffness: 300,
+          damping: 30,
+          duration: 0.4 
+        }}
         onClick={handleTitleBarClick}
       >
         {/* Title Bar */}
         <motion.div
-          className="flex items-center justify-between px-4 py-2 bg-slate-800/60 border-b border-cyan-500/20 cursor-move select-none"
+          className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-cartoon-orange to-cartoon-yellow border-b-4 border-cartoon-purple cursor-move select-none rounded-t-xl"
           onPointerDown={(e) => {
             if (!win.maximized) {
               dragControls.start(e);
@@ -164,51 +169,69 @@ export default function Window({ window: win, children }: WindowProps) {
           }}
         >
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium text-text-light">{win.title}</span>
+            <span className="text-sm font-bold text-white drop-shadow-md">{win.title}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 relative z-50">
             <button
               onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 minimizeWindow(win.id);
               }}
-              className="p-1 hover:bg-slate-700/50 rounded transition-colors"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              className="p-2 hover:bg-white/30 rounded-lg transition-all relative z-50 cursor-pointer"
               aria-label="Minimize"
+              type="button"
             >
-              <Minus className="w-4 h-4 text-text-light" />
+              <Minus className="w-4 h-4 text-white pointer-events-none" />
             </button>
             <button
               onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 maximizeWindow(win.id);
               }}
-              className="p-1 hover:bg-slate-700/50 rounded transition-colors"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              className="p-2 hover:bg-white/30 rounded-lg transition-all relative z-50 cursor-pointer"
               aria-label={win.maximized ? 'Restore' : 'Maximize'}
+              type="button"
             >
               {win.maximized ? (
-                <Maximize2 className="w-4 h-4 text-text-light" />
+                <Maximize2 className="w-4 h-4 text-white pointer-events-none" />
               ) : (
-                <Square className="w-4 h-4 text-text-light" />
+                <Square className="w-4 h-4 text-white pointer-events-none" />
               )}
             </button>
             <button
               onClick={(e) => {
+                e.preventDefault();
                 e.stopPropagation();
                 closeWindow(win.id);
               }}
-              className="p-1 hover:bg-red-500/50 rounded transition-colors"
+              onMouseDown={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              className="p-2 hover:bg-red-500/80 rounded-lg transition-all relative z-50 cursor-pointer"
               aria-label="Close"
+              type="button"
             >
-              <X className="w-4 h-4 text-text-light" />
+              <X className="w-4 h-4 text-white pointer-events-none" />
             </button>
           </div>
         </motion.div>
 
         {/* Window Content */}
         <div
-          className="bg-slate-900/40 overflow-auto"
+          className="bg-white/90 overflow-auto"
           style={{
-            height: win.maximized ? 'calc(100vh - 40px)' : `${win.height - 40}px`,
+            height: win.maximized ? 'calc(100vh - 56px)' : `${win.height - 56}px`,
           }}
         >
           {children}
@@ -221,7 +244,7 @@ export default function Window({ window: win, children }: WindowProps) {
             className="absolute bottom-0 right-0 w-4 h-4 cursor-nwse-resize"
             onMouseDown={handleResizeStart}
             style={{
-              background: 'linear-gradient(135deg, transparent 0%, transparent 50%, rgba(0, 240, 255, 0.3) 50%, rgba(0, 240, 255, 0.3) 100%)',
+              background: 'linear-gradient(135deg, transparent 0%, transparent 50%, rgba(255, 107, 53, 0.4) 50%, rgba(255, 217, 61, 0.4) 100%)',
             }}
           />
         )}

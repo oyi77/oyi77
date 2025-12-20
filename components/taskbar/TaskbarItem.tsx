@@ -1,7 +1,7 @@
 'use client';
 
 import { useWindowStore, Window } from '@/lib/store/windowStore';
-import { User, Briefcase, Terminal, BarChart3 } from 'lucide-react';
+import { User, Briefcase, Terminal, BarChart3, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface TaskbarItemProps {
@@ -9,6 +9,7 @@ interface TaskbarItemProps {
 }
 
 const iconMap = {
+  welcome: <Sparkles className="w-4 h-4" />,
   profile: <User className="w-4 h-4" />,
   experience: <Briefcase className="w-4 h-4" />,
   projects: <Terminal className="w-4 h-4" />,
@@ -18,7 +19,10 @@ const iconMap = {
 export default function TaskbarItem({ window }: TaskbarItemProps) {
   const { focusWindow, restoreWindow, minimizeWindow } = useWindowStore();
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (window.minimized) {
       restoreWindow(window.id);
     } else {
@@ -29,17 +33,18 @@ export default function TaskbarItem({ window }: TaskbarItemProps) {
   return (
     <motion.button
       onClick={handleClick}
-      className={`flex items-center gap-2 px-3 py-1.5 rounded transition-colors ${
+      type="button"
+      className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all relative z-50 cursor-pointer font-semibold ${
         window.minimized
-          ? 'bg-slate-800/40 hover:bg-slate-800/60'
-          : 'bg-neon-cyan/20 hover:bg-neon-cyan/30'
+          ? 'bg-white/30 hover:bg-white/40 text-white/70'
+          : 'bg-white/50 hover:bg-white/70 text-cartoon-purple border-2 border-white/50'
       }`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onMouseEnter={() => focusWindow(window.id)}
     >
-      <div className="text-neon-cyan">{iconMap[window.type]}</div>
-      <span className="text-xs text-text-light">{window.title}</span>
+      <div className="text-cartoon-purple">{iconMap[window.type]}</div>
+      <span className="text-xs">{window.title}</span>
     </motion.button>
   );
 }

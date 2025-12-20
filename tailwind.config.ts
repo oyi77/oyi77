@@ -15,13 +15,27 @@ const config: Config = {
           magenta: "#ff006e",
           green: "#39ff14",
         },
+        cartoon: {
+          orange: "#FF6B35",
+          yellow: "#FFD93D",
+          green: "#6BCB77",
+          blue: "#4ECDC4",
+          pink: "#FF6B9D",
+          purple: "#C44569",
+        },
         dark: {
           bg: "#0a0e27",
           surface: "#1a1f3a",
         },
+        light: {
+          bg: "#FEF9E7",
+          surface: "#FFF8DC",
+          cream: "#FFF5E1",
+        },
         text: {
           light: "#e0e0e0",
           white: "#ffffff",
+          dark: "#2C3E50",
         },
       },
       backgroundImage: {
@@ -35,6 +49,11 @@ const config: Config = {
       animation: {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "cursor-blink": "cursor-blink 1s step-end infinite",
+        "bounce-soft": "bounce-soft 0.6s ease-in-out",
+        "wiggle": "wiggle 0.5s ease-in-out",
+        "float": "float 3s ease-in-out infinite",
+        "blink": "blink 2s step-end infinite",
+        "breathe": "breathe 3s ease-in-out infinite",
       },
       keyframes: {
         "glow-pulse": {
@@ -44,6 +63,26 @@ const config: Config = {
         "cursor-blink": {
           "0%, 50%": { opacity: "1" },
           "51%, 100%": { opacity: "0" },
+        },
+        "bounce-soft": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "wiggle": {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "blink": {
+          "0%, 90%, 100%": { opacity: "1" },
+          "95%": { opacity: "0" },
+        },
+        "breathe": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
         },
       },
     },

@@ -73,33 +73,33 @@ export default function Terminal({ onCommand, prompt = '$' }: TerminalProps) {
   };
 
   return (
-    <div className="h-full flex flex-col bg-slate-950 font-mono text-sm">
+    <div className="h-full flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 font-mono text-sm border-4 border-cartoon-orange rounded-b-xl">
       <div
         ref={outputRef}
-        className="flex-1 overflow-y-auto p-4 space-y-1 text-green-400"
+        className="flex-1 overflow-y-auto p-4 space-y-1 text-cartoon-green"
         style={{ maxHeight: 'calc(100% - 60px)' }}
       >
         {history.map((item, index) => (
-          <div key={index} className={item.type === 'input' ? 'text-cyan-400' : 'text-green-400'}>
-            {item.type === 'input' && <span className="text-neon-cyan">{prompt} </span>}
+          <div key={index} className={item.type === 'input' ? 'text-cartoon-blue' : 'text-cartoon-green'}>
+            {item.type === 'input' && <span className="text-cartoon-yellow font-bold">{prompt} </span>}
             {item.content}
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit} className="border-t border-cyan-500/20 p-4">
+      <form onSubmit={handleSubmit} className="border-t-4 border-cartoon-orange p-4 bg-gray-900/50">
         <div className="flex items-center gap-2">
-          <span className="text-neon-cyan">{prompt}</span>
+          <span className="text-cartoon-yellow font-bold">{prompt}</span>
           <input
             ref={inputRef}
             type="text"
             value={currentInput}
             onChange={(e) => setCurrentInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent outline-none text-green-400 caret-cyan-400"
+            className="flex-1 bg-transparent outline-none text-cartoon-green caret-cartoon-yellow font-semibold"
             autoFocus
             autoComplete="off"
           />
-          <span className="w-2 h-4 bg-neon-cyan animate-cursor-blink" />
+          <span className="w-2 h-5 bg-cartoon-yellow animate-cursor-blink rounded" />
         </div>
       </form>
     </div>

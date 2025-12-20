@@ -46,28 +46,28 @@ export default function StatsWindow() {
   ];
 
   return (
-    <div className="p-6 text-text-light">
-      <h2 className="text-2xl font-bold text-neon-cyan mb-6">Statistics Dashboard</h2>
+    <div className="p-6 text-text-dark">
+      <h2 className="text-2xl font-bold text-cartoon-orange mb-6">Statistics Dashboard</h2>
 
       <div className="grid grid-cols-2 gap-6 mb-6">
         <motion.div
-          className="glass rounded-lg p-4"
+          className="bg-white/80 rounded-2xl p-4 border-4 border-cartoon-green cartoon-shadow"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.2, type: "spring" }}
         >
-          <h3 className="text-lg font-semibold mb-4 text-white">Trading Accuracy</h3>
+          <h3 className="text-lg font-bold mb-4 text-cartoon-purple">Trading Accuracy</h3>
           <div className="flex items-end gap-2 h-32">
             <div className="flex-1 flex flex-col items-center">
-              <div className="flex-1 w-full bg-slate-800 rounded-t overflow-hidden flex items-end">
+              <div className="flex-1 w-full bg-gray-200 rounded-t-xl overflow-hidden flex items-end">
                 <motion.div
-                  className="w-full bg-neon-green"
+                  className="w-full bg-cartoon-green rounded-t-xl"
                   initial={{ height: 0 }}
                   animate={{ height: `${animatedTrading}%` }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 2, type: "spring" }}
                 />
               </div>
-              <span className="text-2xl font-bold text-neon-green mt-2">
+              <span className="text-2xl font-bold text-cartoon-green mt-2">
                 {Math.round(animatedTrading)}%
               </span>
             </div>
@@ -75,23 +75,23 @@ export default function StatsWindow() {
         </motion.div>
 
         <motion.div
-          className="glass rounded-lg p-4"
+          className="bg-white/80 rounded-2xl p-4 border-4 border-cartoon-pink cartoon-shadow"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, type: "spring" }}
         >
-          <h3 className="text-lg font-semibold mb-4 text-white">Efficiency Gains</h3>
+          <h3 className="text-lg font-bold mb-4 text-cartoon-purple">Efficiency Gains</h3>
           <div className="flex items-end gap-2 h-32">
             <div className="flex-1 flex flex-col items-center">
-              <div className="flex-1 w-full bg-slate-800 rounded-t overflow-hidden flex items-end">
+              <div className="flex-1 w-full bg-gray-200 rounded-t-xl overflow-hidden flex items-end">
                 <motion.div
-                  className="w-full bg-neon-magenta"
+                  className="w-full bg-cartoon-pink rounded-t-xl"
                   initial={{ height: 0 }}
                   animate={{ height: `${animatedEfficiency}%` }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 2, type: "spring" }}
                 />
               </div>
-              <span className="text-2xl font-bold text-neon-magenta mt-2">
+              <span className="text-2xl font-bold text-cartoon-pink mt-2">
                 {Math.round(animatedEfficiency)}%
               </span>
             </div>
@@ -101,32 +101,32 @@ export default function StatsWindow() {
 
       <div className="grid grid-cols-2 gap-6">
         <motion.div
-          className="glass rounded-lg p-4"
+          className="bg-white/80 rounded-2xl p-4 border-4 border-cartoon-blue cartoon-shadow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.4, type: "spring" }}
         >
-          <h3 className="text-lg font-semibold mb-2 text-white">Projects Completed</h3>
+          <h3 className="text-lg font-bold mb-2 text-cartoon-purple">Projects Completed</h3>
           <div className="flex items-center gap-3">
-            <span className="text-4xl font-bold text-neon-cyan">
+            <span className="text-4xl font-bold text-cartoon-blue">
               {Math.round(animatedProjects)}+
             </span>
-            <span className="text-sm text-text-light/70">active projects</span>
+            <span className="text-sm text-text-dark/70 font-medium">active projects</span>
           </div>
         </motion.div>
 
         <motion.div
-          className="glass rounded-lg p-4"
+          className="bg-white/80 rounded-2xl p-4 border-4 border-cartoon-orange cartoon-shadow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.5, type: "spring" }}
         >
-          <h3 className="text-lg font-semibold mb-2 text-white">Years of Experience</h3>
+          <h3 className="text-lg font-bold mb-2 text-cartoon-purple">Years of Experience</h3>
           <div className="flex items-center gap-3">
-            <span className="text-4xl font-bold text-neon-cyan">
+            <span className="text-4xl font-bold text-cartoon-orange">
               {Math.round(animatedYears)}+
             </span>
-            <span className="text-sm text-text-light/70">years in tech</span>
+            <span className="text-sm text-text-dark/70 font-medium">years in tech</span>
           </div>
         </motion.div>
       </div>

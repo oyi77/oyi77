@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-export type WindowType = 'profile' | 'experience' | 'projects' | 'stats';
+export type WindowType = 'welcome' | 'profile' | 'experience' | 'projects' | 'stats';
 
 export interface Window {
   id: string;
@@ -33,6 +33,7 @@ interface WindowState {
 
 const getWindowTitle = (type: WindowType): string => {
   const titles: Record<WindowType, string> = {
+    welcome: 'Welcome',
     profile: 'Profile.app',
     experience: 'Experience.exe',
     projects: 'Projects.terminal',
@@ -43,6 +44,7 @@ const getWindowTitle = (type: WindowType): string => {
 
 const getDefaultSize = (type: WindowType): { width: number; height: number } => {
   const sizes: Record<WindowType, { width: number; height: number }> = {
+    welcome: { width: 700, height: 600 },
     profile: { width: 600, height: 500 },
     experience: { width: 800, height: 600 },
     projects: { width: 700, height: 500 },
@@ -78,12 +80,25 @@ export const useWindowStore = create<WindowState>()(
         const windowCount = state.windows.length;
         const offset = 30;
         const { width, height } = getDefaultSize(type);
+        
+        // Center welcome window on first load
+        let x = 100 + windowCount * offset;
+        let y = 100 + windowCount * offset;
+        
+        if (type === 'welcome' && windowCount === 0) {
+          // Center the welcome window
+          if (typeof window !== 'undefined') {
+            x = (window.innerWidth - width) / 2;
+            y = (window.innerHeight - height) / 2;
+          }
+        }
+        
         const newWindow: Window = {
           id: `${type}-${Date.now()}`,
           type,
           title: getWindowTitle(type),
-          x: 100 + windowCount * offset,
-          y: 100 + windowCount * offset,
+          x,
+          y,
           width,
           height,
           zIndex: state.maxZIndex + 1,
@@ -169,12 +184,12 @@ export const useWindowStore = create<WindowState>()(
         if (typeof window !== 'undefined') {
           return localStorage;
         }
-        // Fallback for SSR
+        // Fallback for SSR - return a no-op storage
         return {
           getItem: () => null,
           setItem: () => {},
           removeItem: () => {},
-        };
+        } as any;
       }),
       partialize: (state) => ({ windows: state.windows }),
     }

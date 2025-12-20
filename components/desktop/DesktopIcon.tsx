@@ -26,29 +26,35 @@ export default function DesktopIcon({ type, label, icon, x = 0, y = 0 }: Desktop
   const [isSelected, setIsSelected] = useState(false);
   const { openWindow } = useWindowStore();
 
-  const handleDoubleClick = () => {
+  const handleDoubleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     if (type === 'cv') {
       // Download CV
       const link = document.createElement('a');
       link.href = '/muchammadfikriizzuddin_cv.pdf';
       link.download = 'muchammadfikriizzuddin_cv.pdf';
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
     } else if (type === 'github') {
       // Open GitHub in new tab
-      window.open('https://github.com/oyi77', '_blank');
+      window.open('https://github.com/oyi77', '_blank', 'noopener,noreferrer');
     } else {
       openWindow(type as WindowType);
     }
   };
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
     setIsSelected(true);
     setTimeout(() => setIsSelected(false), 200);
   };
 
   return (
     <motion.div
-      className="flex flex-col items-center gap-2 cursor-pointer select-none group"
+      className="flex flex-col items-center gap-2 cursor-pointer select-none group relative z-10"
       style={{ position: 'absolute', left: x, top: y }}
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
@@ -58,26 +64,30 @@ export default function DesktopIcon({ type, label, icon, x = 0, y = 0 }: Desktop
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div
-        className={`p-3 rounded-lg transition-all duration-300 ${
+      <motion.div
+        className={`p-4 rounded-2xl transition-all duration-300 cartoon-shadow ${
           isSelected
-            ? 'bg-cyan-500/30 neon-glow'
-            : 'bg-slate-800/20 group-hover:bg-slate-800/40 group-hover:neon-glow'
+            ? 'bg-cartoon-orange/30 border-4 border-cartoon-orange'
+            : 'bg-white/80 group-hover:bg-white border-4 border-cartoon-yellow group-hover:border-cartoon-orange'
         }`}
+        whileHover={{ scale: 1.15, rotate: [0, -5, 5, 0] }}
+        whileTap={{ scale: 0.9 }}
+        animate={isSelected ? { y: [0, -5, 0] } : {}}
       >
-        <div className="text-neon-cyan group-hover:text-neon-cyan transition-colors">
+        <div className="text-cartoon-orange group-hover:text-cartoon-purple transition-colors">
           {icon}
         </div>
-      </div>
-      <span
-        className={`text-xs text-text-light px-2 py-1 rounded transition-all ${
+      </motion.div>
+      <motion.span
+        className={`text-sm font-bold text-text-dark px-3 py-1.5 rounded-full transition-all ${
           isSelected
-            ? 'bg-cyan-500/30 text-white'
-            : 'bg-slate-900/50 group-hover:bg-slate-900/70'
+            ? 'bg-cartoon-orange text-white'
+            : 'bg-white/90 group-hover:bg-cartoon-yellow text-cartoon-purple'
         }`}
+        animate={isSelected ? { scale: [1, 1.1, 1] } : {}}
       >
         {label}
-      </span>
+      </motion.span>
     </motion.div>
   );
 }
