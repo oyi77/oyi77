@@ -204,10 +204,6 @@ I'm actively seeking new challenges and opportunities in software engineering, t
   <br/>
 </div>
   
-  <!-- https://github.com/ashutosh00710/github-readme-activity-graph -->
-
-  <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="GitHub Activity Graph - oyi77's contribution activity graph showing daily commits and contributions" src="https://github-readme-activity-graph.cyclic.app/graph/?username=oyi77&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
-
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
