@@ -142,7 +142,7 @@ export default function ProfileWindow() {
               whileTap={{ scale: 0.98 }}
             >
               <Scroll className="w-6 h-6" />
-              Download Captain's CV
+              Download Captain&apos;s CV
             </motion.a>
           </div>
 
