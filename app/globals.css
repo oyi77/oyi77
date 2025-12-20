@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0e27;
-  --foreground: #e0e0e0;
-  --cartoon-orange: #FF6B35;
-  --cartoon-yellow: #FFD93D;
-  --cartoon-green: #6BCB77;
-  --cartoon-blue: #4ECDC4;
-  --cartoon-pink: #FF6B9D;
-  --cartoon-purple: #C44569;
-  --light-bg: #FEF9E7;
-  --light-surface: #FFF8DC;
+  --background: #1a0f0a;
+  --foreground: #f4e4bc;
+  --mahogany: #4a1d1d;
+  --mahogany-dark: #2a0f0f;
+  --gold-polished: #d4af37;
+  --gold-bright: #ffd700;
+  --ocean-deep: #0a1f3a;
+  --paper-aged: #f4e4bc;
 }
 
 * {
@@ -34,103 +32,250 @@ body {
 
 body {
   color: rgb(var(--foreground));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background))
-    )
-    rgb(var(--background));
+      rgb(var(--background))) rgb(var(--background));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .glass {
     @apply backdrop-blur-md bg-slate-900/40 border border-cyan-500/20;
   }
-  
+
   .glass-hover {
     @apply hover:border-cyan-500/40 hover:bg-slate-900/60 transition-all duration-300;
   }
-  
+
   .neon-glow {
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
-                0 0 20px rgba(0, 240, 255, 0.3),
-                0 0 30px rgba(0, 240, 255, 0.1);
+      0 0 20px rgba(0, 240, 255, 0.3),
+      0 0 30px rgba(0, 240, 255, 0.1);
   }
-  
+
   .neon-glow-magenta {
     box-shadow: 0 0 10px rgba(255, 0, 110, 0.5),
-                0 0 20px rgba(255, 0, 110, 0.3),
-                0 0 30px rgba(255, 0, 110, 0.1);
+      0 0 20px rgba(255, 0, 110, 0.3),
+      0 0 30px rgba(255, 0, 110, 0.1);
   }
-  
+
   .neon-glow-green {
     box-shadow: 0 0 10px rgba(57, 255, 20, 0.5),
-                0 0 20px rgba(57, 255, 20, 0.3),
-                0 0 30px rgba(57, 255, 20, 0.1);
+      0 0 20px rgba(57, 255, 20, 0.3),
+      0 0 30px rgba(57, 255, 20, 0.1);
   }
-  
+
   .gradient-text {
     background: linear-gradient(135deg, #00f0ff 0%, #ff006e 50%, #39ff14 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .cartoon-gradient {
     background: linear-gradient(135deg, #FF6B35 0%, #FFD93D 50%, #6BCB77 100%);
   }
-  
+
   .cartoon-shadow {
     box-shadow: 0 8px 16px rgba(255, 107, 53, 0.3),
-                0 4px 8px rgba(255, 217, 61, 0.2);
+      0 4px 8px rgba(255, 217, 61, 0.2);
   }
-  
+
   .cartoon-border {
     border: 3px solid;
     border-image: linear-gradient(135deg, #FF6B35, #FFD93D, #6BCB77) 1;
     border-radius: 12px;
   }
-  
+
   .bounce-elastic {
     animation: bounce-elastic 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* 3D Button System (Premium Pirate Style) */
+  .button-3d-premium {
+    background: linear-gradient(135deg, var(--mahogany) 0%, var(--mahogany-dark) 100%);
+    box-shadow:
+      0 4px 0 rgba(0, 0, 0, 0.4),
+      0 8px 16px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold-polished);
+    color: var(--gold-polished);
+    transform: translateY(0);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-3d-premium:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold-bright);
+    color: var(--gold-bright);
+    box-shadow:
+      0 6px 0 rgba(0, 0, 0, 0.5),
+      0 12px 24px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .button-3d-premium:active {
+    transform: translateY(2px);
+    box-shadow:
+      0 2px 0 rgba(0, 0, 0, 0.3),
+      0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-3d-blue {
+    background: linear-gradient(135deg, #1E3A8A 0%, #4ECDC4 100%);
+    box-shadow:
+      0 4px 0 #006994,
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(0);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-3d-blue:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 #006994,
+      0 12px 24px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .button-3d-blue:active {
+    transform: translateY(2px);
+    box-shadow:
+      0 2px 0 #006994,
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .button-3d-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    box-shadow:
+      0 4px 0 #B8860B,
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(0);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .button-3d-gold:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 6px 0 #B8860B,
+      0 12px 24px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .button-3d-gold:active {
+    transform: translateY(2px);
+    box-shadow:
+      0 2px 0 #B8860B,
+      0 4px 8px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  /* 3D Window Depth */
+  .window-3d {
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.3),
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border: 4px solid;
+    border-image: linear-gradient(135deg, #C8102E, #FFD700) 1;
+  }
+
+  /* 3D Icon Container */
+  .icon-3d {
+    box-shadow:
+      0 6px 0 rgba(139, 69, 19, 0.4),
+      0 12px 24px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .icon-3d:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow:
+      0 8px 0 rgba(139, 69, 19, 0.5),
+      0 16px 32px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  .icon-3d:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow:
+      0 3px 0 rgba(139, 69, 19, 0.3),
+      0 6px 12px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* 3D Shadow Utilities */
+  .shadow-3d {
+    box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.25),
+      0 4px 8px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .shadow-3d-lg {
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.3),
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .shadow-3d-hover:hover {
+    box-shadow:
+      0 15px 45px rgba(0, 0, 0, 0.3),
+      0 6px 12px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
 }
 
 @keyframes bounce-elastic {
-  0% { transform: scale(0); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Grid pattern overlay */
 .grid-pattern {
-  background-image: 
-    linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(26, 31, 58, 0.5);
+  background: var(--mahogany-dark);
+  border-left: 2px solid var(--gold-polished);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 240, 255, 0.3);
-  border-radius: 4px;
+  background: linear-gradient(to bottom, var(--gold-polished), var(--gold-bright));
+  border: 2px solid var(--mahogany-dark);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 240, 255, 0.5);
+  background: var(--gold-bright);
 }
 
 /* Hide scrollbar on mobile */
@@ -145,6 +290,7 @@ body {
 
 /* Mobile optimizations */
 @media (max-width: 767px) {
+
   /* Prevent text selection on mobile for better UX */
   .select-none {
     -webkit-user-select: none;
@@ -152,11 +298,11 @@ body {
     -ms-user-select: none;
     user-select: none;
   }
-  
+
   /* Better touch targets */
-  button, a {
+  button,
+  a {
     min-height: 44px;
     min-width: 44px;
   }
 }
-

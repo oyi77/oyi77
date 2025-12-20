@@ -56,25 +56,28 @@ export default function WindowMenu({ window: win, onClose }: WindowMenuProps) {
   return (
     <motion.div
       ref={menuRef}
-      className="absolute top-14 left-0 bg-white rounded-xl shadow-2xl border-4 border-onepiece-red z-[100] min-w-[200px] overflow-hidden"
+      className="absolute top-14 left-0 bg-white rounded-xl shadow-3d-lg border-4 border-onepiece-red z-[100] min-w-[200px] overflow-hidden"
       initial={{ opacity: 0, scale: 0.9, y: -10 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9, y: -10 }}
-      transition={{ duration: 0.2 }}
+      transition={{ duration: 0.2, type: "spring", stiffness: 300, damping: 25 }}
     >
       {menuItems.map((item, index) => (
-        <button
+        <motion.button
           key={index}
           onClick={item.action}
-          className={`w-full px-5 py-3 text-left flex items-center gap-4 text-sm font-semibold transition-colors ${
+          className={`w-full px-5 py-3 text-left flex items-center gap-4 text-sm font-semibold transition-all ${
             item.danger
               ? 'text-onepiece-red hover:bg-red-50'
               : 'text-onepiece-blue hover:bg-onepiece-gold/20'
           }`}
+          whileHover={{ x: 2, backgroundColor: item.danger ? 'rgba(239, 68, 68, 0.1)' : 'rgba(255, 215, 0, 0.15)' }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.15 }}
         >
           {item.icon}
           <span>{item.label}</span>
-        </button>
+        </motion.button>
       ))}
     </motion.div>
   );

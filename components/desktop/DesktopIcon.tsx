@@ -11,6 +11,7 @@ interface DesktopIconProps {
   icon: React.ReactNode;
   x?: number;
   y?: number;
+  isGridItem?: boolean;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -22,14 +23,14 @@ const iconMap: Record<string, React.ReactNode> = {
   github: <FolderGit2 className="w-12 h-12" />,
 };
 
-export default function DesktopIcon({ type, label, icon, x = 0, y = 0 }: DesktopIconProps) {
+export default function DesktopIcon({ type, label, icon, x = 0, y = 0, isGridItem = false }: DesktopIconProps) {
   const [isSelected, setIsSelected] = useState(false);
   const { openWindow } = useWindowStore();
 
   const handleDoubleClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    
+
     if (type === 'cv') {
       // Download CV
       const link = document.createElement('a');
@@ -59,7 +60,7 @@ export default function DesktopIcon({ type, label, icon, x = 0, y = 0 }: Desktop
     const now = Date.now();
     const lastTap = (target as any).lastTap || 0;
     const timeDiff = now - lastTap;
-    
+
     if (timeDiff < 300 && timeDiff > 0) {
       // Double tap detected
       handleDoubleClick(e as any);
@@ -72,43 +73,53 @@ export default function DesktopIcon({ type, label, icon, x = 0, y = 0 }: Desktop
   return (
     <motion.div
       className="flex flex-col items-center gap-2 md:gap-3 cursor-pointer select-none group relative z-10"
-      style={{ position: 'absolute', left: x, top: y }}
+      style={!isGridItem ? { position: 'absolute', left: x, top: y } : {}}
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
       onTouchEnd={handleTouch}
-      whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.1 : 1 }}
+      whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1, zIndex: 1000 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
       <motion.div
-        className={`p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl transition-all duration-300 cartoon-shadow ${
-          isSelected
-            ? 'bg-onepiece-red/30 border-2 md:border-4 border-onepiece-red'
-            : 'bg-white/80 group-hover:bg-white border-2 md:border-4 border-onepiece-gold group-hover:border-onepiece-red'
-        }`}
-        whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.15 : 1, rotate: typeof window !== 'undefined' && window.innerWidth >= 768 ? [0, -5, 5, 0] : 0 }}
-        whileTap={{ scale: 0.9 }}
+        className={`p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl transition-all duration-300 icon-3d ${isSelected
+          ? 'bg-gradient-to-br from-onepiece-red/40 to-onepiece-red/20 border-2 md:border-4 border-onepiece-red'
+          : 'bg-white/90 group-hover:bg-white border-2 md:border-4 border-onepiece-gold group-hover:border-onepiece-red'
+          }`}
+        whileHover={{
+          scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.15 : 1,
+          rotate: typeof window !== 'undefined' && window.innerWidth >= 768 ? [0, -5, 5, 0] : 0,
+          y: typeof window !== 'undefined' && window.innerWidth >= 768 ? -3 : 0
+        }}
+        whileTap={{ scale: 0.98, y: 1 }}
         animate={isSelected ? { y: [0, -5, 0] } : {}}
       >
         <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
           {icon}
         </div>
       </motion.div>
-      <motion.div className="flex flex-col items-center gap-0.5 md:gap-1">
+      <motion.div className="flex flex-col items-center gap-0.5 md:gap-1 relative z-50">
         <motion.span
-          className={`text-xs md:text-sm font-bold text-text-dark px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 rounded-full transition-all ${
-            isSelected
-              ? 'bg-onepiece-red text-white'
-              : 'bg-white/90 group-hover:bg-onepiece-gold text-onepiece-blue'
-          }`}
+          className={`text-xs md:text-sm font-bold text-text-dark px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 rounded-full transition-all opacity-0 group-hover:opacity-100 pointer-events-none relative z-[100] shadow-3d ${isSelected
+            ? 'bg-onepiece-red text-white opacity-100'
+            : 'bg-white/95 group-hover:bg-onepiece-gold text-onepiece-blue'
+            }`}
           animate={isSelected ? { scale: [1, 1.1, 1] } : {}}
         >
           {label}
         </motion.span>
-        <span className="text-[10px] md:text-xs text-text-dark/60 font-medium hidden md:block">Double-click to open</span>
-        <span className="text-[10px] text-text-dark/60 font-medium md:hidden">Tap to open</span>
+        <motion.span
+          className="text-[10px] md:text-xs text-text-dark/60 font-medium hidden md:block opacity-0 group-hover:opacity-100 transition-opacity relative z-[100]"
+        >
+          Double-click to open
+        </motion.span>
+        <motion.span
+          className="text-[10px] text-text-dark/60 font-medium md:hidden opacity-0 group-hover:opacity-100 transition-opacity relative z-[100]"
+        >
+          Tap to open
+        </motion.span>
       </motion.div>
     </motion.div>
   );

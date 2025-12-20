@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { useWindowStore } from '@/lib/store/windowStore';
 import TaskbarItem from './TaskbarItem';
 import StartMenu from './StartMenu';
@@ -39,22 +40,23 @@ export default function Taskbar() {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 h-14 md:h-16 bg-gradient-to-r from-onepiece-red to-onepiece-gold border-t-2 md:border-t-4 border-onepiece-blue flex items-center justify-between px-3 md:px-4 lg:px-6 z-50 shadow-lg">
+      <div className="fixed bottom-0 left-0 right-0 h-14 md:h-16 bg-gradient-to-r from-[#4a1d1d] to-[#2a0f0f] border-t-2 md:border-t-4 border-[#d4af37] flex items-center justify-between px-3 md:px-4 lg:px-6 z-50 shadow-lg">
         {/* Start Button */}
-        <button
+        <motion.button
           onClick={() => setStartMenuOpen(!startMenuOpen)}
-          className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all font-bold ${
-            startMenuOpen
-              ? 'bg-white/70 text-onepiece-red border-2 border-onepiece-blue'
-              : 'bg-white/40 hover:bg-white/60 text-white border-2 border-transparent'
-          }`}
+          className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all font-bold button-3d-premium ${startMenuOpen
+              ? 'bg-[#d4af37] text-[#4a1d1d] border-2 border-white'
+              : ''
+            }`}
           aria-label="Start Menu"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           <svg className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
             <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
           </svg>
           <span className="text-xs md:text-sm hidden sm:inline">Start</span>
-        </button>
+        </motion.button>
 
         {/* Open Windows */}
         <div className="flex items-center gap-1 md:gap-2 lg:gap-3 flex-1 overflow-x-auto scrollbar-hide">

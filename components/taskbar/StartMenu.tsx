@@ -2,8 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  User, Briefcase, Terminal, BarChart3, FileText, FolderGit2, 
+import {
+  User, Briefcase, Terminal, BarChart3, FileText, FolderGit2,
   Sparkles, Settings, Power, Search, X
 } from 'lucide-react';
 import { useWindowStore } from '@/lib/store/windowStore';
@@ -33,42 +33,42 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
   }, [isOpen, onClose]);
 
   const apps = [
-    { 
-      name: 'Welcome', 
-      icon: <Sparkles className="w-8 h-8" />, 
+    {
+      name: 'Welcome',
+      icon: <Sparkles className="w-8 h-8" />,
       type: 'welcome' as const,
       description: 'Welcome to my portfolio'
     },
-    { 
-      name: 'Profile', 
-      icon: <User className="w-8 h-8" />, 
+    {
+      name: 'Profile',
+      icon: <User className="w-8 h-8" />,
       type: 'profile' as const,
       description: 'View my profile'
     },
-    { 
-      name: 'Experience', 
-      icon: <Briefcase className="w-8 h-8" />, 
-      type: 'experience' as const,
+    {
+      name: 'Bounty Posters',
+      icon: <Briefcase className="w-8 h-8" />,
+      type: 'bounty' as const,
       description: 'Work experience'
     },
-    { 
-      name: 'Projects', 
-      icon: <Terminal className="w-8 h-8" />, 
-      type: 'projects' as const,
+    {
+      name: 'Log Pose',
+      icon: <Terminal className="w-8 h-8" />,
+      type: 'logpose' as const,
       description: 'Terminal projects'
     },
-    { 
-      name: 'Stats', 
-      icon: <BarChart3 className="w-8 h-8" />, 
-      type: 'stats' as const,
+    {
+      name: 'Tactical Map',
+      icon: <BarChart3 className="w-8 h-8" />,
+      type: 'tactical' as const,
       description: 'Statistics dashboard'
     },
   ];
 
   const quickActions = [
-    { 
-      name: 'CV', 
-      icon: <FileText className="w-6 h-6" />, 
+    {
+      name: 'CV',
+      icon: <FileText className="w-6 h-6" />,
       action: () => {
         const link = document.createElement('a');
         link.href = '/muchammadfikriizzuddin_cv.pdf';
@@ -79,9 +79,9 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
         onClose();
       }
     },
-    { 
-      name: 'GitHub', 
-      icon: <FolderGit2 className="w-6 h-6" />, 
+    {
+      name: 'GitHub',
+      icon: <FolderGit2 className="w-6 h-6" />,
       action: () => {
         window.open('https://github.com/oyi77', '_blank', 'noopener,noreferrer');
         onClose();
@@ -89,7 +89,7 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
     },
   ];
 
-  const filteredApps = apps.filter(app => 
+  const filteredApps = apps.filter(app =>
     app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     app.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -106,33 +106,33 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
             exit={{ opacity: 0 }}
             onClick={onClose}
           />
-          
+
           {/* Start Menu */}
           <motion.div
             ref={menuRef}
-            className="fixed bottom-14 md:bottom-16 left-2 md:left-4 right-2 md:right-auto w-auto md:w-96 max-w-md bg-white/95 backdrop-blur-md rounded-xl md:rounded-2xl shadow-2xl border-2 md:border-4 border-onepiece-red z-50 overflow-hidden"
+            className="fixed bottom-14 md:bottom-16 left-2 md:left-4 right-2 md:right-auto w-auto md:w-96 max-w-md bg-[#f4e4bc] rounded-xl md:rounded-2xl shadow-3d-lg border-2 md:border-4 border-[#4a1d1d] z-50 overflow-hidden"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {/* Header with Luffy */}
-            <div className="bg-gradient-to-r from-onepiece-red to-onepiece-gold p-3 md:p-4 flex items-center justify-between border-b-2 md:border-b-4 border-onepiece-blue">
+            <div className="bg-gradient-to-r from-[#4a1d1d] to-[#2a0f0f] p-3 md:p-4 flex items-center justify-between border-b-2 md:border-b-4 border-[#d4af37]">
               <div className="flex items-center gap-2 md:gap-3">
                 <div className="hidden sm:block">
                   <Luffy size="sm" variant="excited" />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-bold text-white">Start Menu</h3>
-                  <p className="text-[10px] md:text-xs text-white/80">Muchammad Fikri Izzuddin</p>
+                  <h3 className="text-base md:text-lg font-bold text-[#d4af37]">Start Menu</h3>
+                  <p className="text-[10px] md:text-xs text-[#d4af37]/80">Muchammad Fikri Izzuddin</p>
                 </div>
               </div>
               <button
                 onClick={onClose}
-                className="p-1.5 hover:bg-white/20 rounded-lg transition-colors"
+                className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
                 aria-label="Close"
               >
-                <X className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                <X className="w-4 h-4 md:w-5 md:h-5 text-[#d4af37]" />
               </button>
             </div>
 
@@ -162,9 +162,12 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
                       openWindow(app.type);
                       onClose();
                     }}
-                    className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 bg-white/60 hover:bg-onepiece-gold/20 rounded-lg md:rounded-xl border-2 border-transparent hover:border-onepiece-red transition-all group"
-                    whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1 }}
-                    whileTap={{ scale: 0.95 }}
+                    className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 bg-white/80 hover:bg-onepiece-gold/30 rounded-lg md:rounded-xl border-2 border-onepiece-gold/50 hover:border-onepiece-red transition-all group shadow-3d"
+                    whileHover={{
+                      scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1,
+                      y: typeof window !== 'undefined' && window.innerWidth >= 768 ? -2 : 0
+                    }}
+                    whileTap={{ scale: 0.95, y: 1 }}
                   >
                     <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
                       {app.icon}
@@ -184,9 +187,12 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
                     <motion.button
                       key={index}
                       onClick={action.action}
-                      className="flex-1 flex flex-col items-center gap-1.5 md:gap-2 p-2 md:p-3 bg-white/60 hover:bg-onepiece-gold/20 rounded-lg md:rounded-xl border-2 border-transparent hover:border-onepiece-red transition-all group"
-                      whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1 }}
-                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 flex flex-col items-center gap-1.5 md:gap-2 p-2 md:p-3 bg-white/80 hover:bg-onepiece-gold/30 rounded-lg md:rounded-xl border-2 border-onepiece-gold/50 hover:border-onepiece-red transition-all group shadow-3d"
+                      whileHover={{
+                        scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1,
+                        y: typeof window !== 'undefined' && window.innerWidth >= 768 ? -2 : 0
+                      }}
+                      whileTap={{ scale: 0.95, y: 1 }}
                     >
                       <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
                         {action.icon}

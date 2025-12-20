@@ -17,7 +17,8 @@ export default function Illustration({ type, className = '', size = 40 }: Illust
             <path
               d="M 20 40 Q 10 40 10 30 Q 10 20 20 20 Q 25 10 35 10 Q 45 10 50 20 Q 60 10 70 10 Q 80 10 85 20 Q 95 20 95 30 Q 95 40 85 40 Z"
               fill="#FFFFFF"
-              opacity="0.8"
+              opacity="0.9"
+              style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
             />
           </svg>
         );

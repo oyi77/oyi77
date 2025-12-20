@@ -1,14 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, Code, Rocket, Heart } from 'lucide-react';
+import { Compass, Scroll, Map, Heart } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import Illustration from '@/components/cartoon/Illustration';
-import { Luffy } from '@/components/cartoon/OnePieceCharacters';
+import Character2D from '@/components/2d/Character2D';
+import { useWindowStore } from '@/lib/store/windowStore';
 
 export default function WelcomeWindow() {
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = 'Hello, welcome to my page!';
+  const fullText = 'Welcome to the Grand Line, Captain!';
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
@@ -26,27 +27,29 @@ export default function WelcomeWindow() {
     return () => clearInterval(interval);
   }, [fullText]);
 
+  const { openWindow } = useWindowStore();
+
   const features = [
-    { icon: <Code className="w-6 h-6" />, text: 'Explore my projects' },
-    { icon: <Rocket className="w-6 h-6" />, text: 'View my experience' },
-    { icon: <Sparkles className="w-6 h-6" />, text: 'Check out my skills' },
+    { icon: <Compass className="w-6 h-6" />, text: 'Navigate My Projects', type: 'projects' },
+    { icon: <Scroll className="w-6 h-6" />, text: 'View Bounty Posters', type: 'experience' },
+    { icon: <Map className="w-6 h-6" />, text: 'Explore Tactical Map', type: 'stats' },
   ];
 
   return (
     <div className="p-8 text-text-dark h-full flex flex-col items-center justify-center relative overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-onepiece-red/10 via-onepiece-gold/10 to-onepiece-blue/10 animate-pulse" />
-      
+
       {/* Luffy greeting - Hidden on mobile */}
       <motion.div
-        className="hidden md:block absolute top-4 md:top-8 right-4 md:right-8"
+        className="hidden md:block absolute top-4 md:top-8 right-4 md:right-8 z-20"
         initial={{ opacity: 0, scale: 0, rotate: -180 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
       >
-        <Luffy variant="waving" size="lg" />
+        <Character2D character="luffy" variant="waving" size="lg" />
       </motion.div>
-      
+
       {/* Floating illustrations - Hidden on mobile */}
       <motion.div
         className="hidden md:block absolute top-4 left-4"
@@ -55,7 +58,7 @@ export default function WelcomeWindow() {
       >
         <Illustration type="sparkle" size={50} />
       </motion.div>
-      
+
       <motion.div
         className="hidden md:block absolute bottom-4 right-4"
         animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
@@ -63,7 +66,7 @@ export default function WelcomeWindow() {
       >
         <Illustration type="star" size={40} />
       </motion.div>
-      
+
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(20)].map((_, i) => (
@@ -127,13 +130,26 @@ export default function WelcomeWindow() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                className="bg-white/90 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 hover:cartoon-shadow border-2 md:border-4 border-onepiece-gold hover:border-onepiece-red transition-all duration-300 group cursor-pointer"
+                initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.6 + index * 0.1,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 20
+                }}
+                onClick={() => openWindow(feature.type as any)}
+                className="bg-white/10 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-3d border-2 md:border-4 border-onepiece-gold hover:border-onepiece-red transition-all duration-300 group cursor-pointer text-white"
+                whileHover={{
+                  scale: 1.05,
+                  y: -4,
+                  boxShadow: "0 15px 45px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15)"
+                }}
+                whileTap={{ scale: 0.98, y: -2 }}
               >
                 <div className="flex flex-col items-center gap-4">
-                  <motion.div 
+                  <motion.div
                     className="text-onepiece-red group-hover:text-onepiece-blue transition-colors"
                     whileHover={{ scale: 1.2, rotate: [0, -10, 10, 0] }}
                   >

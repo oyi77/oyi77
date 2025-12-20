@@ -24,6 +24,10 @@ const config: Config = {
           black: "#000000", // Jolly Roger black
           sky: "#87CEEB", // Sky blue
           ocean: "#006994", // Deep ocean
+          mahogany: "#4a1d1d",
+          mahoganyDark: "#2a0f0f",
+          goldPolished: "#d4af37",
+          goldBright: "#ffd700",
         },
         cartoon: {
           orange: "#FF6B35",
@@ -52,6 +56,13 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      boxShadow: {
+        "3d": "0 4px 0 rgba(139, 69, 19, 0.4), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+        "3d-hover": "0 6px 0 rgba(139, 69, 19, 0.5), 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4)",
+        "3d-active": "0 2px 0 rgba(139, 69, 19, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+        "3d-window": "0 20px 60px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+        "3d-icon": "0 6px 0 rgba(139, 69, 19, 0.4), 0 12px 24px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
       },
       fontFamily: {
         mono: ["Monaco", "Courier New", "monospace"],

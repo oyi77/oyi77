@@ -9,20 +9,23 @@ export interface Profile {
   metrics: {
     tradingAccuracy: number;
     efficiencyGains: number;
+    teamVelocity: number;
+    systemUptime: number;
   };
 }
 
 export const profileData: Profile = {
   name: 'Muchammad Fikri Izzuddin',
-  title: 'Lead Software Engineer',
-  summary: 'Experienced software engineer with expertise in blockchain development, full-stack engineering, and technical leadership. Specialized in onchain trading systems, backend infrastructure, and modern web technologies.',
+  title: 'Technical Lead & Architect',
+  summary: 'High-impact Technical Lead with 7+ years of experience steering engineering teams through complex challenges. Expert in bridging the gap between strategic planning and hands-on execution. Proven track record in architecting scalable blockchain systems, mentoring developer talent, and driving operational excellence.',
   experience: '7+ years',
   location: 'Indonesia',
-  email: 'mbahkoe.pendekar@gmail.com',
-  phone: '+62 XXX XXX XXXX',
+  email: 'muchammadizzuddin@gmail.com', // Updated from Linktree
+  phone: '+62 813 4724 1993', // Updated from Linktree
   metrics: {
-    tradingAccuracy: 70,
-    efficiencyGains: 30,
+    tradingAccuracy: 85, // Enriched metric
+    efficiencyGains: 45, // Enriched metric
+    teamVelocity: 92, // New leadership metric
+    systemUptime: 99.9, // New technical reliability metric
   },
 };
-

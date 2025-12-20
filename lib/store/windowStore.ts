@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-export type WindowType = 'welcome' | 'profile' | 'experience' | 'projects' | 'stats';
+export type WindowType = 'welcome' | 'profile' | 'bounty' | 'logpose' | 'tactical' | 'crew';
 
 export interface Window {
   id: string;
@@ -33,48 +33,55 @@ interface WindowState {
 
 const getWindowTitle = (type: WindowType): string => {
   const titles: Record<WindowType, string> = {
-    welcome: 'Welcome',
-    profile: 'Profile.app',
-    experience: 'Experience.exe',
-    projects: 'Projects.terminal',
-    stats: 'Stats.dashboard',
+    welcome: 'Grand Line Welcome',
+    profile: 'Captain\'s Log',
+    bounty: 'Bounty Posters (Experience)',
+    logpose: 'Log Pose (Projects)',
+    tactical: 'Tactical Map (Architecture)',
+    crew: 'Crew Management (Mentorship)',
   };
   return titles[type];
 };
 
 const getDefaultSize = (type: WindowType): { width: number; height: number } => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const isTablet = typeof window !== 'undefined' && window.innerWidth >= 768 && window.innerWidth < 1024;
-  
-  if (isMobile) {
-    // Mobile: Full screen windows
-    return {
-      width: typeof window !== 'undefined' ? window.innerWidth : 375,
-      height: typeof window !== 'undefined' ? window.innerHeight - 64 : 667, // Account for taskbar
-    };
-  }
-  
-  if (isTablet) {
-    // Tablet: Slightly smaller windows
-    const sizes: Record<WindowType, { width: number; height: number }> = {
-      welcome: { width: 600, height: 500 },
-      profile: { width: 550, height: 450 },
-      experience: { width: 700, height: 550 },
-      projects: { width: 600, height: 450 },
-      stats: { width: 550, height: 450 },
-    };
-    return sizes[type];
-  }
-  
-  // Desktop: Original sizes
+  // Default desktop sizes - will be adjusted on client side if needed
   const sizes: Record<WindowType, { width: number; height: number }> = {
     welcome: { width: 700, height: 600 },
     profile: { width: 600, height: 500 },
-    experience: { width: 800, height: 600 },
-    projects: { width: 700, height: 500 },
-    stats: { width: 600, height: 500 },
+    bounty: { width: 800, height: 600 },
+    logpose: { width: 700, height: 500 },
+    tactical: { width: 600, height: 500 },
+    crew: { width: 600, height: 500 },
   };
   return sizes[type];
+};
+
+const adjustSizeForViewport = (size: { width: number; height: number }, type: WindowType): { width: number; height: number } => {
+  if (typeof window === 'undefined') return size;
+
+  const isMobile = window.innerWidth < 768;
+  const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+
+  if (isMobile) {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight - 64,
+    };
+  }
+
+  if (isTablet) {
+    const tabletSizes: Record<WindowType, { width: number; height: number }> = {
+      welcome: { width: 600, height: 500 },
+      profile: { width: 550, height: 450 },
+      bounty: { width: 700, height: 550 },
+      logpose: { width: 600, height: 450 },
+      tactical: { width: 550, height: 450 },
+      crew: { width: 550, height: 450 },
+    };
+    return tabletSizes[type];
+  }
+
+  return size;
 };
 
 export const useWindowStore = create<WindowState>()(
@@ -86,7 +93,7 @@ export const useWindowStore = create<WindowState>()(
       openWindow: (type: WindowType) => {
         const state = get();
         const existingWindow = state.windows.find((w) => w.type === type);
-        
+
         if (existingWindow) {
           // If window exists, restore and focus it
           set({
@@ -103,29 +110,29 @@ export const useWindowStore = create<WindowState>()(
         // Create new window with cascade effect
         const windowCount = state.windows.length;
         const offset = 30;
-        const { width, height } = getDefaultSize(type);
-        
+        const baseSize = getDefaultSize(type);
+        const { width, height } = adjustSizeForViewport(baseSize, type);
+
         // Center welcome window on first load
-        const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
         let x = 100 + windowCount * offset;
         let y = 100 + windowCount * offset;
-        
-        if (type === 'welcome' && windowCount === 0) {
-          // Center the welcome window
-          if (typeof window !== 'undefined') {
+
+        if (typeof window !== 'undefined') {
+          const isMobile = window.innerWidth < 768;
+
+          if (type === 'welcome' && windowCount === 0) {
+            // Center the welcome window
             x = (window.innerWidth - width) / 2;
             y = (window.innerHeight - height) / 2;
           }
-        }
-        
-        // Mobile: Always center windows
-        if (isMobile) {
-          if (typeof window !== 'undefined') {
+
+          // Mobile: Always center windows
+          if (isMobile) {
             x = 0;
             y = 0;
           }
         }
-        
+
         const newWindow: Window = {
           id: `${type}-${Date.now()}`,
           type,
@@ -220,8 +227,8 @@ export const useWindowStore = create<WindowState>()(
         // Fallback for SSR - return a no-op storage
         return {
           getItem: () => null,
-          setItem: () => {},
-          removeItem: () => {},
+          setItem: () => { },
+          removeItem: () => { },
         } as any;
       }),
       partialize: (state) => ({ windows: state.windows }),

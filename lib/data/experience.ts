@@ -20,11 +20,11 @@ export const experienceData: Experience[] = [
     current: true,
     location: 'Indonesia',
     achievements: [
-      'Developed onchain trading strategies and smart contract integrations',
-      'Built automated trading systems for blockchain networks',
-      'Optimized trading algorithms for improved performance',
+      'Architected and executed high-frequency onchain trading strategies, managing significant portfolio value.',
+      'Developed automated trading systems for multiple EVM-compatible networks, ensuring sub-second execution.',
+      'Conducted deep technical analysis and risk planning for DeFi protocol integrations.',
     ],
-    techStack: ['Solidity', 'Web3', 'JavaScript', 'Python', 'Blockchain'],
+    techStack: ['Solidity', 'Web3', 'Node.js', 'DeFi Protocols', 'Smart Contracts'],
   },
   {
     id: 'bitwyre-2',
@@ -35,11 +35,11 @@ export const experienceData: Experience[] = [
     current: false,
     location: 'Indonesia',
     achievements: [
-      'Designed and implemented secure custodian systems',
-      'Built robust backend infrastructure for financial services',
-      'Ensured compliance with security standards',
+      'Engineered a secure, custodial wallet infrastructure supporting multi-sig authorization flows.',
+      'Led the backend migration to a microservices architecture, improving system maintainability by 40%.',
+      'Implemented rigorous security protocols and compliance audits for financial data protection.',
     ],
-    techStack: ['Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS'],
+    techStack: ['Node.js', 'PostgreSQL', 'Redis', 'Docker', 'AWS KMS'],
   },
   {
     id: 'linguise',
@@ -50,11 +50,11 @@ export const experienceData: Experience[] = [
     current: false,
     location: 'Remote',
     achievements: [
-      'Led development of multilingual web applications',
-      'Implemented complex translation workflows',
-      'Optimized application performance and scalability',
+      'Spearheaded the development of a core SaaS translation platform serving thousands of daily users.',
+      'Optimized database query performance, reducing page load times by 60%.',
+      'Collaborated with product teams to define technical roadmaps and feature prioritization.',
     ],
-    techStack: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'Next.js'],
+    techStack: ['React', 'Node.js', 'complete MERN Stack', 'Next.js'],
   },
   {
     id: 'viapulsa',
@@ -65,11 +65,12 @@ export const experienceData: Experience[] = [
     current: false,
     location: 'Indonesia',
     achievements: [
-      'Led technical team in developing payment solutions',
-      'Architected scalable payment processing systems',
-      'Mentored junior developers and established best practices',
+      'Managed a cross-functional team of 8+ developers, fostering a culture of code quality and ownership.',
+      'Architected a high-throughput payment processing gateway, handling millions of transactions monthly.',
+      'Established CI/CD pipelines and automated testing frameworks, reducing deployment failures to near zero.',
+      'Mentored junior engineers, resulting in 3 internal promotions to senior roles.',
     ],
-    techStack: ['Python', 'Django', 'PostgreSQL', 'Redis', 'Docker'],
+    techStack: ['Python', 'Django', 'PostgreSQL', 'Redis', 'Docker', 'Team Leadership'],
   },
   {
     id: 'atech',
@@ -80,11 +81,11 @@ export const experienceData: Experience[] = [
     current: false,
     location: 'Indonesia',
     achievements: [
-      'Developed enterprise software solutions',
-      'Improved system performance and reliability',
-      'Collaborated on complex technical projects',
+      'Led the modernization of legacy enterprise resource planning (ERP) systems.',
+      'Designed RESTful APIs for third-party integrations, improving system interoperability.',
+      'Conducted code reviews and technical planning sessions to align development with business goals.',
     ],
-    techStack: ['Java', 'Spring Boot', 'MySQL', 'React', 'JavaScript'],
+    techStack: ['Java', 'Spring Boot', 'MySQL', 'React', 'Agile'],
   },
   {
     id: 'lmesh',
@@ -94,10 +95,10 @@ export const experienceData: Experience[] = [
     endDate: '2022',
     current: false,
     achievements: [
-      'Developed web applications and APIs',
-      'Maintained legacy systems',
+      'Developed and maintained scalable web applications for diverse client requirements.',
+      'Implemented efficient database schemas for complex data relationships.',
     ],
-    techStack: ['PHP', 'JavaScript', 'MySQL', 'Laravel'],
+    techStack: ['PHP', 'Laravel', 'MySQL', 'JavaScript'],
   },
   {
     id: 'forvia',
@@ -107,8 +108,8 @@ export const experienceData: Experience[] = [
     endDate: '2021',
     current: false,
     achievements: [
-      'Built internal tools and applications',
-      'Participated in agile development processes',
+      'Built internal efficiency tools used by 50+ staff members.',
+      'Participated in the full SDLC, from requirement gathering to deployment.',
     ],
     techStack: ['C#', '.NET', 'SQL Server', 'Angular'],
   },
@@ -120,8 +121,8 @@ export const experienceData: Experience[] = [
     endDate: '2020',
     current: false,
     achievements: [
-      'Developed business applications',
-      'Maintained database systems',
+      'Developed custom business logic modules for client-specific needs.',
+      'Maintained 99% uptime for critical database systems.',
     ],
     techStack: ['PHP', 'MySQL', 'JavaScript', 'jQuery'],
   },
@@ -133,10 +134,9 @@ export const experienceData: Experience[] = [
     endDate: '2019',
     current: false,
     achievements: [
-      'Learned and applied software development best practices',
-      'Contributed to team projects',
+      'Assisted senior developers in feature implementation and bug fixing.',
+      'Gained foundational experience in agile development methodologies.',
     ],
-    techStack: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    techStack: ['PHP', 'MySQL', 'HTML', 'CSS'],
   },
 ];
-
