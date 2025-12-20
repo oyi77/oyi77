@@ -43,6 +43,30 @@ const getWindowTitle = (type: WindowType): string => {
 };
 
 const getDefaultSize = (type: WindowType): { width: number; height: number } => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const isTablet = typeof window !== 'undefined' && window.innerWidth >= 768 && window.innerWidth < 1024;
+  
+  if (isMobile) {
+    // Mobile: Full screen windows
+    return {
+      width: typeof window !== 'undefined' ? window.innerWidth : 375,
+      height: typeof window !== 'undefined' ? window.innerHeight - 64 : 667, // Account for taskbar
+    };
+  }
+  
+  if (isTablet) {
+    // Tablet: Slightly smaller windows
+    const sizes: Record<WindowType, { width: number; height: number }> = {
+      welcome: { width: 600, height: 500 },
+      profile: { width: 550, height: 450 },
+      experience: { width: 700, height: 550 },
+      projects: { width: 600, height: 450 },
+      stats: { width: 550, height: 450 },
+    };
+    return sizes[type];
+  }
+  
+  // Desktop: Original sizes
   const sizes: Record<WindowType, { width: number; height: number }> = {
     welcome: { width: 700, height: 600 },
     profile: { width: 600, height: 500 },
@@ -82,6 +106,7 @@ export const useWindowStore = create<WindowState>()(
         const { width, height } = getDefaultSize(type);
         
         // Center welcome window on first load
+        const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
         let x = 100 + windowCount * offset;
         let y = 100 + windowCount * offset;
         
@@ -90,6 +115,14 @@ export const useWindowStore = create<WindowState>()(
           if (typeof window !== 'undefined') {
             x = (window.innerWidth - width) / 2;
             y = (window.innerHeight - height) / 2;
+          }
+        }
+        
+        // Mobile: Always center windows
+        if (isMobile) {
+          if (typeof window !== 'undefined') {
+            x = 0;
+            y = 0;
           }
         }
         

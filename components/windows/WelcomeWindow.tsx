@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import { Sparkles, Code, Rocket, Heart } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import Character from '@/components/cartoon/Character';
 import Illustration from '@/components/cartoon/Illustration';
+import { Luffy } from '@/components/cartoon/OnePieceCharacters';
 
 export default function WelcomeWindow() {
   const [displayedText, setDisplayedText] = useState('');
@@ -35,21 +35,21 @@ export default function WelcomeWindow() {
   return (
     <div className="p-8 text-text-dark h-full flex flex-col items-center justify-center relative overflow-hidden">
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cartoon-orange/10 via-cartoon-yellow/10 to-cartoon-green/10 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-br from-onepiece-red/10 via-onepiece-gold/10 to-onepiece-blue/10 animate-pulse" />
       
-      {/* Character greeting */}
+      {/* Luffy greeting - Hidden on mobile */}
       <motion.div
-        className="absolute top-8 right-8"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
+        className="hidden md:block absolute top-4 md:top-8 right-4 md:right-8"
+        initial={{ opacity: 0, scale: 0, rotate: -180 }}
+        animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
       >
-        <Character variant="waving" size="lg" />
+        <Luffy variant="waving" size="lg" />
       </motion.div>
       
-      {/* Floating illustrations */}
+      {/* Floating illustrations - Hidden on mobile */}
       <motion.div
-        className="absolute top-4 left-4"
+        className="hidden md:block absolute top-4 left-4"
         animate={{ rotate: [0, 360], scale: [1, 1.2, 1] }}
         transition={{ duration: 4, repeat: Infinity }}
       >
@@ -57,7 +57,7 @@ export default function WelcomeWindow() {
       </motion.div>
       
       <motion.div
-        className="absolute bottom-4 right-4"
+        className="hidden md:block absolute bottom-4 right-4"
         animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
         transition={{ duration: 3, repeat: Infinity }}
       >
@@ -96,12 +96,12 @@ export default function WelcomeWindow() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            <span className="cartoon-gradient bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+            <span className="bg-gradient-to-r from-onepiece-red via-onepiece-gold to-onepiece-blue bg-clip-text text-transparent">
               {displayedText}
             </span>
             {displayedText.length < fullText.length && (
-              <span className="inline-block w-2 h-10 bg-cartoon-orange ml-2 animate-cursor-blink rounded" />
+              <span className="inline-block w-2 h-10 bg-onepiece-red ml-2 animate-cursor-blink rounded" />
             )}
           </h1>
         </motion.div>
@@ -111,9 +111,9 @@ export default function WelcomeWindow() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl text-text-dark font-semibold"
+          className="text-base sm:text-lg md:text-xl text-text-dark font-semibold mb-6 md:mb-8"
         >
-          I&apos;m <span className="text-cartoon-orange font-bold">Muchammad Fikri Izzuddin</span>, a Lead Software Engineer
+          I&apos;m <span className="text-onepiece-red font-bold">Muchammad Fikri Izzuddin</span>, a Lead Software Engineer
         </motion.p>
 
         {/* Features grid */}
@@ -122,7 +122,7 @@ export default function WelcomeWindow() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mt-8 md:mt-12"
           >
             {features.map((feature, index) => (
               <motion.div
@@ -130,11 +130,11 @@ export default function WelcomeWindow() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                className="bg-white/90 rounded-2xl p-6 hover:cartoon-shadow border-4 border-cartoon-yellow hover:border-cartoon-orange transition-all duration-300 group cursor-pointer"
+                className="bg-white/90 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 hover:cartoon-shadow border-2 md:border-4 border-onepiece-gold hover:border-onepiece-red transition-all duration-300 group cursor-pointer"
               >
-                <div className="flex flex-col items-center gap-3">
+                <div className="flex flex-col items-center gap-4">
                   <motion.div 
-                    className="text-cartoon-orange group-hover:text-cartoon-purple transition-colors"
+                    className="text-onepiece-red group-hover:text-onepiece-blue transition-colors"
                     whileHover={{ scale: 1.2, rotate: [0, -10, 10, 0] }}
                   >
                     {feature.icon}
@@ -154,15 +154,15 @@ export default function WelcomeWindow() {
             transition={{ duration: 0.6, delay: 1 }}
             className="mt-8"
           >
-            <p className="text-sm text-text-dark/70 mb-4 font-medium">
-              Click on the desktop icons to explore my portfolio
+            <p className="text-sm text-text-dark/70 mb-6 font-medium">
+              Double-click on the desktop icons to explore my portfolio
             </p>
-            <div className="flex items-center justify-center gap-2 text-cartoon-green">
+            <div className="flex items-center justify-center gap-3 text-onepiece-blue">
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
               >
-                <Heart className="w-5 h-5 fill-cartoon-pink text-cartoon-pink" />
+                <Heart className="w-5 h-5 fill-onepiece-red text-onepiece-red" />
               </motion.div>
               <span className="text-sm font-semibold text-text-dark">Built with Next.js, Framer Motion & Tailwind CSS</span>
             </div>

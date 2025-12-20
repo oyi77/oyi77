@@ -15,6 +15,16 @@ const config: Config = {
           magenta: "#ff006e",
           green: "#39ff14",
         },
+        onepiece: {
+          red: "#C8102E", // Straw Hat red
+          blue: "#1E3A8A", // Ocean blue
+          gold: "#FFD700", // Treasure gold
+          brown: "#8B4513", // Wood/ship brown
+          white: "#FFFFFF", // Jolly Roger white
+          black: "#000000", // Jolly Roger black
+          sky: "#87CEEB", // Sky blue
+          ocean: "#006994", // Deep ocean
+        },
         cartoon: {
           orange: "#FF6B35",
           yellow: "#FFD93D",

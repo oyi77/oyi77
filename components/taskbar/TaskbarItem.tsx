@@ -34,17 +34,17 @@ export default function TaskbarItem({ window }: TaskbarItemProps) {
     <motion.button
       onClick={handleClick}
       type="button"
-      className={`flex items-center gap-2 px-4 py-2 rounded-xl transition-all relative z-50 cursor-pointer font-semibold ${
+      className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all relative z-50 cursor-pointer font-semibold ${
         window.minimized
           ? 'bg-white/30 hover:bg-white/40 text-white/70'
-          : 'bg-white/50 hover:bg-white/70 text-cartoon-purple border-2 border-white/50'
+          : 'bg-white/50 hover:bg-white/70 text-onepiece-blue border-2 border-white/50'
       }`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onMouseEnter={() => focusWindow(window.id)}
     >
-      <div className="text-cartoon-purple">{iconMap[window.type]}</div>
-      <span className="text-xs">{window.title}</span>
+      <div className="text-onepiece-blue flex-shrink-0">{iconMap[window.type]}</div>
+      <span className="text-[10px] md:text-xs truncate max-w-[80px] md:max-w-none">{window.title}</span>
     </motion.button>
   );
 }

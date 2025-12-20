@@ -73,33 +73,33 @@ export default function Terminal({ onCommand, prompt = '$' }: TerminalProps) {
   };
 
   return (
-    <div className="h-full flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 font-mono text-sm border-4 border-cartoon-orange rounded-b-xl">
+    <div className="h-full flex flex-col bg-gradient-to-br from-gray-900 to-gray-800 font-mono text-sm border-4 border-onepiece-red rounded-b-xl">
       <div
         ref={outputRef}
-        className="flex-1 overflow-y-auto p-4 space-y-1 text-cartoon-green"
+        className="flex-1 overflow-y-auto p-4 space-y-1 text-onepiece-gold"
         style={{ maxHeight: 'calc(100% - 60px)' }}
       >
         {history.map((item, index) => (
-          <div key={index} className={item.type === 'input' ? 'text-cartoon-blue' : 'text-cartoon-green'}>
-            {item.type === 'input' && <span className="text-cartoon-yellow font-bold">{prompt} </span>}
+          <div key={index} className={item.type === 'input' ? 'text-onepiece-blue' : 'text-onepiece-gold'}>
+            {item.type === 'input' && <span className="text-onepiece-gold font-bold">{prompt} </span>}
             {item.content}
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit} className="border-t-4 border-cartoon-orange p-4 bg-gray-900/50">
+      <form onSubmit={handleSubmit} className="border-t-4 border-onepiece-red p-4 bg-gray-900/50">
         <div className="flex items-center gap-2">
-          <span className="text-cartoon-yellow font-bold">{prompt}</span>
+          <span className="text-onepiece-gold font-bold">{prompt}</span>
           <input
             ref={inputRef}
             type="text"
             value={currentInput}
             onChange={(e) => setCurrentInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent outline-none text-cartoon-green caret-cartoon-yellow font-semibold"
+            className="flex-1 bg-transparent outline-none text-onepiece-gold caret-onepiece-gold font-semibold"
             autoFocus
             autoComplete="off"
           />
-          <span className="w-2 h-5 bg-cartoon-yellow animate-cursor-blink rounded" />
+          <span className="w-2 h-5 bg-onepiece-gold animate-cursor-blink rounded" />
         </div>
       </form>
     </div>

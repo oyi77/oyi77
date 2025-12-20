@@ -52,42 +52,64 @@ export default function DesktopIcon({ type, label, icon, x = 0, y = 0 }: Desktop
     setTimeout(() => setIsSelected(false), 200);
   };
 
+  // Handle touch for mobile (single tap = double click on mobile)
+  const handleTouch = (e: React.TouchEvent) => {
+    e.preventDefault();
+    const target = e.currentTarget;
+    const now = Date.now();
+    const lastTap = (target as any).lastTap || 0;
+    const timeDiff = now - lastTap;
+    
+    if (timeDiff < 300 && timeDiff > 0) {
+      // Double tap detected
+      handleDoubleClick(e as any);
+    } else {
+      handleClick(e as any);
+    }
+    (target as any).lastTap = now;
+  };
+
   return (
     <motion.div
-      className="flex flex-col items-center gap-2 cursor-pointer select-none group relative z-10"
+      className="flex flex-col items-center gap-2 md:gap-3 cursor-pointer select-none group relative z-10"
       style={{ position: 'absolute', left: x, top: y }}
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
-      whileHover={{ scale: 1.1 }}
+      onTouchEnd={handleTouch}
+      whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.1 : 1 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
       <motion.div
-        className={`p-4 rounded-2xl transition-all duration-300 cartoon-shadow ${
+        className={`p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl transition-all duration-300 cartoon-shadow ${
           isSelected
-            ? 'bg-cartoon-orange/30 border-4 border-cartoon-orange'
-            : 'bg-white/80 group-hover:bg-white border-4 border-cartoon-yellow group-hover:border-cartoon-orange'
+            ? 'bg-onepiece-red/30 border-2 md:border-4 border-onepiece-red'
+            : 'bg-white/80 group-hover:bg-white border-2 md:border-4 border-onepiece-gold group-hover:border-onepiece-red'
         }`}
-        whileHover={{ scale: 1.15, rotate: [0, -5, 5, 0] }}
+        whileHover={{ scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.15 : 1, rotate: typeof window !== 'undefined' && window.innerWidth >= 768 ? [0, -5, 5, 0] : 0 }}
         whileTap={{ scale: 0.9 }}
         animate={isSelected ? { y: [0, -5, 0] } : {}}
       >
-        <div className="text-cartoon-orange group-hover:text-cartoon-purple transition-colors">
+        <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
           {icon}
         </div>
       </motion.div>
-      <motion.span
-        className={`text-sm font-bold text-text-dark px-3 py-1.5 rounded-full transition-all ${
-          isSelected
-            ? 'bg-cartoon-orange text-white'
-            : 'bg-white/90 group-hover:bg-cartoon-yellow text-cartoon-purple'
-        }`}
-        animate={isSelected ? { scale: [1, 1.1, 1] } : {}}
-      >
-        {label}
-      </motion.span>
+      <motion.div className="flex flex-col items-center gap-0.5 md:gap-1">
+        <motion.span
+          className={`text-xs md:text-sm font-bold text-text-dark px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 rounded-full transition-all ${
+            isSelected
+              ? 'bg-onepiece-red text-white'
+              : 'bg-white/90 group-hover:bg-onepiece-gold text-onepiece-blue'
+          }`}
+          animate={isSelected ? { scale: [1, 1.1, 1] } : {}}
+        >
+          {label}
+        </motion.span>
+        <span className="text-[10px] md:text-xs text-text-dark/60 font-medium hidden md:block">Double-click to open</span>
+        <span className="text-[10px] text-text-dark/60 font-medium md:hidden">Tap to open</span>
+      </motion.div>
     </motion.div>
   );
 }

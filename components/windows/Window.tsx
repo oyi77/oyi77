@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion, useDragControls, PanInfo } from 'framer-motion';
+import { motion, useDragControls, PanInfo, AnimatePresence } from 'framer-motion';
 import { X, Minus, Square, Maximize2 } from 'lucide-react';
 import { useWindowStore, Window as WindowType } from '@/lib/store/windowStore';
+import WindowMenu from './WindowMenu';
 
 interface WindowProps {
   window: WindowType;
@@ -11,13 +12,14 @@ interface WindowProps {
 }
 
 const SNAP_THRESHOLD = 50;
-const MIN_WIDTH = 400;
-const MIN_HEIGHT = 300;
+const MIN_WIDTH = typeof window !== 'undefined' && window.innerWidth < 768 ? 320 : 400;
+const MIN_HEIGHT = typeof window !== 'undefined' && window.innerWidth < 768 ? 400 : 300;
 
 export default function Window({ window: win, children }: WindowProps) {
   const { closeWindow, minimizeWindow, maximizeWindow, focusWindow, updatePosition, updateSize } = useWindowStore();
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   const dragControls = useDragControls();
   const windowRef = useRef<HTMLDivElement>(null);
   const resizeHandleRef = useRef<HTMLDivElement>(null);
@@ -31,6 +33,21 @@ export default function Window({ window: win, children }: WindowProps) {
   const handleDragStart = () => {
     setIsDragging(true);
     focusWindow(win.id);
+  };
+
+  const handleDrag = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    if (win.maximized) return;
+    
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    if (isMobile) return; // Disable dragging on mobile
+    
+    const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+    const viewportHeight = typeof window !== 'undefined' ? window.innerHeight : 1080;
+    
+    const newX = Math.max(0, Math.min(win.x + info.delta.x, viewportWidth - win.width));
+    const newY = Math.max(0, Math.min(win.y + info.delta.y, viewportHeight - win.height));
+    
+    updatePosition(win.id, newX, newY);
   };
 
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
@@ -132,13 +149,19 @@ export default function Window({ window: win, children }: WindowProps) {
       style={{ zIndex: win.zIndex }}
     >
       <motion.div
-        className="bg-white/95 backdrop-blur-md rounded-2xl overflow-hidden pointer-events-auto cartoon-shadow border-4 border-cartoon-orange"
+        className="bg-white/95 backdrop-blur-md rounded-2xl overflow-hidden pointer-events-auto cartoon-shadow border-4 border-onepiece-red"
         style={{
-          ...windowStyle,
           position: 'absolute',
+          left: win.maximized ? 0 : (typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : `${win.x}px`),
+          top: win.maximized ? 0 : (typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : `${win.y}px`),
+          width: win.maximized || (typeof window !== 'undefined' && window.innerWidth < 768) ? '100vw' : `${win.width}px`,
+          height: win.maximized || (typeof window !== 'undefined' && window.innerWidth < 768) ? 'calc(100vh - 64px)' : `${win.height}px`,
         }}
         initial={{ scale: 0.8, opacity: 0, y: 50 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
+        animate={{ 
+          scale: 1, 
+          opacity: 1,
+        }}
         exit={{ scale: 0.8, opacity: 0, y: 50 }}
         transition={{ 
           type: "spring",
@@ -150,26 +173,47 @@ export default function Window({ window: win, children }: WindowProps) {
       >
         {/* Title Bar */}
         <motion.div
-          className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-cartoon-orange to-cartoon-yellow border-b-4 border-cartoon-purple cursor-move select-none rounded-t-xl"
-          onPointerDown={(e) => {
-            if (!win.maximized) {
-              dragControls.start(e);
-            }
-          }}
-          drag={!win.maximized}
+          className="flex items-center justify-between px-4 md:px-6 py-3 md:py-4 bg-gradient-to-r from-onepiece-red to-onepiece-gold border-b-4 border-onepiece-blue cursor-move select-none rounded-t-xl"
+          drag={!win.maximized && typeof window !== 'undefined' && window.innerWidth >= 768}
           dragControls={dragControls}
           dragMomentum={false}
+          onDrag={handleDrag}
           onDragStart={handleDragStart}
           onDragEnd={handleDragEnd}
-          dragConstraints={win.maximized ? false : {
+          dragConstraints={win.maximized || (typeof window !== 'undefined' && window.innerWidth < 768) ? false : {
             left: 0,
             top: 0,
             right: typeof window !== 'undefined' ? window.innerWidth - win.width : 0,
             bottom: typeof window !== 'undefined' ? window.innerHeight - win.height : 0,
           }}
+          onPointerDown={(e) => {
+            if (!win.maximized && typeof window !== 'undefined' && window.innerWidth >= 768) {
+              e.stopPropagation();
+              dragControls.start(e);
+            }
+          }}
         >
-          <div className="flex items-center gap-2">
-            <span className="text-sm font-bold text-white drop-shadow-md">{win.title}</span>
+          <div className="flex items-center gap-2 md:gap-3 relative">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setShowMenu(!showMenu);
+              }}
+              className="p-1.5 hover:bg-white/20 rounded-lg transition-colors"
+              aria-label="Window Menu"
+              type="button"
+            >
+              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+              </svg>
+            </button>
+            <AnimatePresence>
+              {showMenu && (
+                <WindowMenu window={win} onClose={() => setShowMenu(false)} />
+              )}
+            </AnimatePresence>
+            <span className="text-xs md:text-sm font-bold text-white drop-shadow-md truncate">{win.title}</span>
           </div>
           <div className="flex items-center gap-1 relative z-50">
             <button
@@ -229,9 +273,9 @@ export default function Window({ window: win, children }: WindowProps) {
 
         {/* Window Content */}
         <div
-          className="bg-white/90 overflow-auto"
+          className="bg-white/90 overflow-auto p-4 md:p-6 lg:p-8"
           style={{
-            height: win.maximized ? 'calc(100vh - 56px)' : `${win.height - 56}px`,
+            height: win.maximized ? 'calc(100vh - 64px)' : (typeof window !== 'undefined' && window.innerWidth < 768 ? 'calc(100vh - 56px)' : `${win.height - 64}px`),
           }}
         >
           {children}
