@@ -1,102 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Paijo (Oyi77)</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="error-container">
-        <div class="error-content">
-            <div class="error-icon">
-                <i class="fas fa-exclamation-triangle"></i>
-            </div>
-            <h1 class="error-title">404</h1>
-            <h2 class="error-subtitle">Page Not Found</h2>
-            <p class="error-description">
-                Oops! The page you're looking for doesn't exist. 
-                It might have been moved, deleted, or you entered the wrong URL.
-            </p>
-            <div class="error-actions">
-                <a href="/" class="btn btn-primary">
-                    <i class="fas fa-home"></i>
-                    Go Home
-                </a>
-                <a href="/#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i>
-                    Contact Me
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <style>
-        .error-container {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gradient-primary);
-            padding: 2rem;
-        }
-
-        .error-content {
-            text-align: center;
-            color: white;
-            max-width: 600px;
-        }
-
-        .error-icon {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            animation: bounce 2s infinite;
-        }
-
-        .error-title {
-            font-size: 6rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .error-subtitle {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-        }
-
-        .error-description {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-
-        .error-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 768px) {
-            .error-title {
-                font-size: 4rem;
-            }
-            
-            .error-subtitle {
-                font-size: 1.5rem;
-            }
-            
-            .error-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</body>
-</html> 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 0;
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

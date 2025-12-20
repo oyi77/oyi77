@@ -1,180 +1,125 @@
+# Windows OS-Themed Portfolio
 
-<h1 align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=2000&pause=1000&center=true&vCenter=true&repeat=false&width=435&lines=Hello+There+%F0%9F%91%8B!;%F0%9F%A4%96I+am+Paijo+a.k.a+Oyi77%F0%9F%A4%96" alt="Typing SVG" /></a>
-</h1>
-<p align="center">
-  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
-  <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;5%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=500&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" /></a>
-</p>
+An interactive portfolio website built with Next.js 14+ that mimics a Windows desktop environment. Features draggable windows, a terminal emulator, and a modern glassmorphic design with neon accents.
 
+## Features
 
+- **Desktop Environment**: Grid-based background with desktop icons
+- **Window System**: Draggable, resizable windows with minimize/maximize/close controls
+- **Terminal Emulator**: Interactive terminal with command parser
+- **Profile Window**: Professional summary with animated metrics
+- **Experience Window**: Timeline view of work experience with collapsible sections
+- **Projects Terminal**: Command-line interface to browse projects
+- **Stats Dashboard**: Visual statistics with animated charts
+- **Taskbar**: Bottom dock with active window indicators and real-time clock
+- **Responsive Design**: Adapts to desktop, tablet, and mobile devices
 
-![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77)
+## Tech Stack
 
-## 🎓 I'm a IT Professional & Software Engineer
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: Tailwind CSS with custom neon theme
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **State Management**: Zustand
+- **Charts**: Recharts
+- **TypeScript**: Full type safety
 
-- 🔭 I’m currently works as TechLead.
-- 🌱 I’m currently learning Agile & Python. 
-- 👯 I’m looking to collaborate with anyone on any project.
-- 💬 Ask me anything about from <a href="https://github.com/oyi77/oyi77/issues" title="Issues">Here</a>
-- 🤖 I am a [Python](https://www.python.org/) Bot & ML Specialist. How may AI help you?
-- 🌐 Website : [Tutorial Work](https://tutorialwork.my.id)
-- 📷 Instagram : [@jasatugasyuk](https://instagram.com/jasatugasyuk)
+## Getting Started
 
-## :email: Find me on:
+### Prerequisites
 
-<!--
-[<img align="left" alt="oyi77" width="40px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]
-[<img align="left" alt="oyi77 | LinkedIn" width="40px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="oyi77 | Mail" width="40px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />][mail]
--->
+- Node.js 20+
+- npm or yarn
 
-<p align="center">
-<!--  <a href="https://www.charalambosioannou.tech" target="_blank" rel="noopener noreferrer"> <img src="https://cdn-icons-png.flaticon.com/512/841/841364.png" alt="Python" height="40" style="vertical-align:top; margin:4px"> </a> -->
- <a href="https://www.linkedin.com/in/fikriizzuddin/" target="_blank" rel="noopener noreferrer"> <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Python" height="40" style="vertical-align:top; margin:4px"></a>
- <a href="mailto:mbahkoe.pendekar@gmail.com"> <img src="https://cdn-icons-png.flaticon.com/512/726/726623.png" alt="Python" height="40" style="vertical-align:top; margin:4px"></a> 
-<!--   <a href="https://dev.to/CharalambosIoannou" target="_blank" rel="noopener noreferrer"> <img src="https://img.shields.io/badge/DEV.TO-%230A0A0A.svg?&style=for-the-badge&logo=dev-dot-to&logoColor=white" alt="Python" height="40" style="vertical-align:top; margin:4px"> </a> -->
-</p>
+### Installation
 
-<br />
-
-
-## 🧰 Languages and Tools:
-<p align="center">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" alt="NodeJS" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL" height="40" style="vertical-align:top; margin:4px">
- <img src="https://cdn-icons-png.flaticon.com/512/5969/5969346.png" alt="Unity" height="40" style="vertical-align:top; margin:4px">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968866.png" alt="Github" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" alt="Git" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png" alt="Terminal" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png" alt="Linux" height="40" style="vertical-align:top; margin:4px" alt="Windows" height="40" style="vertical-align:top; margin:4px">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/windows/windows.png" alt="Windows" height="40" style="vertical-align:top; margin:4px">
-
-</p>
-
-<br />
-
-
-
-
- <h2>:trophy: My Github Stats and Activity</h2>
-
-  <h3 align="center">🔥 Streak Stats</h3>
-  <div align="center">
-  <p>
-    <a href="https://github.com/DenverCoder1/github-readme-streak-stats">
-      <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="oyi77's streak" src="https://streak-stats.demolab.com/?user=oyi77&theme=monokai-metallian&hide_border=true"/>
-    </a>
-  </p>
-  </div>
-  
-  <h3 align="center">🏆 Oyi77 lab's Github Tier</h3>
-<div align="center">
-<a href="https://app.dooboo.io/oyi77"><img src="https://server.dooboo.io/github-stats/oyi77" width="400" /></a>
-</div>
-  <h3 align="center">💻 GitHub Profile Stats</h3>
-
-  <!-- https://github.com/anuraghazra/github-readme-stats -->
-<div align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="oyi77's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=oyi77&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
-  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="DenverCoder1's Top Languages" src="https://denvercoder1-github-readme-stats.vercel.app/api/top-langs/?username=oyi77&langs_count=8&layout=compact&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866&hide=Jupyter%20Notebook,Roff" height="192px"/></a>
-  <br/>
-</div>
-  <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
-  
-  <!-- https://github.com/ashutosh00710/github-readme-activity-graph -->
-
-  <a href="https://github.com/ashutosh00710/github-readme-activity-graph"><img alt="DenverCoder1's Activity Graph" src="https://github-readme-activity-graph.cyclic.app/graph/?username=oyi77&bg_color=1F222E&color=F8D866&line=F85D7F&point=FFFFFF&hide_border=true" /></a>
-
-  <h2>⚡ Recent GitHub Activity</h2>
-
-  <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-2. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-3. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-4. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-<!--RECENT_ACTIVITY:end-->
-  
-  <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C721%20hrs%203%20mins-blue)
-
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-20.4%20million%20lines%20of%20code-blue)
-
-**🐱 My GitHub Data** 
-
-> 📦 673.4 kB Used in GitHub's Storage 
- > 
-> 🏆 8,464 Contributions in the Year 2025
- > 
-> 💼 Opted to Hire
- > 
-> 📜 73 Public Repositories 
- > 
-> 🔑 20 Private Repositories 
- > 
-**I'm a Night 🦉** 
-
-```text
-🌞 Morning                5147 commits        ███░░░░░░░░░░░░░░░░░░░░░░   11.96 % 
-🌆 Daytime                12221 commits       ███████░░░░░░░░░░░░░░░░░░   28.40 % 
-🌃 Evening                15012 commits       █████████░░░░░░░░░░░░░░░░   34.88 % 
-🌙 Night                  10654 commits       ██████░░░░░░░░░░░░░░░░░░░   24.76 % 
-```
-📅 **I'm Most Productive on Wednesday** 
-
-```text
-Monday                   6889 commits        ████░░░░░░░░░░░░░░░░░░░░░   16.01 % 
-Tuesday                  7552 commits        ████░░░░░░░░░░░░░░░░░░░░░   17.55 % 
-Wednesday                8143 commits        █████░░░░░░░░░░░░░░░░░░░░   18.92 % 
-Thursday                 6099 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.17 % 
-Friday                   4870 commits        ███░░░░░░░░░░░░░░░░░░░░░░   11.32 % 
-Saturday                 3960 commits        ██░░░░░░░░░░░░░░░░░░░░░░░   09.20 % 
-Sunday                   5521 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.83 % 
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd oyi77-1
 ```
 
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Jakarta
-
-💬 Programming Languages: 
-Python                   2 hrs 16 mins       ██████░░░░░░░░░░░░░░░░░░░   22.06 % 
-JavaScript               2 hrs               █████░░░░░░░░░░░░░░░░░░░░   19.44 % 
-Markdown                 1 hr 49 mins        ████░░░░░░░░░░░░░░░░░░░░░   17.69 % 
-PHP                      1 hr 29 mins        ████░░░░░░░░░░░░░░░░░░░░░   14.49 % 
-JSON                     1 hr 2 mins         ███░░░░░░░░░░░░░░░░░░░░░░   10.11 % 
-
-🐱‍💻 Projects: 
-solxdap                  3 hrs 30 mins       ████████░░░░░░░░░░░░░░░░░   33.97 % 
-snap-perpetual-trading   3 hrs 22 mins       ████████░░░░░░░░░░░░░░░░░   32.66 % 
-mighty-bear-idGenerator  3 hrs 9 mins        ████████░░░░░░░░░░░░░░░░░   30.63 % 
-admin                    13 mins             █░░░░░░░░░░░░░░░░░░░░░░░░   02.12 % 
-bitwyre-backend-otc-porta1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.32 % 
-
-💻 Operating System: 
-Mac                      10 hrs 18 mins      █████████████████████████   100.00 % 
+2. Install dependencies:
+```bash
+npm install
 ```
 
-**Timeline**
+3. Run the development server:
+```bash
+npm run dev
+```
 
-![Lines of Code chart](https://raw.githubusercontent.com/oyi77/oyi77/main/assets/bar_graph.png)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Building for Production
 
- Last Updated on 28/10/2025 18:47:59 UTC
-<!--END_SECTION:waka-->
+```bash
+npm run build
+```
 
+This generates a static export in the `out` directory, ready for deployment to GitHub Pages or any static hosting service.
 
+## Deployment
 
+### GitHub Pages
 
-[linkedin]: https://linkedin.com/in/fikriizzuddin/
-[mail]: mailto:mbahkoe.pendekar@gmail.com
+1. Configure the repository settings to use GitHub Pages
+2. Set the base path in `.env.local`:
+```
+NEXT_PUBLIC_BASE_PATH=/repository-name
+```
 
+3. The GitHub Actions workflow (`.github/workflows/deploy.yml`) will automatically build and deploy on push to main.
 
+### Manual Deployment
 
+1. Build the project:
+```bash
+npm run build
+```
 
+2. Deploy the `out` directory to your hosting service.
+
+## Project Structure
+
+```
+/app
+  /(desktop)
+    page.tsx              # Main desktop view
+/components
+  /desktop                # Desktop grid and icons
+  /windows                # Window components
+  /taskbar                # Taskbar components
+  /terminal               # Terminal emulator
+/lib
+  /store                  # Zustand state management
+  /data                   # Static data files
+  /github                 # GitHub API integration
+  /utils                  # Utility functions
+/public
+  /assets                 # Icons and images
+```
+
+## Environment Variables
+
+Create a `.env.local` file (optional):
+
+```
+NEXT_PUBLIC_GITHUB_TOKEN=your_github_token
+NEXT_PUBLIC_BASE_PATH=/repository-name
+```
+
+## Available Commands
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## License
+
+MIT
+
+## Author
+
+Muchammad Fikri Izzuddin (Oyi77)

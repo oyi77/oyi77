@@ -1,0 +1,183 @@
+import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
+
+export type WindowType = 'profile' | 'experience' | 'projects' | 'stats';
+
+export interface Window {
+  id: string;
+  type: WindowType;
+  title: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  zIndex: number;
+  minimized: boolean;
+  maximized: boolean;
+}
+
+interface WindowState {
+  windows: Window[];
+  maxZIndex: number;
+  openWindow: (type: WindowType) => void;
+  closeWindow: (id: string) => void;
+  minimizeWindow: (id: string) => void;
+  maximizeWindow: (id: string) => void;
+  restoreWindow: (id: string) => void;
+  focusWindow: (id: string) => void;
+  updatePosition: (id: string, x: number, y: number) => void;
+  updateSize: (id: string, width: number, height: number) => void;
+  isWindowOpen: (type: WindowType) => boolean;
+  getWindowByType: (type: WindowType) => Window | undefined;
+}
+
+const getWindowTitle = (type: WindowType): string => {
+  const titles: Record<WindowType, string> = {
+    profile: 'Profile.app',
+    experience: 'Experience.exe',
+    projects: 'Projects.terminal',
+    stats: 'Stats.dashboard',
+  };
+  return titles[type];
+};
+
+const getDefaultSize = (type: WindowType): { width: number; height: number } => {
+  const sizes: Record<WindowType, { width: number; height: number }> = {
+    profile: { width: 600, height: 500 },
+    experience: { width: 800, height: 600 },
+    projects: { width: 700, height: 500 },
+    stats: { width: 600, height: 500 },
+  };
+  return sizes[type];
+};
+
+export const useWindowStore = create<WindowState>()(
+  persist(
+    (set, get) => ({
+      windows: [],
+      maxZIndex: 1000,
+
+      openWindow: (type: WindowType) => {
+        const state = get();
+        const existingWindow = state.windows.find((w) => w.type === type);
+        
+        if (existingWindow) {
+          // If window exists, restore and focus it
+          set({
+            windows: state.windows.map((w) =>
+              w.id === existingWindow.id
+                ? { ...w, minimized: false, zIndex: state.maxZIndex + 1 }
+                : w
+            ),
+            maxZIndex: state.maxZIndex + 1,
+          });
+          return;
+        }
+
+        // Create new window with cascade effect
+        const windowCount = state.windows.length;
+        const offset = 30;
+        const { width, height } = getDefaultSize(type);
+        const newWindow: Window = {
+          id: `${type}-${Date.now()}`,
+          type,
+          title: getWindowTitle(type),
+          x: 100 + windowCount * offset,
+          y: 100 + windowCount * offset,
+          width,
+          height,
+          zIndex: state.maxZIndex + 1,
+          minimized: false,
+          maximized: false,
+        };
+
+        set({
+          windows: [...state.windows, newWindow],
+          maxZIndex: state.maxZIndex + 1,
+        });
+      },
+
+      closeWindow: (id: string) => {
+        set((state) => ({
+          windows: state.windows.filter((w) => w.id !== id),
+        }));
+      },
+
+      minimizeWindow: (id: string) => {
+        set((state) => ({
+          windows: state.windows.map((w) =>
+            w.id === id ? { ...w, minimized: true } : w
+          ),
+        }));
+      },
+
+      maximizeWindow: (id: string) => {
+        set((state) => ({
+          windows: state.windows.map((w) =>
+            w.id === id ? { ...w, maximized: !w.maximized } : w
+          ),
+        }));
+      },
+
+      restoreWindow: (id: string) => {
+        set((state) => ({
+          windows: state.windows.map((w) =>
+            w.id === id
+              ? { ...w, minimized: false, zIndex: state.maxZIndex + 1 }
+              : w
+          ),
+          maxZIndex: state.maxZIndex + 1,
+        }));
+      },
+
+      focusWindow: (id: string) => {
+        set((state) => ({
+          windows: state.windows.map((w) =>
+            w.id === id ? { ...w, zIndex: state.maxZIndex + 1 } : w
+          ),
+          maxZIndex: state.maxZIndex + 1,
+        }));
+      },
+
+      updatePosition: (id: string, x: number, y: number) => {
+        set((state) => ({
+          windows: state.windows.map((w) =>
+            w.id === id ? { ...w, x, y } : w
+          ),
+        }));
+      },
+
+      updateSize: (id: string, width: number, height: number) => {
+        set((state) => ({
+          windows: state.windows.map((w) =>
+            w.id === id ? { ...w, width, height } : w
+          ),
+        }));
+      },
+
+      isWindowOpen: (type: WindowType) => {
+        return get().windows.some((w) => w.type === type && !w.minimized);
+      },
+
+      getWindowByType: (type: WindowType) => {
+        return get().windows.find((w) => w.type === type);
+      },
+    }),
+    {
+      name: 'window-storage',
+      storage: createJSONStorage(() => {
+        if (typeof window !== 'undefined') {
+          return localStorage;
+        }
+        // Fallback for SSR
+        return {
+          getItem: () => null,
+          setItem: () => {},
+          removeItem: () => {},
+        };
+      }),
+      partialize: (state) => ({ windows: state.windows }),
+    }
+  )
+);
+
