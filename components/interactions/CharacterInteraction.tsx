@@ -54,6 +54,24 @@ export default function CharacterInteraction({
       power: 'Full Stack Haki',
       quote: 'Correctness is important. I don\'t accept mistakes.',
     },
+    akainu: {
+      name: 'Sakazuki (Akainu)',
+      title: 'Fleet Admiral',
+      power: 'Magu Magu no Mi',
+      quote: 'Absolute Justice!',
+    },
+    kizaru: {
+      name: 'Borsalino (Kizaru)',
+      title: 'Admiral',
+      power: 'Pika Pika no Mi',
+      quote: 'Speed is weight. Have you ever been kicked at the speed of light?',
+    },
+    trafalgar_law: {
+      name: 'Trafalgar D. Water Law',
+      title: 'Surgeon of Death',
+      power: 'Ope Ope no Mi',
+      quote: 'The weak do not get to choose how they die.',
+    },
   };
 
   const info = characterInfo[character];

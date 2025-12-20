@@ -75,6 +75,39 @@ export const characterAnimations: Record<CharacterType, Record<AnimationType | A
     sleeping: { duration: 3, loop: true, trigger: 'auto' },
     angry: { duration: 0.4, loop: true, trigger: 'click' },
   },
+  akainu: {
+    idle: { duration: 2.2, loop: true, trigger: 'auto' },
+    walking: { duration: 1.2, loop: true, trigger: 'auto' },
+    fighting: { duration: 0.6, loop: true, trigger: 'click' },
+    emote: { duration: 1.2, loop: false, trigger: 'click' },
+    waving: { duration: 1, loop: true, trigger: 'hover' },
+    excited: { duration: 0.6, loop: true, trigger: 'click' },
+    thinking: { duration: 2.2, loop: true, trigger: 'auto' },
+    sleeping: { duration: 3.2, loop: true, trigger: 'auto' },
+    angry: { duration: 0.5, loop: true, trigger: 'click' },
+  },
+  kizaru: {
+    idle: { duration: 2.4, loop: true, trigger: 'auto' },
+    walking: { duration: 1.1, loop: true, trigger: 'auto' },
+    fighting: { duration: 0.5, loop: true, trigger: 'click' },
+    emote: { duration: 1.1, loop: false, trigger: 'click' },
+    waving: { duration: 1.1, loop: true, trigger: 'hover' },
+    excited: { duration: 0.5, loop: true, trigger: 'click' },
+    thinking: { duration: 2.4, loop: true, trigger: 'auto' },
+    sleeping: { duration: 3.4, loop: true, trigger: 'auto' },
+    angry: { duration: 0.4, loop: true, trigger: 'click' },
+  },
+  trafalgar_law: {
+    idle: { duration: 2.1, loop: true, trigger: 'auto' },
+    walking: { duration: 1.0, loop: true, trigger: 'auto' },
+    fighting: { duration: 0.5, loop: true, trigger: 'click' },
+    emote: { duration: 1.0, loop: false, trigger: 'click' },
+    waving: { duration: 1, loop: true, trigger: 'hover' },
+    excited: { duration: 0.5, loop: true, trigger: 'click' },
+    thinking: { duration: 2.1, loop: true, trigger: 'auto' },
+    sleeping: { duration: 3.1, loop: true, trigger: 'auto' },
+    angry: { duration: 0.4, loop: true, trigger: 'click' },
+  },
 };
 
 export const specialMoves: Record<CharacterType, string[]> = {
@@ -84,5 +117,8 @@ export const specialMoves: Record<CharacterType, string[]> = {
   doflamingo: ['Overheat', 'Parasite', 'God Thread', 'Birdcage'],
   mihawk: ['Yoru Slash', 'Black Blade', 'World\'s Strongest Slash'],
   captain: ['Code Refactor', 'System Architecture', 'Production Deploy', 'Team Motivation'],
+  akainu: ['Dai Funka', 'Ryusei Kazan', 'Meigo', 'Inugami Guren'],
+  kizaru: ['Yata no Kagami', 'Amaterasu', 'Yasakani no Magatama', 'Ama no Murakumo'],
+  trafalgar_law: ['Room', 'Shambles', 'Tact', 'Gamma Knife'],
 };
 

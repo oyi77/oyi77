@@ -21,6 +21,9 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
     doflamingo: 'idle',
     mihawk: 'idle',
     captain: 'idle',
+    akainu: 'idle',
+    kizaru: 'idle',
+    trafalgar_law: 'idle',
   });
 
   const handleCharacterClick = (character: string, event: React.MouseEvent) => {
@@ -89,6 +92,24 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
               position={[4, 1.5, -4]}
               animation={characterAnimations.mihawk}
               scale={0.8}
+            />
+            <Character3D
+              character="akainu"
+              position={[-6, 0.5, -5]}
+              animation={characterAnimations.akainu}
+              scale={0.9}
+            />
+            <Character3D
+              character="kizaru"
+              position={[6, 0.5, -5]}
+              animation={characterAnimations.kizaru}
+              scale={0.9}
+            />
+            <Character3D
+              character="trafalgar_law"
+              position={[0, 0.5, -5]}
+              animation={characterAnimations.trafalgar_law}
+              scale={0.9}
             />
             <ParticleSystem count={50} color="#FFD700" position={[0, 2, 0]} />
           </Suspense>

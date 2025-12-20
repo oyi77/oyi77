@@ -6,7 +6,7 @@ import { Group, TextureLoader, DoubleSide } from 'three';
 import { Billboard, useTexture } from '@react-three/drei';
 import { getAssetPath } from '@/lib/utils/basePath';
 
-export type CharacterType = 'luffy' | 'zoro' | 'crocodile' | 'doflamingo' | 'mihawk' | 'captain';
+export type CharacterType = 'luffy' | 'zoro' | 'crocodile' | 'doflamingo' | 'mihawk' | 'captain' | 'akainu' | 'kizaru' | 'trafalgar_law';
 export type AnimationType = 'idle' | 'walking' | 'fighting' | 'emote';
 
 interface Character3DProps {
@@ -92,10 +92,16 @@ export default function Character3D({
     doflamingo: { primary: '#FF0000', secondary: '#FFD700', skin: '#FFDBAC' },
     mihawk: { primary: '#1a1a1a', secondary: '#FFD700', skin: '#FFDBAC' },
     captain: { primary: '#C8102E', secondary: '#FFD700', skin: '#FFDBAC' },
+    akainu: { primary: '#8B0000', secondary: '#FF4500', skin: '#FFDBAC' }, // Dark Red / Orange
+    kizaru: { primary: '#FFD700', secondary: '#FFFF00', skin: '#FFDBAC' }, // Gold / Yellow
+    trafalgar_law: { primary: '#1a1a1a', secondary: '#FFD700', skin: '#FFDBAC' }, // Black / Yellow
   };
 
   const colors = characterColors[character];
   const texture = useTexture(getAssetPath(`/assets/characters/${character}.png`));
+  const aspect = texture.image.width / texture.image.height;
+  const height = 2;
+  const width = height * aspect;
 
   return (
     <group
@@ -113,7 +119,7 @@ export default function Character3D({
       >
         {/* Character Sprite Plane */}
         <mesh position={[0, 0.8, 0]}>
-          <planeGeometry args={[2, 2]} />
+          <planeGeometry args={[width, height]} />
           <meshBasicMaterial
             map={texture}
             transparent={true}
