@@ -22,13 +22,13 @@ export default function CharacterInteraction({
       name: 'Monkey D. Luffy',
       title: 'Straw Hat Captain',
       power: 'Gomu Gomu no Mi',
-      quote: 'I&apos;m gonna be the Pirate King!',
+      quote: "I&apos;m gonna be the Pirate King!",
     },
     zoro: {
       name: 'Roronoa Zoro',
       title: 'Swordsman',
       power: 'Three Sword Style',
-      quote: 'I&apos;ll become the world&apos;s greatest swordsman!',
+      quote: "I'll become the world's greatest swordsman!",
     },
     crocodile: {
       name: 'Sir Crocodile',

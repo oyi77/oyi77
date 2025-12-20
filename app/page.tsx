@@ -13,24 +13,37 @@ import ExperienceWindow from '@/components/windows/ExperienceWindow';
 import ProjectsTerminal from '@/components/windows/ProjectsTerminal';
 import StatsWindow from '@/components/windows/StatsWindow';
 import CrewWindow from '@/components/windows/CrewWindow';
+import TerminalWindow from '@/components/windows/TerminalWindow';
+import FileManagerWindow from '@/components/windows/FileManagerWindow';
+import BrowserWindow from '@/components/windows/BrowserWindow';
 import Taskbar from '@/components/taskbar/Taskbar';
 import ClientOnly from '@/components/ClientOnly';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function Home() {
   const windows = useWindowStore((state) => state.windows);
   const openWindow = useWindowStore((state) => state.openWindow);
-  const hasWelcomeWindow = windows.some((w) => w.type === 'welcome');
+  const hasInitialized = useRef(false);
 
-  // Open welcome window on first load
+  // Open welcome window on first load - only once
   useEffect(() => {
-    if (!hasWelcomeWindow) {
-      // Small delay for smooth animation
-      setTimeout(() => {
-        openWindow('welcome');
+    if (!hasInitialized.current) {
+      hasInitialized.current = true;
+
+      // Use setTimeout to ensure we check the latest state
+      const timer = setTimeout(() => {
+        const currentWindows = useWindowStore.getState().windows;
+        const hasWelcome = currentWindows.some((w) => w.type === 'welcome');
+
+        if (!hasWelcome) {
+          openWindow('welcome');
+        }
       }, 300);
+
+      return () => clearTimeout(timer);
     }
-  }, [hasWelcomeWindow, openWindow]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const renderWindowContent = (window: typeof windows[0]) => {
     switch (window.type) {
@@ -46,6 +59,12 @@ export default function Home() {
         return <StatsWindow />;
       case 'crew':
         return <CrewWindow />;
+      case 'terminal':
+        return <TerminalWindow />;
+      case 'fileManager':
+        return <FileManagerWindow />;
+      case 'browser':
+        return <BrowserWindow />;
       default:
         return null;
     }

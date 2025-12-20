@@ -4,7 +4,8 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   User, Briefcase, Terminal, BarChart3, FileText, FolderGit2,
-  Sparkles, Settings, Power, Search, X
+  Sparkles, Settings, Power, Search, X, Folder, Globe,
+  Compass
 } from 'lucide-react';
 import { useWindowStore } from '@/lib/store/windowStore';
 import { Luffy } from '@/components/cartoon/OnePieceCharacters';
@@ -53,15 +54,33 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
     },
     {
       name: 'Log Pose',
-      icon: <Terminal className="w-8 h-8" />,
+      icon: <Compass className="w-8 h-8" />,
       type: 'logpose' as const,
-      description: 'Terminal projects'
+      description: 'Log pose'
     },
     {
       name: 'Tactical Map',
       icon: <BarChart3 className="w-8 h-8" />,
       type: 'tactical' as const,
       description: 'Statistics dashboard'
+    },
+    {
+      name: 'Terminal',
+      icon: <Terminal className="w-8 h-8" />,
+      type: 'terminal' as const,
+      description: 'Command line interface'
+    },
+    {
+      name: 'Files',
+      icon: <Folder className="w-8 h-8" />,
+      type: 'fileManager' as const,
+      description: 'Browse portfolio files'
+    },
+    {
+      name: 'Browser',
+      icon: <Globe className="w-8 h-8" />,
+      type: 'browser' as const,
+      description: 'Explore my projects'
     },
   ];
 

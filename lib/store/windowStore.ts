@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-export type WindowType = 'welcome' | 'profile' | 'bounty' | 'logpose' | 'tactical' | 'crew';
+export type WindowType = 'welcome' | 'profile' | 'bounty' | 'logpose' | 'tactical' | 'crew' | 'terminal' | 'fileManager' | 'browser';
 
 export interface Window {
   id: string;
@@ -39,6 +39,9 @@ const getWindowTitle = (type: WindowType): string => {
     logpose: 'Log Pose (Projects)',
     tactical: 'Tactical Map (Architecture)',
     crew: 'Crew Management (Mentorship)',
+    terminal: 'Captain\'s Terminal',
+    fileManager: 'File System',
+    browser: 'Grand Line Net',
   };
   return titles[type];
 };
@@ -52,12 +55,15 @@ const getDefaultSize = (type: WindowType): { width: number; height: number } => 
     logpose: { width: 700, height: 500 },
     tactical: { width: 600, height: 500 },
     crew: { width: 600, height: 500 },
+    terminal: { width: 600, height: 400 },
+    fileManager: { width: 700, height: 500 },
+    browser: { width: 900, height: 600 },
   };
   return sizes[type];
 };
 
 const adjustSizeForViewport = (size: { width: number; height: number }, type: WindowType): { width: number; height: number } => {
-  if (typeof window === 'undefined') return size;
+  if (typeof window === 'undefined' || !size) return size || { width: 800, height: 600 };
 
   const isMobile = window.innerWidth < 768;
   const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
@@ -77,6 +83,9 @@ const adjustSizeForViewport = (size: { width: number; height: number }, type: Wi
       logpose: { width: 600, height: 450 },
       tactical: { width: 550, height: 450 },
       crew: { width: 550, height: 450 },
+      terminal: { width: 550, height: 400 },
+      fileManager: { width: 600, height: 450 },
+      browser: { width: 700, height: 500 },
     };
     return tabletSizes[type];
   }
@@ -91,64 +100,64 @@ export const useWindowStore = create<WindowState>()(
       maxZIndex: 1000,
 
       openWindow: (type: WindowType) => {
-        const state = get();
-        const existingWindow = state.windows.find((w) => w.type === type);
+        set((state) => {
+          const existingWindow = state.windows.find((w) => w.type === type);
 
-        if (existingWindow) {
-          // If window exists, restore and focus it
-          set({
-            windows: state.windows.map((w) =>
-              w.id === existingWindow.id
-                ? { ...w, minimized: false, zIndex: state.maxZIndex + 1 }
-                : w
-            ),
+          if (existingWindow) {
+            // If window exists, restore and focus it
+            return {
+              windows: state.windows.map((w) =>
+                w.id === existingWindow.id
+                  ? { ...w, minimized: false, zIndex: state.maxZIndex + 1 }
+                  : w
+              ),
+              maxZIndex: state.maxZIndex + 1,
+            };
+          }
+
+          // Create new window with cascade effect
+          const windowCount = state.windows.length;
+          const offset = 30;
+          const baseSize = getDefaultSize(type);
+          const { width, height } = adjustSizeForViewport(baseSize, type);
+
+          // Center welcome window on first load
+          let x = 100 + windowCount * offset;
+          let y = 100 + windowCount * offset;
+
+          if (typeof window !== 'undefined') {
+            const isMobile = window.innerWidth < 768;
+
+            if (type === 'welcome' && windowCount === 0) {
+              // Center the welcome window
+              x = (window.innerWidth - width) / 2;
+              y = (window.innerHeight - height) / 2;
+            }
+
+            // Mobile: Always center windows
+            if (isMobile) {
+              x = 0;
+              y = 0;
+            }
+          }
+
+          const newWindow: Window = {
+            id: `${type}-${Date.now()}`,
+            type,
+            title: getWindowTitle(type),
+            x,
+            y,
+            width,
+            height,
+            zIndex: state.maxZIndex + 1,
+            minimized: false,
+            maximized: false,
+          };
+
+          return {
+            windows: [...state.windows, newWindow],
             maxZIndex: state.maxZIndex + 1,
-          });
-          return;
-        }
-
-        // Create new window with cascade effect
-        const windowCount = state.windows.length;
-        const offset = 30;
-        const baseSize = getDefaultSize(type);
-        const { width, height } = adjustSizeForViewport(baseSize, type);
-
-        // Center welcome window on first load
-        let x = 100 + windowCount * offset;
-        let y = 100 + windowCount * offset;
-
-        if (typeof window !== 'undefined') {
-          const isMobile = window.innerWidth < 768;
-
-          if (type === 'welcome' && windowCount === 0) {
-            // Center the welcome window
-            x = (window.innerWidth - width) / 2;
-            y = (window.innerHeight - height) / 2;
-          }
-
-          // Mobile: Always center windows
-          if (isMobile) {
-            x = 0;
-            y = 0;
-          }
-        }
-
-        const newWindow: Window = {
-          id: `${type}-${Date.now()}`,
-          type,
-          title: getWindowTitle(type),
-          x,
-          y,
-          width,
-          height,
-          zIndex: state.maxZIndex + 1,
-          minimized: false,
-          maximized: false,
-        };
-
-        set({
-          windows: [...state.windows, newWindow],
-          maxZIndex: state.maxZIndex + 1,
+          };
         });
       },
 

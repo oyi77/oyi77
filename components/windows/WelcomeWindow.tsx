@@ -30,9 +30,9 @@ export default function WelcomeWindow() {
   const { openWindow } = useWindowStore();
 
   const features = [
-    { icon: <Compass className="w-6 h-6" />, text: 'Navigate My Projects', type: 'projects' },
-    { icon: <Scroll className="w-6 h-6" />, text: 'View Bounty Posters', type: 'experience' },
-    { icon: <Map className="w-6 h-6" />, text: 'Explore Tactical Map', type: 'stats' },
+    { icon: <Compass className="w-6 h-6" />, text: 'Navigate My Projects', type: 'logpose' },
+    { icon: <Scroll className="w-6 h-6" />, text: 'View Bounty Posters', type: 'bounty' },
+    { icon: <Map className="w-6 h-6" />, text: 'Explore Tactical Map', type: 'tactical' },
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function WelcomeWindow() {
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
         transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
       >
-        <Character2D character="luffy" variant="waving" size="lg" />
+        <Character2D character="captain" variant="waving" size="lg" />
       </motion.div>
 
       {/* Floating illustrations - Hidden on mobile */}

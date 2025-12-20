@@ -59,55 +59,55 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
           <Suspense fallback={null}>
             <Character3D
               character="luffy"
-              position={[-3, 0, -2]}
+              position={[-1.4, -1.2, -1]}
               animation={characterAnimations.luffy}
               scale={0.8}
             />
             <Character3D
               character="zoro"
-              position={[3, 0, -2]}
+              position={[-1.5, -1.1, -1.3]}
               animation={characterAnimations.zoro}
               scale={0.8}
             />
             <Character3D
               character="captain"
-              position={[0, 0, 0]}
+              position={[-0.5, -1, 0]}
               animation={characterAnimations.captain || 'idle'}
               scale={1}
             />
             <Character3D
               character="crocodile"
-              position={[2, -1.5, -3]}
+              position={[0.4, -1.1, -1]}
               animation={characterAnimations.crocodile}
               scale={0.9}
             />
             <Character3D
               character="doflamingo"
-              position={[-4, 1.5, -4]}
+              position={[1, -1.1, -1.1]}
               animation={characterAnimations.doflamingo}
               scale={0.8}
             />
             <Character3D
               character="mihawk"
-              position={[4, 1.5, -4]}
+              position={[1.5, -1.1, -1.2]}
               animation={characterAnimations.mihawk}
               scale={0.8}
             />
             <Character3D
               character="akainu"
-              position={[-6, 0.5, -5]}
+              position={[-2.6, -1.1, -1.7]}
               animation={characterAnimations.akainu}
               scale={0.9}
             />
             <Character3D
               character="kizaru"
-              position={[6, 0.5, -5]}
+              position={[1.7, -1.1, -1.3]}
               animation={characterAnimations.kizaru}
               scale={0.9}
             />
             <Character3D
               character="trafalgar_law"
-              position={[0, 0.5, -5]}
+              position={[-2.3, -1, -1.5]}
               animation={characterAnimations.trafalgar_law}
               scale={0.9}
             />
@@ -155,18 +155,19 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
           <JollyRoger size={60} animated={true} />
         </motion.div>
 
+        {/* IKI KARAKTER ONEPIECE COK! */}
         <motion.div
-          className="hidden md:block absolute bottom-24 right-16 z-20 pointer-events-auto"
-          initial={{ opacity: 0, scale: 0, rotate: -180 }}
+          className="hidden md:block absolute bottom-32 right-0 z-20 pointer-events-auto"
+          initial={{ opacity: 0, scale: 0, rotate: -90 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ delay: 1, type: "spring", stiffness: 200 }}
+          transition={{ delay: 1.5, type: "spring", stiffness: 100 }}
           onClick={(e) => handleCharacterClick('captain', e)}
         >
           <Character2D character="captain" variant="waving" size="lg" />
         </motion.div>
 
         <motion.div
-          className="hidden md:block absolute top-[20%] left-[50%] z-20 pointer-events-auto"
+          className="hidden lg:block absolute top-[20%] left-[20%] z-20 pointer-events-auto"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.1, type: "spring" }}
@@ -176,7 +177,7 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
         </motion.div>
 
         <motion.div
-          className="hidden lg:block absolute bottom-32 left-20 z-20 pointer-events-auto"
+          className="hidden lg:block absolute bottom-32 left-0 z-20 pointer-events-auto"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1.2, type: "spring" }}
@@ -206,7 +207,7 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
         </motion.div>
 
         <motion.div
-          className="hidden lg:block absolute top-40 left-1/2 z-20 pointer-events-auto"
+          className="hidden lg:block absolute top-60 left-1/2 z-20 pointer-events-auto"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.7, type: "spring" }}
@@ -252,7 +253,7 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
         </motion.div>
 
         <motion.div
-          className="absolute top-1/2 left-[40%]"
+          className="absolute top-1/4 left-[40%]"
           animate={{ x: [0, 60, 0], y: [0, -25, 0] }}
           transition={{ duration: 30, repeat: Infinity, ease: 'linear', delay: 5 }}
         >
@@ -287,4 +288,3 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
     </div>
   );
 }
-

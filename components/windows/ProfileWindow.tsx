@@ -25,7 +25,7 @@ export default function ProfileWindow() {
   }, [fullText]);
 
   return (
-    <div className="p-8 text-text-dark bg-[#f4e4bc] min-h-full">
+    <div className="p-8 text-text-dark bg-[#f4e4bc] min-h-full min-w-full">
       <div className="flex flex-col md:flex-row gap-10">
         {/* Left: Portrait */}
         <motion.div
@@ -125,12 +125,49 @@ export default function ProfileWindow() {
           </div>
 
           <div className="pt-8 border-t-2 border-dashed border-onepiece-mahogany/30">
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-6">
               {['System Design', 'Mentor', 'Strategy', 'Scalability'].map(tag => (
                 <span key={tag} className="px-4 py-1.5 bg-onepiece-mahogany text-onepiece-gold font-black text-xs uppercase tracking-tighter">
                   #{tag}
                 </span>
               ))}
+            </div>
+
+            {/* Download CV Button */}
+            <motion.a
+              href="/assets/cv/resume.pdf"
+              download="Fikri_Izzuddin_CV.pdf"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-onepiece-red text-white font-black text-lg uppercase tracking-wider rounded-lg shadow-3d-premium hover:bg-onepiece-blue transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Scroll className="w-6 h-6" />
+              Download Captain's CV
+            </motion.a>
+          </div>
+
+          {/* Journey Timeline */}
+          <div className="mt-8 space-y-4">
+            <h3 className="text-2xl font-bold flex items-center gap-2 text-onepiece-mahogany">
+              <TrendingUp className="w-6 h-6 text-onepiece-gold" />
+              Journey Highlights
+            </h3>
+            <div className="space-y-4">
+              <div className="bg-white/70 p-4 rounded-lg border-l-4 border-onepiece-red">
+                <h4 className="font-bold text-onepiece-mahogany">Lead Software Engineer @ Tech Corp</h4>
+                <p className="text-sm text-onepiece-mahogany/70 mb-2">2021 - Present</p>
+                <p className="text-sm text-onepiece-mahogany/80">Leading a team of 8 engineers building high-performance microservices serving 1M+ users. Architected scalable systems with 99.9% uptime.</p>
+              </div>
+              <div className="bg-white/70 p-4 rounded-lg border-l-4 border-onepiece-blue">
+                <h4 className="font-bold text-onepiece-mahogany">Senior Full Stack Developer @ StartupCo</h4>
+                <p className="text-sm text-onepiece-mahogany/70 mb-2">2018 - 2021</p>
+                <p className="text-sm text-onepiece-mahogany/80">Built DeFi trading platform from scratch. Implemented algo-trading engines with sub-millisecond latency.</p>
+              </div>
+              <div className="bg-white/70 p-4 rounded-lg border-l-4 border-onepiece-gold">
+                <h4 className="font-bold text-onepiece-mahogany">Software Engineer @ Innovation Labs</h4>
+                <p className="text-sm text-onepiece-mahogany/70 mb-2">2016 - 2018</p>
+                <p className="text-sm text-onepiece-mahogany/80">Developed cloud infrastructure and CI/CD pipelines. Mentored junior developers and established best practices.</p>
+              </div>
             </div>
           </div>
         </motion.div>

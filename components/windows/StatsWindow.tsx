@@ -41,7 +41,7 @@ export default function StatsWindow() {
   }, []);
 
   return (
-    <div className="p-6 text-white h-full overflow-y-auto">
+    <div className="p-6 text-white h-full overflow-y-auto bg-black/40">
       <h2 className="text-2xl font-black text-onepiece-gold mb-8 italic uppercase tracking-widest flex items-center gap-3">
         <Map className="w-8 h-8" />
         Tactical Map: Strategy & Ops

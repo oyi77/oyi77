@@ -64,9 +64,66 @@ export default function Character3D({
       groupRef.current.position.x = position[0] + Math.sin(timeRef.current * 3) * 0.5;
       groupRef.current.rotation.y = Math.sin(timeRef.current * 3) * 0.2;
     } else if (animation === 'fighting') {
-      // Fighting animation
-      groupRef.current.rotation.y = Math.sin(timeRef.current * 5) * 0.3;
-      groupRef.current.position.y = position[1] + Math.abs(Math.sin(timeRef.current * 5)) * 0.2;
+      // Unique "Jurus" Animations based on character
+      const fightTime = timeRef.current * 10;
+
+      switch (character) {
+        case 'luffy': // Gomu Gomu no Gatling (Rapid Vibration)
+          groupRef.current.position.x = position[0] + Math.sin(fightTime * 5) * 0.2;
+          groupRef.current.position.y = position[1] + Math.cos(fightTime * 3) * 0.1;
+          groupRef.current.scale.setScalar(scaleRef.current * (1 + Math.sin(fightTime) * 0.1));
+          break;
+
+        case 'zoro': // Santoryu (Sharp Diagonal Slashes)
+          groupRef.current.position.x = position[0] + Math.sin(fightTime) * 0.5;
+          groupRef.current.position.y = position[1] + Math.abs(Math.cos(fightTime)) * 0.3;
+          groupRef.current.rotation.z = Math.sin(fightTime * 2) * 0.5;
+          break;
+
+        case 'crocodile': // Sables (Sand Storm Spiral)
+          groupRef.current.rotation.y += 0.2;
+          groupRef.current.position.y = position[1] + Math.sin(fightTime) * 0.2;
+          break;
+
+        case 'doflamingo': // Aerial wire movements
+          groupRef.current.position.y = position[1] + Math.sin(fightTime * 2) * 0.8;
+          groupRef.current.rotation.x = Math.sin(fightTime) * 0.2;
+          break;
+
+        case 'mihawk': // Precision Slash (Slow, deliberate, powerful)
+          groupRef.current.rotation.z = Math.sin(fightTime * 0.5) * 0.8;
+          groupRef.current.position.x = position[0] + Math.sin(fightTime * 0.5) * 0.3;
+          break;
+
+        case 'akainu': // Magma Eruption (Shaking + Rising)
+          groupRef.current.position.x = position[0] + (Math.random() - 0.5) * 0.1;
+          groupRef.current.position.y = position[1] + Math.abs(Math.sin(fightTime * 0.5)) * 0.5;
+          break;
+
+        case 'kizaru': // Light Speed (Teleport/Glitch effect)
+          if (Math.random() > 0.8) {
+            groupRef.current.position.x = position[0] + (Math.random() - 0.5) * 2;
+            groupRef.current.position.z = position[2] + (Math.random() - 0.5) * 2;
+          } else {
+            groupRef.current.position.lerp({ x: position[0], y: position[1], z: position[2] } as any, 0.1);
+          }
+          break;
+
+        case 'trafalgar_law': // Room (Rotation + Levitation)
+          groupRef.current.rotation.y -= 0.1;
+          groupRef.current.position.y = position[1] + Math.sin(fightTime) * 0.5;
+          groupRef.current.scale.setScalar(scaleRef.current * (1 + Math.sin(fightTime * 2) * 0.1));
+          break;
+
+        case 'captain': // Coding Fury (Intense typing/head bob)
+          groupRef.current.position.z = position[2] + Math.sin(fightTime * 20) * 0.05;
+          groupRef.current.rotation.x = Math.sin(fightTime * 10) * 0.1;
+          break;
+
+        default: // Generic fighting
+          groupRef.current.rotation.y = Math.sin(fightTime) * 0.3;
+          groupRef.current.position.y = position[1] + Math.abs(Math.sin(fightTime)) * 0.2;
+      }
     }
   });
 

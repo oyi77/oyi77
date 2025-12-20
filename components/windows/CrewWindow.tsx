@@ -41,7 +41,7 @@ const teamData: Team[] = [
 
 export default function CrewWindow() {
     return (
-        <div className="p-6 text-white overflow-y-auto h-full space-y-8">
+        <div className="p-6 text-white overflow-y-auto h-full space-y-8 bg-black/40">
             <div className="flex items-center justify-between mb-8">
                 <h2 className="text-3xl font-black text-onepiece-gold italic uppercase tracking-widest flex items-center gap-3">
                     <Users className="w-8 h-8" />
