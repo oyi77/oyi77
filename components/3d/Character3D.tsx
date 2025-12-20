@@ -4,6 +4,7 @@ import { useRef, useState, Suspense } from 'react';
 import { useFrame, useLoader } from '@react-three/fiber';
 import { Group, TextureLoader, DoubleSide } from 'three';
 import { Billboard, useTexture } from '@react-three/drei';
+import { getAssetPath } from '@/lib/utils/basePath';
 
 export type CharacterType = 'luffy' | 'zoro' | 'crocodile' | 'doflamingo' | 'mihawk' | 'captain';
 export type AnimationType = 'idle' | 'walking' | 'fighting' | 'emote';
@@ -94,8 +95,7 @@ export default function Character3D({
   };
 
   const colors = characterColors[character];
-
-  const texture = useTexture(`/assets/characters/${character}.png`);
+  const texture = useTexture(getAssetPath(`/assets/characters/${character}.png`));
 
   return (
     <group

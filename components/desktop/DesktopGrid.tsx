@@ -10,6 +10,7 @@ import Character3D from '@/components/3d/Character3D';
 import Character2D from '@/components/2d/Character2D';
 import CharacterInteraction from '@/components/interactions/CharacterInteraction';
 import ParticleSystem from '@/components/effects/ParticleSystem';
+import { getAssetPath } from '@/lib/utils/basePath';
 
 export default function DesktopGrid({ children }: { children: React.ReactNode }) {
   const [selectedCharacter, setSelectedCharacter] = useState<{ type: string; position: { x: number; y: number } } | null>(null);
@@ -47,7 +48,7 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
       {/* Background Nautical Map */}
       <div
         className="absolute inset-0 opacity-40 bg-cover bg-center mix-blend-multiply"
-        style={{ backgroundImage: 'url("/assets/images/map_bg.png")' }}
+        style={{ backgroundImage: `url("${getAssetPath('/assets/images/map_bg.png')}")` }}
       />
       {/* 3D Characters Background Layer */}
       <div className="absolute inset-0 z-0 pointer-events-none">
