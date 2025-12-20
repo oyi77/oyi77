@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils/basePath';
 
 interface CharacterProps {
   size?: 'sm' | 'md' | 'lg';
@@ -46,7 +47,7 @@ function CharacterSprite({ name, size = 'md', className = '', variant = 'idle' }
       }}
     >
       <Image
-        src={`/assets/characters/${name}.png`}
+        src={getAssetPath(`/assets/characters/${name}.png`)}
         alt={name}
         width={pixelSize}
         height={pixelSize}

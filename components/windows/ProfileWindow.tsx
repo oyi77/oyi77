@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Scroll, Users, TrendingUp } from 'lucide-react';
 import { profileData } from '@/lib/data/profile';
+import { getAssetPath } from '@/lib/utils/basePath';
 
 export default function ProfileWindow() {
   const [displayedText, setDisplayedText] = useState('');
@@ -39,7 +40,7 @@ export default function ProfileWindow() {
             </div>
             <div className="relative w-full h-full pt-8 overflow-hidden">
               <Image
-                src="/assets/characters/captain.png"
+                src={getAssetPath("/assets/characters/captain.png")}
                 alt="Captain Portrait"
                 fill
                 className="object-contain"

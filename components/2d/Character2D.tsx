@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CharacterType } from '../3d/Character3D';
 import { useState } from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/utils/basePath';
 
 export type AnimationVariant = 'idle' | 'waving' | 'excited' | 'fighting' | 'walking' | 'thinking' | 'sleeping' | 'angry';
 
@@ -148,7 +149,7 @@ export default function Character2D({
       )}
 
       <Image
-        src={`/assets/characters/${character}.png`}
+        src={getAssetPath(`/assets/characters/${character}.png`)}
         alt={character}
         width={pixelSizes[size]}
         height={pixelSizes[size]}
