@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import DesktopGrid from '@/components/desktop/DesktopGrid';
 import DesktopIcon from '@/components/desktop/DesktopIcon';
 import { User, Briefcase, Terminal, BarChart3, FileText, FolderGit2 } from 'lucide-react';
@@ -12,7 +13,12 @@ import StatsWindow from '@/components/windows/StatsWindow';
 import Taskbar from '@/components/taskbar/Taskbar';
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
   const { windows } = useWindowStore();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const iconPositions = [
     { type: 'profile' as const, label: 'Profile.app', icon: <User className="w-12 h-12" />, x: 50, y: 50 },
@@ -37,6 +43,26 @@ export default function Home() {
         return null;
     }
   };
+
+  if (!mounted) {
+    return (
+      <DesktopGrid>
+        {/* Desktop Icons */}
+        {iconPositions.map((icon) => (
+          <DesktopIcon
+            key={icon.type}
+            type={icon.type}
+            label={icon.label}
+            icon={icon.icon}
+            x={icon.x}
+            y={icon.y}
+          />
+        ))}
+        {/* Taskbar */}
+        <Taskbar />
+      </DesktopGrid>
+    );
+  }
 
   return (
     <DesktopGrid>
