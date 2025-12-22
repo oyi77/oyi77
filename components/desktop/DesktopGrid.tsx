@@ -1,16 +1,27 @@
 'use client';
 
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Illustration from '@/components/cartoon/Illustration';
 import JollyRoger from '@/components/cartoon/JollyRoger';
 import TreasureChest from '@/components/cartoon/TreasureChest';
-import Scene from '@/components/3d/Scene';
-import Character3D from '@/components/3d/Character3D';
 import Character2D from '@/components/2d/Character2D';
 import CharacterInteraction from '@/components/interactions/CharacterInteraction';
-import ParticleSystem from '@/components/effects/ParticleSystem';
 import { getAssetPath } from '@/lib/utils/basePath';
+
+// Lazy load 3D components
+const Scene = dynamic(() => import('@/components/3d/Scene'), {
+  ssr: false,
+});
+
+const Character3D = dynamic(() => import('@/components/3d/Character3D'), {
+  ssr: false,
+});
+
+const ParticleSystem = dynamic(() => import('@/components/effects/ParticleSystem'), {
+  ssr: false,
+});
 
 export default function DesktopGrid({ children }: { children: React.ReactNode }) {
   const [selectedCharacter, setSelectedCharacter] = useState<{ type: string; position: { x: number; y: number } } | null>(null);
@@ -25,6 +36,41 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
     kizaru: 'idle',
     trafalgar_law: 'idle',
   });
+  const [shouldLoad3D, setShouldLoad3D] = useState(false);
+  const sceneRef = useRef<HTMLDivElement>(null);
+
+  // Intersection observer to lazy load 3D scene
+  useEffect(() => {
+    // Skip 3D on mobile for better performance
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoad3D(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sceneRef.current) {
+      observer.observe(sceneRef.current);
+    }
+
+    // Fallback: load after 1 second if not visible
+    const timeout = setTimeout(() => {
+      setShouldLoad3D(true);
+      observer.disconnect();
+    }, 1000);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const handleCharacterClick = (character: string, event: React.MouseEvent) => {
     setSelectedCharacter({
@@ -53,67 +99,91 @@ export default function DesktopGrid({ children }: { children: React.ReactNode })
         className="absolute inset-0 opacity-40 bg-cover bg-center mix-blend-multiply"
         style={{ backgroundImage: `url("${getAssetPath('/assets/images/map_bg.png')}")` }}
       />
-      {/* 3D Characters Background Layer */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <Scene className="w-full h-full" enableControls={false}>
-          <Suspense fallback={null}>
-            <Character3D
-              character="luffy"
-              position={[-1.4, -1.2, -1]}
-              animation={characterAnimations.luffy}
-              scale={0.8}
-            />
-            <Character3D
-              character="zoro"
-              position={[-1.5, -1.1, -1.3]}
-              animation={characterAnimations.zoro}
-              scale={0.8}
-            />
-            <Character3D
-              character="captain"
-              position={[-0.5, -1, 0]}
-              animation={characterAnimations.captain || 'idle'}
-              scale={1}
-            />
-            <Character3D
-              character="crocodile"
-              position={[0.4, -1.1, -1]}
-              animation={characterAnimations.crocodile}
-              scale={0.9}
-            />
-            <Character3D
-              character="doflamingo"
-              position={[1, -1.1, -1.1]}
-              animation={characterAnimations.doflamingo}
-              scale={0.8}
-            />
-            <Character3D
-              character="mihawk"
-              position={[1.5, -1.1, -1.2]}
-              animation={characterAnimations.mihawk}
-              scale={0.8}
-            />
-            <Character3D
-              character="akainu"
-              position={[-2.6, -1.1, -1.7]}
-              animation={characterAnimations.akainu}
-              scale={0.9}
-            />
-            <Character3D
-              character="kizaru"
-              position={[1.7, -1.1, -1.3]}
-              animation={characterAnimations.kizaru}
-              scale={0.9}
-            />
-            <Character3D
-              character="trafalgar_law"
-              position={[-2.3, -1, -1.5]}
-              animation={characterAnimations.trafalgar_law}
-              scale={0.9}
-            />
-            <ParticleSystem count={50} color="#FFD700" position={[0, 2, 0]} />
-          </Suspense>
-        </Scene>
+      {/* 3D Characters Background Layer - Lazy loaded */}
+      <div ref={sceneRef} className="absolute inset-0 z-0 pointer-events-none">
+        {shouldLoad3D && (
+          <Scene className="w-full h-full" enableControls={false}>
+            <Suspense fallback={null}>
+              {/* Initial characters - load first 3 for faster initial render */}
+              <Suspense fallback={null}>
+                <Character3D
+                  character="captain"
+                  position={[-0.5, -1, 0]}
+                  animation={characterAnimations.captain || 'idle'}
+                  scale={1}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="luffy"
+                  position={[-1.4, -1.2, -1]}
+                  animation={characterAnimations.luffy}
+                  scale={0.8}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="zoro"
+                  position={[-1.5, -1.1, -1.3]}
+                  animation={characterAnimations.zoro}
+                  scale={0.8}
+                />
+              </Suspense>
+              {/* Remaining characters - loaded after initial render */}
+              <Suspense fallback={null}>
+                <Character3D
+                  character="crocodile"
+                  position={[0.4, -1.1, -1]}
+                  animation={characterAnimations.crocodile}
+                  scale={0.9}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="doflamingo"
+                  position={[1, -1.1, -1.1]}
+                  animation={characterAnimations.doflamingo}
+                  scale={0.8}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="mihawk"
+                  position={[1.5, -1.1, -1.2]}
+                  animation={characterAnimations.mihawk}
+                  scale={0.8}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="akainu"
+                  position={[-2.6, -1.1, -1.7]}
+                  animation={characterAnimations.akainu}
+                  scale={0.9}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="kizaru"
+                  position={[1.7, -1.1, -1.3]}
+                  animation={characterAnimations.kizaru}
+                  scale={0.9}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <Character3D
+                  character="trafalgar_law"
+                  position={[-2.3, -1, -1.5]}
+                  animation={characterAnimations.trafalgar_law}
+                  scale={0.9}
+                />
+              </Suspense>
+              <Suspense fallback={null}>
+                <ParticleSystem count={50} color="#FFD700" position={[0, 2, 0]} />
+              </Suspense>
+            </Suspense>
+          </Scene>
+        )}
       </div>
 
       {/* One Piece background elements */}

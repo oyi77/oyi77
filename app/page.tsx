@@ -1,24 +1,51 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import DesktopGrid from '@/components/desktop/DesktopGrid';
 import DesktopIcon from '@/components/desktop/DesktopIcon';
-import IsometricBlock from '@/components/cartoon/IsometricBlock';
-import { User, Scroll, Compass, Map, Users, FileText, FolderGit2 } from 'lucide-react';
+import { User, Scroll, Compass, Map, Users, FolderGit2 } from 'lucide-react';
 import { useWindowStore } from '@/lib/store/windowStore';
 import Window from '@/components/windows/Window';
-import WelcomeWindow from '@/components/windows/WelcomeWindow';
-import ProfileWindow from '@/components/windows/ProfileWindow';
-import ExperienceWindow from '@/components/windows/ExperienceWindow';
-import ProjectsTerminal from '@/components/windows/ProjectsTerminal';
-import StatsWindow from '@/components/windows/StatsWindow';
-import CrewWindow from '@/components/windows/CrewWindow';
-import TerminalWindow from '@/components/windows/TerminalWindow';
-import FileManagerWindow from '@/components/windows/FileManagerWindow';
-import BrowserWindow from '@/components/windows/BrowserWindow';
 import Taskbar from '@/components/taskbar/Taskbar';
 import ClientOnly from '@/components/ClientOnly';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+
+// Lazy load window components
+const WelcomeWindow = dynamic(() => import('@/components/windows/WelcomeWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const ProfileWindow = dynamic(() => import('@/components/windows/ProfileWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const ExperienceWindow = dynamic(() => import('@/components/windows/ExperienceWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const ProjectsTerminal = dynamic(() => import('@/components/windows/ProjectsTerminal'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const StatsWindow = dynamic(() => import('@/components/windows/StatsWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const CrewWindow = dynamic(() => import('@/components/windows/CrewWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const TerminalWindow = dynamic(() => import('@/components/windows/TerminalWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const FileManagerWindow = dynamic(() => import('@/components/windows/FileManagerWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
+
+const BrowserWindow = dynamic(() => import('@/components/windows/BrowserWindow'), {
+  loading: () => <div className="p-8 text-white">Loading...</div>,
+});
 
 export default function Home() {
   const windows = useWindowStore((state) => state.windows);
