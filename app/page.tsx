@@ -8,7 +8,8 @@ import { useWindowStore } from '@/lib/store/windowStore';
 import Window from '@/components/windows/Window';
 import Taskbar from '@/components/taskbar/Taskbar';
 import ClientOnly from '@/components/ClientOnly';
-import { useEffect, useRef } from 'react';
+import LoadingOverlay from '@/components/LoadingOverlay';
+import { useEffect, useRef, useState } from 'react';
 
 // Lazy load window components
 const WelcomeWindow = dynamic(() => import('@/components/windows/WelcomeWindow'), {
@@ -51,6 +52,12 @@ export default function Home() {
   const windows = useWindowStore((state) => state.windows);
   const openWindow = useWindowStore((state) => state.openWindow);
   const hasInitialized = useRef(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Handle loading completion
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
 
   // Open welcome window on first load - only once
   useEffect(() => {
@@ -108,35 +115,38 @@ export default function Home() {
 
   return (
     <ClientOnly>
-      <DesktopGrid>
-        {/* Responsive Desktop Icons Grid */}
-        <div className="absolute inset-0 pt-6 px-6 pointer-events-none">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-8 max-w-7xl mx-auto">
-            {icons.map((icon) => (
-              <div key={icon.type} className="flex justify-center pointer-events-auto">
-                <DesktopIcon
-                  type={icon.type}
-                  label={icon.label}
-                  icon={icon.icon}
-                  x={0} // Using absolute=false in DesktopIcon or grid layout
-                  y={0}
-                  isGridItem={true}
-                />
-              </div>
-            ))}
+      <LoadingOverlay onComplete={handleLoadingComplete} />
+      {!isLoading && (
+        <DesktopGrid>
+          {/* Responsive Desktop Icons Grid */}
+          <div className="absolute inset-0 pt-6 px-6 pointer-events-none">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-8 max-w-7xl mx-auto">
+              {icons.map((icon) => (
+                <div key={icon.type} className="flex justify-center pointer-events-auto">
+                  <DesktopIcon
+                    type={icon.type}
+                    label={icon.label}
+                    icon={icon.icon}
+                    x={0} // Using absolute=false in DesktopIcon or grid layout
+                    y={0}
+                    isGridItem={true}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Windows */}
-        {windows.map((window) => (
-          <Window key={window.id} window={window}>
-            {renderWindowContent(window)}
-          </Window>
-        ))}
+          {/* Windows */}
+          {windows.map((window) => (
+            <Window key={window.id} window={window}>
+              {renderWindowContent(window)}
+            </Window>
+          ))}
 
-        {/* Taskbar */}
-        <Taskbar />
-      </DesktopGrid>
+          {/* Taskbar */}
+          <Taskbar />
+        </DesktopGrid>
+      )}
     </ClientOnly>
   );
 }
