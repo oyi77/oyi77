@@ -38,16 +38,16 @@ export default function LoadingOverlay({ onComplete }: LoadingOverlayProps) {
       if (document.readyState === 'complete' && window.performance) {
         const perfData = window.performance.timing;
         const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-        
+
         // Wait for resources to load or minimum time
         const minLoadTime = 800; // Minimum 800ms for better UX
         const elapsed = Date.now() - perfData.navigationStart;
-        
+
         if (elapsed >= minLoadTime && document.readyState === 'complete') {
           setProgress(100);
           clearInterval(progressInterval);
           clearInterval(checkCompleteInterval);
-          
+
           setTimeout(() => {
             setIsComplete(true);
             setTimeout(() => {
@@ -104,7 +104,7 @@ export default function LoadingOverlay({ onComplete }: LoadingOverlayProps) {
       const now = Date.now();
       const delta = now - lastTime;
       lastTime = now;
-      
+
       // Spawn obstacles every 2 seconds
       if (now - lastObstacleTimeRef.current > 2000) {
         lastObstacleTimeRef.current = now;
@@ -163,7 +163,7 @@ export default function LoadingOverlay({ onComplete }: LoadingOverlayProps) {
           <div className="relative w-full max-w-md h-64 mb-8 overflow-hidden">
             {/* Ground */}
             <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#8b4513] to-[#d4a574] border-t-4 border-[#654321]" />
-            
+
             {/* Ground line */}
             <div className="absolute bottom-16 left-0 right-0 h-1 bg-[#654321]" />
 
@@ -174,7 +174,7 @@ export default function LoadingOverlay({ onComplete }: LoadingOverlayProps) {
                 y: isJumping ? -60 : 0,
               }}
               transition={{
-                type: 'easeOut',
+                ease: 'easeOut',
                 duration: 0.4,
               }}
             >

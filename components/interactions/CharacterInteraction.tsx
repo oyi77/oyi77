@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CharacterType } from '@/components/3d/Character3D';
+import { CharacterType } from '@/lib/types/character';
 
 interface CharacterInteractionProps {
   character: CharacterType;
@@ -17,12 +17,12 @@ export default function CharacterInteraction({
 }: CharacterInteractionProps) {
   const [showInfo, setShowInfo] = useState(true);
 
-  const characterInfo = {
+  const characterInfo: Record<string, { name: string; title: string; power: string; quote: string }> = {
     luffy: {
       name: 'Monkey D. Luffy',
       title: 'Straw Hat Captain',
       power: 'Gomu Gomu no Mi',
-      quote: "I&apos;m gonna be the Pirate King!",
+      quote: "I'm gonna be the Pirate King!",
     },
     zoro: {
       name: 'Roronoa Zoro',
@@ -74,7 +74,12 @@ export default function CharacterInteraction({
     },
   };
 
-  const info = characterInfo[character];
+  const info = characterInfo[character] || {
+    name: 'Unknown Pirate',
+    title: 'Mystery Character',
+    power: 'Unknown',
+    quote: '...',
+  };
 
   return (
     <AnimatePresence>

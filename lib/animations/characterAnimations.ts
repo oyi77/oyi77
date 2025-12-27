@@ -1,4 +1,5 @@
-import { CharacterType, AnimationType } from '@/components/3d/Character3D';
+import { AnimationType } from '@/components/3d/Character3D';
+import { CharacterType } from '@/lib/types/character';
 import { AnimationVariant } from '@/components/2d/Character2D';
 
 export interface AnimationConfig {
@@ -8,7 +9,7 @@ export interface AnimationConfig {
   easing?: string;
 }
 
-export const characterAnimations: Record<CharacterType, Record<AnimationType | AnimationVariant, AnimationConfig>> = {
+export const characterAnimations: Partial<Record<CharacterType, Record<AnimationType | AnimationVariant, AnimationConfig>>> = {
   luffy: {
     idle: { duration: 2, loop: true, trigger: 'auto' },
     walking: { duration: 1, loop: true, trigger: 'auto' },
@@ -110,7 +111,7 @@ export const characterAnimations: Record<CharacterType, Record<AnimationType | A
   },
 };
 
-export const specialMoves: Record<CharacterType, string[]> = {
+export const specialMoves: Partial<Record<CharacterType, string[]>> = {
   luffy: ['Gomu Gomu no Pistol', 'Gear Second', 'Gear Third', 'Gear Fourth'],
   zoro: ['Oni Giri', 'Santoryu', 'Asura', 'Purgatory Oni Giri'],
   crocodile: ['Desert Spada', 'Sables', 'Ground Secco', 'Desert La Spada'],

@@ -1,0 +1,9 @@
+{
+    "css.lint.unknownAtRules": "ignore",
+    "files.exclude": {
+        "out/": true
+    },
+    "search.exclude": {
+        "out/": true
+    }
+}

@@ -5,8 +5,8 @@ import { useFrame, useLoader } from '@react-three/fiber';
 import { Group, TextureLoader, DoubleSide } from 'three';
 import { Billboard, useTexture } from '@react-three/drei';
 import { getAssetPath } from '@/lib/utils/basePath';
+import { CharacterType } from '@/lib/types/character';
 
-export type CharacterType = 'luffy' | 'zoro' | 'crocodile' | 'doflamingo' | 'mihawk' | 'captain' | 'akainu' | 'kizaru' | 'trafalgar_law';
 export type AnimationType = 'idle' | 'walking' | 'fighting' | 'emote';
 
 interface Character3DProps {
@@ -142,7 +142,7 @@ export default function Character3D({
   };
 
   // Character colors
-  const characterColors = {
+  const characterColors: Record<string, { primary: string; secondary: string; skin: string }> = {
     luffy: { primary: '#C8102E', secondary: '#FFD700', skin: '#FFDBAC' },
     zoro: { primary: '#2D5016', secondary: '#8B4513', skin: '#FFDBAC' },
     crocodile: { primary: '#8B7355', secondary: '#D4A574', skin: '#D4A574' },
@@ -154,7 +154,7 @@ export default function Character3D({
     trafalgar_law: { primary: '#1a1a1a', secondary: '#FFD700', skin: '#FFDBAC' }, // Black / Yellow
   };
 
-  const colors = characterColors[character];
+  const colors = characterColors[character] || { primary: '#333333', secondary: '#666666', skin: '#FFDBAC' };
   const texture = useTexture(getAssetPath(`/assets/characters/${character}.png`));
   const aspect = texture.image.width / texture.image.height;
   const height = 2;
