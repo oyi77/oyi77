@@ -1,20 +1,22 @@
 'use client';
 
 import { useWindowStore, Window } from '@/lib/store/windowStore';
-import { User, Briefcase, Terminal, BarChart3, Sparkles, Map, Users, Scroll } from 'lucide-react';
+import { User, Briefcase, Terminal, BarChart3, Sparkles, Map, Users, Scroll, AppWindow } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { cn } from '@/lib/utils/cn';
 
 interface TaskbarItemProps {
   window: Window;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
-  welcome: <Sparkles className="w-4 h-4" />,
-  profile: <User className="w-4 h-4" />,
-  bounty: <Scroll className="w-4 h-4" />,
-  logpose: <Terminal className="w-4 h-4" />,
-  tactical: <Map className="w-4 h-4" />,
-  crew: <Users className="w-4 h-4" />,
+  welcome: <Sparkles className="w-5 h-5" />,
+  profile: <User className="w-5 h-5" />,
+  bounty: <Briefcase className="w-5 h-5" />,
+  logpose: <Terminal className="w-5 h-5" />,
+  tactical: <BarChart3 className="w-5 h-5" />,
+  crew: <Users className="w-5 h-5" />,
+  fileManager: <AppWindow className="w-5 h-5" />,
 };
 
 export default function TaskbarItem({ window }: TaskbarItemProps) {
@@ -35,16 +37,21 @@ export default function TaskbarItem({ window }: TaskbarItemProps) {
     <motion.button
       onClick={handleClick}
       type="button"
-      className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-lg md:rounded-xl transition-all relative z-50 cursor-pointer font-semibold group shadow-3d ${window.minimized
-        ? 'bg-white/30 hover:bg-white/40 text-white/70'
-        : 'bg-white/60 hover:bg-white/80 text-onepiece-blue border-2 border-white/50'
-        }`}
-      whileHover={{ scale: 1.05, y: -1 }}
-      whileTap={{ scale: 0.95, y: 1 }}
+      className={cn(
+        "flex items-center justify-center p-2 rounded-xl transition-all relative group cursor-pointer border-2",
+        window.minimized
+          ? "bg-tan text-retro-gray/50 border-transparent hover:bg-white hover:text-retro-gray hover:border-retro-gray/30"
+          : "bg-retro-blue text-white border-retro-gray shadow-brutal-sm"
+      )}
+      whileHover={{ scale: 1.1, y: -4 }}
+      whileTap={{ scale: 0.95, y: 0 }}
       onMouseEnter={() => focusWindow(window.id)}
     >
-      <div className="text-onepiece-blue flex-shrink-0 group-hover:scale-110 transition-transform">{iconMap[window.type]}</div>
-      <span className="text-[10px] md:text-xs truncate max-w-[80px] md:max-w-none font-bold text-onepiece-mahogany group-hover:text-onepiece-red transition-colors">{window.title}</span>
+      {iconMap[window.type] || <AppWindow className="w-5 h-5" />}
+      {/* Tooltip on hover (simplified) */}
+      <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-retro-gray text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-mono">
+        {window.title}
+      </span>
     </motion.button>
   );
 }

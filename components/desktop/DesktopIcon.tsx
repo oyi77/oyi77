@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Briefcase, Terminal, BarChart3, FileText, FolderGit2 } from 'lucide-react';
 import { useWindowStore, WindowType } from '@/lib/store/windowStore';
+import HoverWiggle from '@/components/animation/HoverWiggle';
 
 interface DesktopIconProps {
   type: WindowType | 'cv' | 'github';
@@ -83,23 +84,18 @@ export default function DesktopIcon({ type, label, icon, x = 0, y = 0, isGridIte
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <motion.div
-        className={`p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl transition-all duration-300 icon-3d ${isSelected
-          ? 'bg-gradient-to-br from-onepiece-red/40 to-onepiece-red/20 border-2 md:border-4 border-onepiece-red'
-          : 'bg-white/90 group-hover:bg-white border-2 md:border-4 border-onepiece-gold group-hover:border-onepiece-red'
-          }`}
-        whileHover={{
-          scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.15 : 1,
-          rotate: typeof window !== 'undefined' && window.innerWidth >= 768 ? [0, -5, 5, 0] : 0,
-          y: typeof window !== 'undefined' && window.innerWidth >= 768 ? -3 : 0
-        }}
-        whileTap={{ scale: 0.98, y: 1 }}
-        animate={isSelected ? { y: [0, -5, 0] } : {}}
-      >
-        <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
-          {icon}
+      <HoverWiggle rotation={5} scale={1.1}>
+        <div
+          className={`p-3 md:p-4 lg:p-5 rounded-xl md:rounded-2xl transition-all duration-300 icon-3d ${isSelected
+            ? 'bg-retro-red border-2 md:border-4 border-retro-gray shadow-none'
+            : 'bg-retro-white group-hover:bg-white border-2 md:border-4 border-retro-gray shadow-brutal-sm'
+            }`}
+        >
+          <div className="text-retro-gray group-hover:text-retro-blue transition-colors">
+            {icon}
+          </div>
         </div>
-      </motion.div>
+      </HoverWiggle>
       <motion.div className="flex flex-col items-center gap-0.5 md:gap-1 relative z-50">
         <motion.span
           className={`text-xs md:text-sm font-bold text-text-dark px-2 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2 rounded-full transition-all opacity-0 group-hover:opacity-100 pointer-events-none relative z-[100] shadow-3d ${isSelected

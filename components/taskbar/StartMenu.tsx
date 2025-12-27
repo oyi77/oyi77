@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   User, Briefcase, Terminal, BarChart3, FileText, FolderGit2,
   Sparkles, Settings, Power, Search, X, Folder, Globe,
-  Compass
+  Compass, Command, RefreshCw, Cpu, Monitor
 } from 'lucide-react';
 import { useWindowStore } from '@/lib/store/windowStore';
-import { Luffy } from '@/components/cartoon/OnePieceCharacters';
+import { cn } from '@/lib/utils/cn';
 
 interface StartMenuProps {
   isOpen: boolean;
@@ -35,63 +35,63 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
 
   const apps = [
     {
-      name: 'Welcome',
-      icon: <Sparkles className="w-8 h-8" />,
+      name: 'Welcome.exe',
+      icon: <Sparkles className="w-6 h-6" />,
       type: 'welcome' as const,
-      description: 'Welcome to my portfolio'
+      description: 'System Intro'
     },
     {
-      name: 'Profile',
-      icon: <User className="w-8 h-8" />,
+      name: 'Profile.sys',
+      icon: <User className="w-6 h-6" />,
       type: 'profile' as const,
-      description: 'View my profile'
+      description: 'User Data'
     },
     {
-      name: 'Bounty Posters',
-      icon: <Briefcase className="w-8 h-8" />,
+      name: 'Experience.log',
+      icon: <FileText className="w-6 h-6" />,
       type: 'bounty' as const,
-      description: 'Work experience'
+      description: 'Work History'
     },
     {
-      name: 'Log Pose',
-      icon: <Compass className="w-8 h-8" />,
+      name: 'Projects.exe',
+      icon: <Monitor className="w-6 h-6" />,
       type: 'logpose' as const,
-      description: 'Log pose'
+      description: 'Portfolio'
     },
     {
-      name: 'Tactical Map',
-      icon: <BarChart3 className="w-8 h-8" />,
+      name: 'System_Stats',
+      icon: <Cpu className="w-6 h-6" />,
       type: 'tactical' as const,
-      description: 'Statistics dashboard'
+      description: 'Performance'
     },
     {
       name: 'Terminal',
-      icon: <Terminal className="w-8 h-8" />,
+      icon: <Terminal className="w-6 h-6" />,
       type: 'terminal' as const,
-      description: 'Command line interface'
+      description: 'Command Line'
     },
     {
-      name: 'Files',
-      icon: <Folder className="w-8 h-8" />,
+      name: 'File_Explorer',
+      icon: <Folder className="w-6 h-6" />,
       type: 'fileManager' as const,
-      description: 'Browse portfolio files'
+      description: 'Browse Files'
     },
     {
-      name: 'Browser',
-      icon: <Globe className="w-8 h-8" />,
+      name: 'Netscape',
+      icon: <Globe className="w-6 h-6" />,
       type: 'browser' as const,
-      description: 'Explore my projects'
+      description: 'Web Browser'
     },
   ];
 
   const quickActions = [
     {
-      name: 'CV',
-      icon: <FileText className="w-6 h-6" />,
+      name: 'Download_CV',
+      icon: <FileText className="w-4 h-4" />,
       action: () => {
         const link = document.createElement('a');
-        link.href = '/muchammadfikriizzuddin_cv.pdf';
-        link.download = 'muchammadfikriizzuddin_cv.pdf';
+        link.href = '/assets/cv/resume.pdf';
+        link.download = 'Fikri_Izzuddin_CV.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -99,14 +99,18 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
       }
     },
     {
-      name: 'GitHub',
-      icon: <FolderGit2 className="w-6 h-6" />,
+      name: 'GitHub_Repo',
+      icon: <FolderGit2 className="w-4 h-4" />,
       action: () => {
         window.open('https://github.com/oyi77', '_blank', 'noopener,noreferrer');
         onClose();
       }
     },
   ];
+
+  const handleRestart = () => {
+    window.location.reload();
+  };
 
   const filteredApps = apps.filter(app =>
     app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -119,122 +123,109 @@ export default function StartMenu({ isOpen, onClose }: StartMenuProps) {
         <>
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+            className="fixed inset-0 bg-retro-gray/50 backdrop-blur-sm z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
           />
 
-          {/* Start Menu */}
+          {/* Omni-bar / Start Menu */}
           <motion.div
             ref={menuRef}
-            className="fixed bottom-14 md:bottom-16 left-2 md:left-4 right-2 md:right-auto w-auto md:w-96 max-w-md bg-[#f4e4bc] rounded-xl md:rounded-2xl shadow-3d-lg border-2 md:border-4 border-[#4a1d1d] z-50 overflow-hidden"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            className="fixed bottom-20 left-1/2 -translate-x-1/2 w-[90vw] md:w-[600px] z-50 flex flex-col items-center"
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            exit={{ opacity: 0, y: 50, scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 350, damping: 25 }}
           >
-            {/* Header with Luffy */}
-            <div className="bg-gradient-to-r from-[#4a1d1d] to-[#2a0f0f] p-3 md:p-4 flex items-center justify-between border-b-2 md:border-b-4 border-[#d4af37]">
-              <div className="flex items-center gap-2 md:gap-3">
-                <div className="hidden sm:block">
-                  <Luffy size="sm" variant="excited" />
-                </div>
-                <div>
-                  <h3 className="text-base md:text-lg font-bold text-[#d4af37]">Start Menu</h3>
-                  <p className="text-[10px] md:text-xs text-[#d4af37]/80">Muchammad Fikri Izzuddin</p>
-                </div>
-              </div>
-              <button
-                onClick={onClose}
-                className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
-                aria-label="Close"
-              >
-                <X className="w-4 h-4 md:w-5 md:h-5 text-[#d4af37]" />
-              </button>
-            </div>
+            {/* Main Card */}
+            <div className="w-full bg-tan border-2 border-retro-gray shadow-brutal-lg rounded-lg overflow-hidden flex flex-col">
 
-            {/* Search Bar */}
-            <div className="p-3 md:p-4 border-b-2 border-onepiece-gold/30">
-              <div className="relative">
-                <Search className="absolute left-2 md:left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 md:w-5 md:h-5 text-onepiece-blue" />
+              {/* Search Header */}
+              <div className="p-4 border-b-2 border-retro-gray bg-white flex items-center gap-3">
+                <Command className="w-5 h-5 text-retro-gray/50" />
                 <input
                   type="text"
-                  placeholder="Search apps..."
+                  placeholder="EXECUTE PROGRAM..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-8 md:pl-10 pr-3 md:pr-4 py-2 md:py-2.5 bg-white/80 border-2 border-onepiece-gold rounded-lg focus:outline-none focus:border-onepiece-red text-onepiece-blue text-sm md:text-base font-medium"
+                  className="flex-1 bg-transparent outline-none text-lg font-bold text-retro-gray placeholder:text-retro-gray/40 font-mono uppercase"
                   autoFocus
                 />
-              </div>
-            </div>
-
-            {/* Apps Grid */}
-            <div className="p-3 md:p-4 max-h-[60vh] md:max-h-96 overflow-y-auto">
-              <h4 className="text-xs md:text-sm font-bold text-onepiece-blue mb-2 md:mb-3 px-2">Applications</h4>
-              <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-3">
-                {filteredApps.map((app) => (
-                  <motion.button
-                    key={app.type}
-                    onClick={() => {
-                      openWindow(app.type);
-                      onClose();
-                    }}
-                    className="flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 bg-white/80 hover:bg-onepiece-gold/30 rounded-lg md:rounded-xl border-2 border-onepiece-gold/50 hover:border-onepiece-red transition-all group shadow-3d"
-                    whileHover={{
-                      scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1,
-                      y: typeof window !== 'undefined' && window.innerWidth >= 768 ? -2 : 0
-                    }}
-                    whileTap={{ scale: 0.95, y: 1 }}
-                  >
-                    <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
-                      {app.icon}
-                    </div>
-                    <span className="text-[10px] md:text-xs font-semibold text-onepiece-blue text-center">
-                      {app.name}
-                    </span>
-                  </motion.button>
-                ))}
+                <div className="hidden md:flex items-center gap-1">
+                  <span className="px-1.5 py-0.5 rounded border border-retro-gray/20 text-xs font-mono text-retro-gray/50">ESC</span>
+                </div>
               </div>
 
-              {/* Quick Actions */}
-              <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t-2 border-onepiece-gold/30">
-                <h4 className="text-xs md:text-sm font-bold text-onepiece-blue mb-2 md:mb-3 px-2">Quick Actions</h4>
-                <div className="flex gap-2">
-                  {quickActions.map((action, index) => (
+              {/* Content Area */}
+              <div className="p-2 bg-tan max-h-[60vh] overflow-y-auto">
+
+                {/* Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                  {filteredApps.map((app) => (
                     <motion.button
-                      key={index}
-                      onClick={action.action}
-                      className="flex-1 flex flex-col items-center gap-1.5 md:gap-2 p-2 md:p-3 bg-white/80 hover:bg-onepiece-gold/30 rounded-lg md:rounded-xl border-2 border-onepiece-gold/50 hover:border-onepiece-red transition-all group shadow-3d"
-                      whileHover={{
-                        scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 1.05 : 1,
-                        y: typeof window !== 'undefined' && window.innerWidth >= 768 ? -2 : 0
+                      key={app.type}
+                      onClick={() => {
+                        openWindow(app.type);
+                        onClose();
                       }}
-                      whileTap={{ scale: 0.95, y: 1 }}
+                      className={cn(
+                        "flex flex-col items-center justify-center gap-2 p-4 rounded-md border-2 border-transparent transition-all group",
+                        "hover:bg-white hover:border-retro-gray hover:shadow-brutal-sm"
+                      )}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                     >
-                      <div className="text-onepiece-red group-hover:text-onepiece-blue transition-colors">
-                        {action.icon}
+                      <div className="p-3 bg-retro-white border-2 border-retro-gray rounded-full shadow-brutal-sm group-hover:shadow-none group-hover:translate-y-0.5 transition-all">
+                        <div className="text-retro-gray">
+                          {app.icon}
+                        </div>
                       </div>
-                      <span className="text-[10px] md:text-xs font-semibold text-onepiece-blue">
-                        {action.name}
-                      </span>
+                      <div className="text-center">
+                        <div className="font-bold text-sm text-retro-gray font-mono">{app.name}</div>
+                        <div className="text-[10px] text-retro-gray/60 font-mono uppercase tracking-wider">{app.description}</div>
+                      </div>
                     </motion.button>
                   ))}
                 </div>
-              </div>
-            </div>
 
-            {/* Footer */}
-            <div className="p-3 md:p-4 bg-onepiece-gold/10 border-t-2 border-onepiece-gold/30 flex items-center justify-between">
-              <div className="flex items-center gap-1.5 md:gap-2">
-                <Settings className="w-4 h-4 md:w-5 md:h-5 text-onepiece-blue" />
-                <span className="text-xs md:text-sm font-semibold text-onepiece-blue">Settings</span>
+                {/* Quick Actions Footer */}
+                {quickActions.length > 0 && (
+                  <div className="mt-4 pt-4 border-t-2 border-retro-gray/10 flex gap-2">
+                    {quickActions.map((action, idx) => (
+                      <button
+                        key={idx}
+                        onClick={action.action}
+                        className="flex-1 flex items-center justify-center gap-2 py-2 bg-retro-white border-2 border-retro-gray shadow-brutal-sm hover:translate-y-0.5 hover:shadow-none transition-all active:scale-95"
+                      >
+                        {action.icon}
+                        <span className="font-bold text-sm font-mono">{action.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
-              <button className="flex items-center gap-1.5 md:gap-2 p-1.5 md:p-2 hover:bg-onepiece-red/20 rounded-lg transition-colors">
-                <Power className="w-4 h-4 md:w-5 md:h-5 text-onepiece-red" />
-                <span className="text-xs md:text-sm font-semibold text-onepiece-red">Power</span>
-              </button>
+
+              {/* System Footer */}
+              <div className="p-2 bg-retro-gray text-retro-white flex items-center justify-between text-xs font-mono">
+                <span>PAIJO-OS v1.0.5</span>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleRestart}
+                    className="flex items-center gap-1 hover:text-retro-yellow transition-colors px-2 py-0.5 rounded hover:bg-white/10"
+                  >
+                    <RefreshCw className="w-3 h-3" /> RESTART
+                  </button>
+                  <button
+                    onClick={handleRestart}
+                    className="flex items-center gap-1 hover:text-retro-red transition-colors px-2 py-0.5 rounded hover:bg-white/10"
+                  >
+                    <Power className="w-3 h-3" /> SHUTDOWN
+                  </button>
+                </div>
+              </div>
+
             </div>
           </motion.div>
         </>

@@ -41,51 +41,58 @@ export default function StatsWindow() {
   }, []);
 
   return (
-    <div className="p-6 text-white h-full overflow-y-auto bg-black/40">
-      <h2 className="text-2xl font-black text-onepiece-gold mb-8 italic uppercase tracking-widest flex items-center gap-3">
-        <Map className="w-8 h-8" />
-        Tactical Map: Strategy & Ops
+    <div className="p-6 md:p-8 h-full bg-tan text-retro-gray overflow-y-auto">
+      <h2 className="text-3xl font-black mb-8 italic uppercase tracking-widest flex items-center gap-3 border-b-4 border-retro-gray pb-4">
+        <Map className="w-8 h-8 text-retro-gray" />
+        Tactical Map
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* Architectural Resilience */}
         <motion.div
-          className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-onepiece-blue shadow-xl"
+          className="bg-retro-white border-2 border-retro-gray p-6 shadow-brutal relative overflow-hidden group hover:shadow-brutal-hover transition-all"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
         >
-          <div className="flex items-center gap-2 mb-4">
-            <Activity className="w-5 h-5 text-onepiece-blue" />
-            <h3 className="text-lg font-black text-onepiece-blue uppercase">System Resilience</h3>
+          <div className="flex items-center gap-2 mb-6 border-b-2 border-retro-gray pb-2">
+            <Activity className="w-5 h-5 text-retro-blue" />
+            <h3 className="text-lg font-black uppercase text-retro-gray">System Resilience</h3>
           </div>
 
-          <div className="flex items-end gap-2 h-32">
-            <div className="flex-1 flex flex-col items-center">
-              <div className="flex-1 w-full bg-white/10 rounded-t-xl overflow-hidden flex items-end">
+          <div className="flex items-end gap-4 h-40">
+            <div className="flex-1 flex flex-col items-center group/bar">
+              <div className="flex-1 w-full bg-retro-gray/5 rounded-t-sm overflow-hidden flex items-end border-b border-retro-gray relative">
+                <div className="absolute inset-0 bg-retro-grid opacity-20 pointer-events-none" />
                 <motion.div
-                  className="w-full bg-onepiece-blue rounded-t-xl shadow-[0_0_20px_rgba(30,58,138,0.5)]"
+                  className="w-full bg-retro-blue border-t-2 border-x-2 border-retro-gray relative z-10"
                   initial={{ height: 0 }}
                   animate={{ height: `${animatedTrading}%` }}
                   transition={{ duration: 2, type: "spring" }}
-                />
+                >
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/bar:opacity-100 transition-opacity" />
+                </motion.div>
               </div>
-              <span className="text-sm font-bold text-gray-400 mt-2">Reliability</span>
-              <span className="text-xl font-black text-onepiece-blue">
+              <span className="text-xs font-bold font-mono text-retro-gray/60 mt-3 uppercase tracking-wider">Reliability</span>
+              <span className="text-2xl font-black text-retro-blue mt-1 font-mono">
                 {Math.round(animatedTrading)}%
               </span>
             </div>
-            <div className="flex-1 flex flex-col items-center">
-              <div className="flex-1 w-full bg-white/10 rounded-t-xl overflow-hidden flex items-end">
+
+            <div className="flex-1 flex flex-col items-center group/bar">
+              <div className="flex-1 w-full bg-retro-gray/5 rounded-t-sm overflow-hidden flex items-end border-b border-retro-gray relative">
+                <div className="absolute inset-0 bg-retro-grid opacity-20 pointer-events-none" />
                 <motion.div
-                  className="w-full bg-cyan-400 rounded-t-xl shadow-[0_0_20px_rgba(34,211,238,0.5)]"
+                  className="w-full bg-retro-yellow border-t-2 border-x-2 border-retro-gray relative z-10"
                   initial={{ height: 0 }}
                   animate={{ height: `${animatedUptime}%` }}
                   transition={{ duration: 2.2, type: "spring" }}
-                />
+                >
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/bar:opacity-100 transition-opacity" />
+                </motion.div>
               </div>
-              <span className="text-sm font-bold text-gray-400 mt-2">Uptime</span>
-              <span className="text-xl font-black text-cyan-400">
+              <span className="text-xs font-bold font-mono text-retro-gray/60 mt-3 uppercase tracking-wider">Uptime</span>
+              <span className="text-2xl font-black text-retro-yellow mt-1 font-mono">
                 {animatedUptime.toFixed(1)}%
               </span>
             </div>
@@ -94,41 +101,48 @@ export default function StatsWindow() {
 
         {/* Operational Velocity */}
         <motion.div
-          className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-onepiece-gold shadow-xl"
+          className="bg-retro-white border-2 border-retro-gray p-6 shadow-brutal relative overflow-hidden group hover:shadow-brutal-hover transition-all"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, type: "spring" }}
         >
-          <div className="flex items-center gap-2 mb-4">
-            <Zap className="w-5 h-5 text-onepiece-gold" />
-            <h3 className="text-lg font-black text-onepiece-gold uppercase">Operational Velocity</h3>
+          <div className="flex items-center gap-2 mb-6 border-b-2 border-retro-gray pb-2">
+            <Zap className="w-5 h-5 text-retro-red" />
+            <h3 className="text-lg font-black uppercase text-retro-gray">Operational Velocity</h3>
           </div>
-          <div className="flex items-end gap-2 h-32">
-            <div className="flex-1 flex flex-col items-center">
-              <div className="flex-1 w-full bg-white/10 rounded-t-xl overflow-hidden flex items-end">
+          <div className="flex items-end gap-4 h-40">
+            <div className="flex-1 flex flex-col items-center group/bar">
+              <div className="flex-1 w-full bg-retro-gray/5 rounded-t-sm overflow-hidden flex items-end border-b border-retro-gray relative">
+                <div className="absolute inset-0 bg-retro-grid opacity-20 pointer-events-none" />
                 <motion.div
-                  className="w-full bg-onepiece-gold rounded-t-xl shadow-[0_0_20px_rgba(255,215,0,0.5)]"
+                  className="w-full bg-retro-red border-t-2 border-x-2 border-retro-gray relative z-10"
                   initial={{ height: 0 }}
                   animate={{ height: `${animatedEfficiency}%` }}
                   transition={{ duration: 2, type: "spring" }}
-                />
+                >
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/bar:opacity-100 transition-opacity" />
+                </motion.div>
               </div>
-              <span className="text-sm font-bold text-gray-400 mt-2">Efficiency</span>
-              <span className="text-xl font-black text-onepiece-gold">
+              <span className="text-xs font-bold font-mono text-retro-gray/60 mt-3 uppercase tracking-wider">Efficiency</span>
+              <span className="text-2xl font-black text-retro-red mt-1 font-mono">
                 {Math.round(animatedEfficiency)}%
               </span>
             </div>
-            <div className="flex-1 flex flex-col items-center">
-              <div className="flex-1 w-full bg-white/10 rounded-t-xl overflow-hidden flex items-end">
+
+            <div className="flex-1 flex flex-col items-center group/bar">
+              <div className="flex-1 w-full bg-retro-gray/5 rounded-t-sm overflow-hidden flex items-end border-b border-retro-gray relative">
+                <div className="absolute inset-0 bg-retro-grid opacity-20 pointer-events-none" />
                 <motion.div
-                  className="w-full bg-orange-500 rounded-t-xl shadow-[0_0_20px_rgba(249,115,22,0.5)]"
+                  className="w-full bg-retro-gray border-t-2 border-x-2 border-retro-gray relative z-10"
                   initial={{ height: 0 }}
                   animate={{ height: `${animatedVelocity}%` }}
                   transition={{ duration: 2.3, type: "spring" }}
-                />
+                >
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/bar:opacity-100 transition-opacity" />
+                </motion.div>
               </div>
-              <span className="text-sm font-bold text-gray-400 mt-2">Velocity</span>
-              <span className="text-xl font-black text-orange-500">
+              <span className="text-xs font-bold font-mono text-retro-gray/60 mt-3 uppercase tracking-wider">Velocity</span>
+              <span className="text-2xl font-black text-retro-gray mt-1 font-mono">
                 {Math.round(animatedVelocity)}
               </span>
             </div>
@@ -138,16 +152,18 @@ export default function StatsWindow() {
 
       <div className="grid grid-cols-1 gap-6">
         <motion.div
-          className="bg-white/80 rounded-2xl p-4 border-4 border-cartoon-blue cartoon-shadow flex items-start gap-4"
+          className="bg-retro-white rounded-none p-6 border-2 border-retro-gray shadow-brutal flex items-start gap-6 hover:shadow-brutal-lg transition-all"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, type: "spring" }}
         >
-          <Compass className="w-12 h-12 text-onepiece-blue mt-1" />
+          <div className="p-3 bg-retro-blue text-white border-2 border-retro-gray shadow-brutal-sm">
+            <Compass className="w-8 h-8" />
+          </div>
           <div>
-            <h3 className="text-lg font-bold mb-1 text-onepiece-blue">Strategic Focus</h3>
-            <p className="text-sm text-text-dark/80 font-medium leading-relaxed">
-              Currently focused on scaling decentralized infrastructure and optimizing high-frequency trading systems. Prioritizing robust architecture over quick fixes to ensure long-term stability and growth.
+            <h3 className="text-xl font-black mb-2 text-retro-blue uppercase italic">Strategic Focus</h3>
+            <p className="text-base text-retro-gray font-medium leading-relaxed">
+              Currently focused on <span className="font-bold bg-retro-red/10 px-1">scaling decentralized infrastructure</span> and optimizing high-frequency trading systems. Prioritizing robust architecture over quick fixes to ensure long-term stability and growth.
             </p>
           </div>
         </motion.div>

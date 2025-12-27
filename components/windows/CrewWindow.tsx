@@ -41,13 +41,13 @@ const teamData: Team[] = [
 
 export default function CrewWindow() {
     return (
-        <div className="p-6 text-white overflow-y-auto h-full space-y-8 bg-black/40">
-            <div className="flex items-center justify-between mb-8">
-                <h2 className="text-3xl font-black text-onepiece-gold italic uppercase tracking-widest flex items-center gap-3">
-                    <Users className="w-8 h-8" />
-                    Ship&apos;s Manifest: Leadership
+        <div className="p-6 md:p-8 h-full bg-tan text-retro-gray overflow-y-auto">
+            <div className="flex items-center justify-between mb-8 border-b-4 border-retro-gray pb-4">
+                <h2 className="text-3xl font-black italic uppercase tracking-widest flex items-center gap-3">
+                    <Users className="w-8 h-8 text-retro-gray" />
+                    Ship&apos;s Manifest
                 </h2>
-                <div className="bg-onepiece-red px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                <div className="bg-retro-red text-white px-3 py-1 text-xs font-bold font-mono border-2 border-retro-gray shadow-brutal-sm animate-pulse">
                     ACTIVE SQUADS
                 </div>
             </div>
@@ -56,66 +56,65 @@ export default function CrewWindow() {
                 {teamData.map((team, index) => (
                     <motion.div
                         key={team.id}
-                        className="group bg-[#2a1a0f] border-2 border-[#8b4513] rounded-xl p-6 relative overflow-hidden cartoon-shadow"
+                        className="group bg-retro-white border-2 border-retro-gray p-6 relative overflow-hidden shadow-brutal hover:shadow-brutal-hover transition-all"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        whileHover={{ scale: 1.02, borderColor: '#FFD700' }}
+                        whileHover={{ scale: 1.02 }}
                     >
-                        {/* Background Texture Overlay */}
-                        <div
-                            className="absolute inset-0 opacity-10 pointer-events-none"
-                            style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/natural-paper.png")' }}
-                        />
-
                         <div className="relative z-10">
                             <div className="flex items-start justify-between mb-4">
                                 <div>
-                                    <h3 className="text-xl font-black text-onepiece-gold uppercase tracking-tighter">{team.name}</h3>
-                                    <p className="text-sm text-onepiece-blue font-bold italic">{team.role}</p>
+                                    <h3 className="text-xl font-black uppercase tracking-tighter">{team.name}</h3>
+                                    <p className="text-sm text-retro-blue font-bold font-mono border-b-2 border-retro-blue inline-block">{team.role}</p>
                                 </div>
-                                <Anchor className="w-6 h-6 text-[#8b4513] group-hover:text-onepiece-gold transition-colors" />
+                                <div className="p-2 bg-retro-gray text-white rounded-full group-hover:bg-retro-red transition-colors border-2 border-transparent group-hover:border-retro-gray">
+                                    <Anchor className="w-5 h-5" />
+                                </div>
                             </div>
 
                             <div className="space-y-4">
-                                <div className="bg-black/30 p-3 rounded-lg border border-white/10">
-                                    <p className="text-xs font-medium text-gray-300 leading-relaxed">
-                                        <span className="text-onepiece-gold font-bold">Impact: </span>
+                                <div className="bg-tan/50 p-3 border-l-4 border-retro-gray">
+                                    <p className="text-sm font-medium leading-relaxed">
+                                        <span className="font-black uppercase text-xs text-retro-gray/60 block mb-1">Impact Analysis:</span>
                                         {team.impact}
                                     </p>
                                 </div>
 
-                                <div className="flex items-center justify-between pt-2 border-t border-dashed border-[#8b4513]/50">
+                                <div className="flex items-center justify-between pt-4 border-t-2 border-dashed border-retro-gray/20">
                                     <div className="flex flex-col">
-                                        <span className="text-[10px] font-black text-[#8b4513] uppercase tracking-widest">Squad Size</span>
-                                        <span className="text-sm font-bold text-white">{team.size}</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-retro-gray/60">Squad Size</span>
+                                        <span className="text-sm font-bold">{team.size}</span>
                                     </div>
                                     <div className="flex flex-col items-end">
-                                        <span className="text-[10px] font-black text-[#8b4513] uppercase tracking-widest">Style</span>
-                                        <span className="text-sm font-bold text-onepiece-red">{team.style}</span>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-retro-gray/60">Style</span>
+                                        <span className="text-sm font-bold text-retro-red">{team.style}</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        {/* Hover Aura */}
-                        <div className="absolute inset-0 bg-onepiece-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.div>
                 ))}
 
                 {/* Tactical Overview */}
                 <motion.div
-                    className="md:col-span-2 bg-gradient-to-r from-onepiece-blue/20 to-transparent border-l-4 border-onepiece-blue p-6 rounded-r-xl"
+                    className="md:col-span-2 bg-retro-white border-4 border-retro-blue p-6 shadow-brutal-lg relative overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
                 >
-                    <div className="flex items-center gap-4">
-                        <Award className="w-10 h-10 text-onepiece-blue" />
+                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                        <Award className="w-24 h-24 text-retro-blue" />
+                    </div>
+
+                    <div className="flex items-start gap-6 relative z-10">
+                        <div className="hidden sm:flex items-center justify-center w-16 h-16 bg-retro-blue text-white border-2 border-retro-gray shadow-brutal shrink-0">
+                            <Award className="w-8 h-8" />
+                        </div>
                         <div>
-                            <h4 className="text-lg font-black text-white uppercase italic">Management Philosophy</h4>
-                            <p className="text-sm text-gray-400 mt-1">
-                                &quot;My goal as a Technical Lead is to empower the team to build scalable, resilient systems while fostering a culture of continuous learning and ownership. I believe in &apos;Servant Leadership&apos;—removing blockers and enabling others to excel.&quot;
+                            <h4 className="text-xl font-black text-retro-blue uppercase italic mb-2">Management Philosophy</h4>
+                            <p className="text-base font-medium leading-relaxed text-retro-gray">
+                                &quot;My goal as a Technical Lead is to empower the team to build scalable, resilient systems while fostering a culture of continuous learning and ownership. I believe in <span className="bg-retro-yellow/30 px-1 font-bold">Servant Leadership</span>—removing blockers and enabling others to excel.&quot;
                             </p>
                         </div>
                     </div>
