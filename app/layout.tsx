@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Muchammad Fikri Izzuddin - Lead Software Engineer",
+  title: "PaijoOS - Portfolio of Muchammad Fikri Izzuddin",
   description: "Portfolio of Muchammad Fikri Izzuddin - Lead Software Engineer with 7+ years of experience",
 };
 
