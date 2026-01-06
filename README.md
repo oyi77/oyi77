@@ -234,10 +234,10 @@ I'm actively seeking new challenges and opportunities in software engineering, t
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
-2. 💪 Opened PR [#3](undefined) in [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+1. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+2. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 3. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
-4. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+4. 💪 Opened PR [#3](undefined) in [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
 5. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
 <!--RECENT_ACTIVITY:end-->
   
