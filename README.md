@@ -234,10 +234,11 @@ I'm actively seeking new challenges and opportunities in software engineering, t
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-2. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-3. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
-4. ⬆️ Pushed undefined commit(s) to [oyi77/snap-perpetual-trading](https://github.com/oyi77/snap-perpetual-trading)<br>
+1. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+2. 💪 Opened PR [#3](undefined) in [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+3. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+4. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+5. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
