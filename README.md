@@ -237,8 +237,8 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 1. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 2. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 3. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
-4. ⬆️ Pushed undefined commit(s) to [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
-5. 💪 Opened PR [#3](undefined) in [oyi77/naver-smartstore](https://github.com/oyi77/naver-smartstore)<br>
+4. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+5. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
