@@ -1,7 +1,6 @@
 
 <!--
   SEO Meta Description: TechLead & Full-Stack Developer with 5+ years experience in Python, JavaScript, Machine Learning.
-  Specializing in full-stack development, backend architecture, and AI/ML solutions. Open to remote opportunities.
   Keywords: TechLead, Full-Stack Developer, Python Developer, JavaScript Developer, Machine Learning, Remote Developer, Software Engineer
 -->
 
@@ -9,7 +8,6 @@
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&duration=2000&pause=1000&center=true&vCenter=true&repeat=false&width=435&lines=Hello+There+%F0%9F%91%8B!;%F0%9F%A4%96I+am+Paijo+a.k.a+Oyi77%F0%9F%A4%96" alt="Animated typing text: Hello There! I am Paijo a.k.a Oyi77 - TechLead and Full-Stack Developer" /></a>
 </h1>
 <p align="center">
-  <!-- Typing SVG by DenverCoder1 - https://github.com/DenverCoder1/readme-typing-svg -->
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
     <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;5%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=500&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" alt="Professional title animation: Full-stack Developer, Experienced IT/Consultant, 5+ years coding experience, Always learning new things" /></a>
 </p>
@@ -18,9 +16,12 @@
 
 ![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77) [![Open to Opportunities](https://img.shields.io/badge/Status-Open%20to%20Opportunities-success?style=flat-square)](mailto:mbahkoe.pendekar@gmail.com) [![Remote](https://img.shields.io/badge/Location-Remote-blue?style=flat-square)](https://github.com/oyi77) [![Timezone](https://img.shields.io/badge/Timezone-Asia%2FJakarta%20(GMT%2B7)-orange?style=flat-square)](https://github.com/oyi77)
 
+<!--CODE_STATS:start-->
+<!--CODE_STATS:end-->
+
 ## 👨‍💻 Professional Summary
 
-**TechLead & Full-Stack Developer** with **5+ years of professional experience** in software engineering, specializing in **Python**, **JavaScript**, **Machine Learning**, and modern web technologies. Currently serving as a **Technical Lead**, I bring expertise in full-stack development, backend architecture, and AI/ML solutions. Passionate about building scalable applications, leading technical teams, and continuously learning cutting-edge technologies.
+**TechLead & Full-Stack Developer** with **5+ years of experience** in software engineering, specializing in **Python**, **JavaScript**, **Machine Learning**, and modern web technologies. Passionate about building scalable applications and continuously learning cutting-edge technologies.
 
 **Key Specializations:**
 - **Full-Stack Development**: Python, JavaScript, Node.js, React, and modern web frameworks
@@ -29,41 +30,30 @@
 - **Backend Engineering**: RESTful APIs, database design, microservices architecture
 - **DevOps & Tools**: CI/CD pipelines, version control, cloud deployment
 
-**Location**: Remote (Asia/Jakarta, GMT+7) | **Status**: Open to Opportunities | **Experience**: 5+ Years
-
 ## 🎓 About Me
 
-I'm a dedicated **IT Professional & Software Engineer** with a strong foundation in both frontend and backend development. As a **TechLead**, I combine technical expertise with leadership skills to deliver high-quality software solutions. My experience spans across multiple domains including web development, machine learning, automation, and technical consulting.
+Combining technical expertise with leadership skills to deliver high-quality software solutions.
 
 **What I Do:**
-- 🔭 **Currently**: Working as TechLead, leading development teams and architecting scalable solutions
-- 🌱 **Learning**: Continuously expanding knowledge in Agile methodologies, advanced Python, and emerging technologies
-- 👯 **Collaboration**: Open to collaborating on innovative projects, open-source contributions, and technical challenges
-- 🤖 **Specialization**: Python Bot Development & Machine Learning Specialist - building intelligent automation solutions
-- 💬 **Community**: Available for technical discussions, code reviews, and knowledge sharing
+- 🔭 Architecting scalable solutions
+- 🌱 Expanding knowledge in Agile methodologies, advanced Python, and emerging technologies
+- 👯 Open to collaborating on innovative projects and open-source contributions
+- 🤖 Building intelligent automation solutions
+- 💬 Available for technical discussions, code reviews, and knowledge sharing
 
-**Professional Interests:**
-- Full-stack web application development
-- Machine Learning and AI-powered solutions
-- Backend architecture and API design
-- Technical leadership and team mentoring
-- Agile software development practices
-
-**Connect & Learn More:**
-- 💬 Ask me anything: [GitHub Issues](https://github.com/oyi77/oyi77/issues)
-- 🌐 Personal Website: [Tutorial Work](https://tutorialwork.my.id)
-- 📷 Instagram: [@jasatugasyuk](https://instagram.com/jasatugasyuk)
+**Connect:**
+- 💬 [GitHub Issues](https://github.com/oyi77/oyi77/issues)
+- 🌐 [Personal Website](https://tutorialwork.my.id)
+- 📷 [Instagram](https://instagram.com/jasatugasyuk)
 
 ## 📧 Contact & Availability
 
 **Open to Opportunities** | **Remote Work Preferred** | **Timezone: Asia/Jakarta (GMT+7)**
 
-I'm actively seeking new challenges and opportunities in software engineering, technical leadership, and full-stack development roles. Whether it's a full-time position, contract work, or collaboration on interesting projects, I'd love to connect!
-
-**Preferred Contact Methods:**
-- 📧 **Email**: [mbahkoe.pendekar@gmail.com](mailto:mbahkoe.pendekar@gmail.com) - Best for professional inquiries
-- 💼 **LinkedIn**: [fikriizzuddin](https://www.linkedin.com/in/fikriizzuddin/) - Connect for networking and opportunities
-- 💬 **GitHub Issues**: [Ask me anything](https://github.com/oyi77/oyi77/issues) - Technical questions and discussions
+**Contact:**
+- 📧 **Email**: [mbahkoe.pendekar@gmail.com](mailto:mbahkoe.pendekar@gmail.com)
+- 💼 **LinkedIn**: [fikriizzuddin](https://www.linkedin.com/in/fikriizzuddin/)
+- 💬 **GitHub Issues**: [Ask me anything](https://github.com/oyi77/oyi77/issues)
 
 <p align="center">
  <a href="https://www.linkedin.com/in/fikriizzuddin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile - fikriizzuddin"> <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Profile - fikriizzuddin" height="40" style="vertical-align:top; margin:4px"></a>
@@ -95,13 +85,13 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 
 ### Programming Languages
 **Backend & Core:**
-- **Python** - 5+ years | Machine Learning, Backend APIs, Automation, Bot Development
-- **JavaScript** - 5+ years | Full-stack development, Node.js, Frontend frameworks
+- **Python** - Machine Learning, Backend APIs, Automation, Bot Development
+- **JavaScript** - Full-stack development, Node.js, Frontend frameworks
 - **PHP** - Web development, Server-side scripting
 - **SQL** - Database design, Query optimization, MySQL expertise
 
 **Frontend & UI:**
-- **JavaScript/TypeScript** - Modern frontend development
+- **TypeScript** - Modern frontend development
 - **Bootstrap** - Responsive UI frameworks
 - **HTML/CSS** - Web standards and styling
 
@@ -110,16 +100,15 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 - **Git & GitHub** - Version control, collaboration, CI/CD
 - **VS Code** - Primary development environment
 - **Terminal/Linux** - Command-line expertise, system administration
-- **Windows/Mac** - Cross-platform development experience
+- **Windows/Mac** - Cross-platform development
 
 ### Specialized Technologies
 - **Machine Learning** - Python-based ML solutions, AI automation
 - **Unity** - Game development and interactive applications
 - **MySQL** - Database management and optimization
-- **Agile Methodologies** - Scrum, Kanban, iterative development
+- **Agile** - Scrum, Kanban, iterative development
 
 ### DevOps & Infrastructure
-- **Git/GitHub** - Version control and collaboration
 - **CI/CD** - Continuous integration and deployment
 - **Cloud Platforms** - Deployment and hosting solutions
 - **Linux/Unix** - System administration and server management
@@ -157,62 +146,51 @@ I'm actively seeking new challenges and opportunities in software engineering, t
 
 **snap-perpetual-trading** - Perpetual trading platform and automation system
 - Technologies: Python, Trading APIs, Automation
-- Status: Actively developed
 - [View Repository](https://github.com/oyi77/snap-perpetual-trading)
 
 **solxdap** - Full-stack application development project
 - Technologies: JavaScript, Node.js, Modern Web Stack
-- Status: Active development
-- Recent activity: High engagement
+- [View Repository](https://github.com/oyi77/solxdap)
 
 **mighty-bear-idGenerator** - ID generation and management system
 - Technologies: Backend development, API design
-- Status: Active development
-- Recent activity: High engagement
+- [View Repository](https://github.com/oyi77/mighty-bear-idGenerator)
 
 ### Project Highlights
 - **73 Public Repositories** - Open-source contributions and personal projects
 - **20 Private Repositories** - Enterprise and client projects
-- **8,464 Contributions** in 2025 - Consistent development activity
-- **20.4 Million Lines of Code** - Extensive coding experience
+- **8,464 Contributions** in 2025
+- **20.4 Million Lines of Code**
 
 </details>
 
 ## 🏆 Key Achievements & Professional Highlights
 
-- **5+ Years** professional experience | **TechLead** role | **8,464 Contributions** in 2025
+- **5+ Years** experience | **TechLead** role | **8,464 Contributions** in 2025
 - **73 Public Repositories** | **20 Private Repositories** | **1,721+ Hours** coding time | **20.4 Million Lines of Code**
-- **Full-Stack Development** | **Machine Learning Specialist** | **Technical Leadership**
 - 💼 **Opted to Hire** on GitHub | 🌐 **Remote Work** experienced
 
 <details>
 <summary><b>📊 View Detailed Achievements & Metrics</b></summary>
 
 ### Experience & Metrics
-- **5+ Years** of professional software engineering experience
+- **5+ Years** of software engineering experience
 - **TechLead** - Leading development teams and technical architecture
-- **8,464 Contributions** in 2025 - Demonstrating consistent productivity
+- **8,464 Contributions** in 2025
 - **73 Public Repositories** - Active open-source and project contributions
 - **20 Private Repositories** - Enterprise-level project experience
 - **1,721+ Hours** of coding time tracked
 - **20.4 Million Lines of Code** written throughout career
 
-### Technical Expertise
-- **Full-Stack Development** - End-to-end application development expertise
-- **Machine Learning Specialist** - Python-based ML and AI solutions
-- **Technical Leadership** - Team leadership and architecture design
-- **Agile Practitioner** - Experienced in Agile methodologies and best practices
-- **Remote Work Expert** - Proven track record in distributed team collaboration
-
 ### Professional Status
-- 💼 **Opted to Hire** on GitHub - Available for opportunities
+- 💼 **Opted to Hire** on GitHub
 - 🌐 **Remote Work** - Experienced in distributed team environments
 - 📍 **Location**: Remote (Asia/Jakarta, GMT+7)
-- 🔄 **Status**: Open to new opportunities and collaborations
+- 🔄 **Status**: Open to opportunities
 
 ### Productivity Insights
 - **Most Productive Day**: Wednesday (18.92% of commits)
-- **Peak Hours**: Evening (34.88% of commits) - Night Owl developer
+- **Peak Hours**: Evening (34.88% of commits)
 - **Primary Languages**: Python (22.06%), JavaScript (19.44%), Markdown (17.69%)
 - **Development Environment**: Mac OS (100% of tracked time)
 
@@ -316,7 +294,4 @@ Linux                    2 hrs 51 mins       ███████████�
 
 [linkedin]: https://linkedin.com/in/fikriizzuddin/
 [mail]: mailto:mbahkoe.pendekar@gmail.com
-
-
-
 

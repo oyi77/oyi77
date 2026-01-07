@@ -1,0 +1,184 @@
+name: Update Code Stats
+
+on:
+  schedule:
+    - cron: '0 0 */3 * * *'  # Every 3 hours
+  workflow_dispatch:
+
+jobs:
+  update-code-stats:
+    name: Update Code Stats in README
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Fetch and Update Code Stats
+        uses: actions/github-script@v6
+        env:
+          WAKA_KEY: ${{ secrets.WAKA_KEY }}
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const https = require('https');
+            const fs = require('fs');
+            const path = require('path');
+            
+            // Fetch WakaTime stats
+            async function fetchWakaStats() {
+              return new Promise((resolve, reject) => {
+                const options = {
+                  hostname: 'wakatime.com',
+                  path: '/api/v1/users/current/stats/all_time',
+                  method: 'GET',
+                  headers: {
+                    'Authorization': `Bearer ${process.env.WAKA_KEY}`,
+                    'Content-Type': 'application/json'
+                  }
+                };
+                
+                const req = https.request(options, (res) => {
+                  let data = '';
+                  res.on('data', (chunk) => { data += chunk; });
+                  res.on('end', () => {
+                    try {
+                      const json = JSON.parse(data);
+                      resolve(json);
+                    } catch (e) {
+                      reject(e);
+                    }
+                  });
+                });
+                
+                req.on('error', reject);
+                req.end();
+              });
+            }
+            
+            // Fetch all time since today
+            async function fetchAllTime() {
+              return new Promise((resolve, reject) => {
+                const options = {
+                  hostname: 'wakatime.com',
+                  path: '/api/v1/users/current/all_time_since_today',
+                  method: 'GET',
+                  headers: {
+                    'Authorization': `Bearer ${process.env.WAKA_KEY}`,
+                    'Content-Type': 'application/json'
+                  }
+                };
+                
+                const req = https.request(options, (res) => {
+                  let data = '';
+                  res.on('data', (chunk) => { data += chunk; });
+                  res.on('end', () => {
+                    try {
+                      const json = JSON.parse(data);
+                      resolve(json);
+                    } catch (e) {
+                      reject(e);
+                    }
+                  });
+                });
+                
+                req.on('error', reject);
+                req.end();
+              });
+            }
+            
+            async function updateReadme() {
+              try {
+                const stats = await fetchWakaStats();
+                const allTime = await fetchAllTime();
+                
+                // Extract lines of code
+                let linesOfCode = 0;
+                if (stats.data && stats.data.lines) {
+                  linesOfCode = stats.data.lines.code || 0;
+                }
+                
+                // Format lines of code (matching WAKA format: "35.65 million")
+                let locFormatted = '';
+                if (linesOfCode >= 1000000) {
+                  const millions = (linesOfCode / 1000000).toFixed(2);
+                  locFormatted = `${millions}%20million`;
+                } else if (linesOfCode >= 1000) {
+                  const thousands = (linesOfCode / 1000).toFixed(1);
+                  locFormatted = `${thousands}K`;
+                } else {
+                  locFormatted = linesOfCode.toString();
+                }
+                
+                // Extract total code time
+                let totalSeconds = 0;
+                if (allTime.data && allTime.data.total_seconds) {
+                  totalSeconds = allTime.data.total_seconds;
+                }
+                
+                const totalHours = Math.floor(totalSeconds / 3600);
+                const totalMins = Math.floor((totalSeconds % 3600) / 60);
+                
+                // Format hours with comma separator for thousands (e.g., 1,637)
+                const hoursFormatted = totalHours.toLocaleString();
+                
+                // Read README
+                const readmePath = path.join(process.cwd(), 'README.md');
+                let readmeContent = fs.readFileSync(readmePath, 'utf8');
+                
+                // Format hours for badge (replace comma with %2C for URL encoding)
+                const hoursForBadge = hoursFormatted.replace(/,/g, '%2C');
+                
+                // Create stats section (matching the format from WAKA section)
+                // Using variable to avoid YAML parsing issues with ! character
+                const imgPrefix = '!';
+                const statsSection = '<!--CODE_STATS:start-->\n' +
+                  imgPrefix + '[Code Time](http://img.shields.io/badge/Code%20Time-' + hoursForBadge + '%20hrs%20' + totalMins + '%20mins-blue?style=flat)\n\n' +
+                  imgPrefix + '[Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-' + locFormatted + '%20lines%20of%20code-blue?style=flat)\n' +
+                  '<!--CODE_STATS:end-->';
+                
+                // Check if CODE_STATS section exists
+                const codeStatsRegex = /<!--CODE_STATS:start-->[\s\S]*?<!--CODE_STATS:end-->/;
+                
+                if (codeStatsRegex.test(readmeContent)) {
+                  // Replace existing section
+                  readmeContent = readmeContent.replace(codeStatsRegex, statsSection);
+                } else {
+                  // Insert before Professional Summary
+                  const professionalSummaryRegex = /(## 👨‍💻 Professional Summary)/;
+                  readmeContent = readmeContent.replace(
+                    professionalSummaryRegex,
+                    statsSection + '\n\n$1'
+                  );
+                }
+                
+                // Write updated README
+                fs.writeFileSync(readmePath, readmeContent, 'utf8');
+                
+                // Commit and push
+                const { execSync } = require('child_process');
+                execSync('git config --local user.email "mbahkoe.pendekar@gmail.com"', { stdio: 'inherit' });
+                execSync('git config --local user.name "oyi77"', { stdio: 'inherit' });
+                execSync('git add README.md', { stdio: 'inherit' });
+                
+                try {
+                  execSync('git diff --staged --quiet || git commit -m "⚡ Update code stats"', { stdio: 'inherit' });
+                  execSync('git push', { stdio: 'inherit' });
+                } catch (e) {
+                  // No changes to commit
+                  console.log('No changes to commit');
+                }
+                
+              } catch (error) {
+                console.error('Error updating README:', error);
+                throw error;
+              }
+            }
+            
+            updateReadme();
