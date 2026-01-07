@@ -1,6 +1,6 @@
 
 <!--
-  SEO Meta Description: TechLead & Full-Stack Developer with 9+ years experience in Python, JavaScript, Machine Learning.
+  SEO Meta Description: TechLead & Full-Stack Developer with 8+ years experience in Python, JavaScript, Machine Learning.
   Keywords: TechLead, Full-Stack Developer, Python Developer, JavaScript Developer, Machine Learning, Remote Developer, Software Engineer
 -->
 
@@ -9,7 +9,7 @@
 </h1>
 <p align="center">
   <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;9%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=500&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" alt="Professional title animation: Full-stack Developer, Experienced IT/Consultant, 9+ years coding experience, Always learning new things" /></a>
+    <img src="https://readme-typing-svg.demolab.com/?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;8%2B%20years%20of%20coding%20experience;Always%20learning%20new%20things&font=Fira%20Code&center=true&width=500&height=45&color=f75c7e&vCenter=true&pause=1000&size=22" alt="Professional title animation: Full-stack Developer, Experienced IT/Consultant, 8+ years coding experience, Always learning new things" /></a>
 </p>
 
 
@@ -19,12 +19,12 @@
 <!--CODE_STATS:start-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-0%20hrs%200%20mins-blue?style=flat)
 
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-0%20lines%20of%20code-blue?style=flat)
+![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.58%20million%20lines%20of%20code-blue?style=flat)
 <!--CODE_STATS:end-->
 
 ## 👨‍💻 Professional Summary
 
-**TechLead & Full-Stack Developer** with **9+ years of experience** in software engineering, specializing in **Python**, **JavaScript**, **Machine Learning**, and modern web technologies. Passionate about building scalable applications and continuously learning cutting-edge technologies.
+**TechLead & Full-Stack Developer** with **8+ years of experience** in software engineering, specializing in **Python**, **JavaScript**, **Machine Learning**, and modern web technologies. Passionate about building scalable applications and continuously learning cutting-edge technologies.
 
 **Key Specializations:**
 - **Full-Stack Development**: Python, JavaScript, Node.js, React, and modern web frameworks
@@ -69,7 +69,7 @@ Combining technical expertise with leadership skills to deliver high-quality sof
 ## 🛠️ Technologies & Tools
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python Programming Language - 9+ years experience" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" alt="Python Programming Language - 8+ years experience" height="40" style="vertical-align:top; margin:4px">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="JavaScript Programming Language - Full-stack development" height="40" style="vertical-align:top; margin:4px">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" alt="Node.js Runtime - Backend API development" height="40" style="vertical-align:top; margin:4px">
 <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL Database - Database design and optimization" height="40" style="vertical-align:top; margin:4px">
@@ -169,7 +169,7 @@ Combining technical expertise with leadership skills to deliver high-quality sof
 
 ## 🏆 Key Achievements & Professional Highlights
 
-- **9+ Years** experience | **TechLead** role | **8,464 Contributions** in 2025
+- **8+ Years** experience | **TechLead** role | **8,464 Contributions** in 2025
 - **73 Public Repositories** | **20 Private Repositories** | **1,721+ Hours** coding time | **20.4 Million Lines of Code**
 - 💼 **Opted to Hire** on GitHub | 🌐 **Remote Work** experienced
 
@@ -177,7 +177,7 @@ Combining technical expertise with leadership skills to deliver high-quality sof
 <summary><b>📊 View Detailed Achievements & Metrics</b></summary>
 
 ### Experience & Metrics
-- **9+ Years** of software engineering experience
+- **8+ Years** of software engineering experience
 - **TechLead** - Leading development teams and technical architecture
 - **8,464 Contributions** in 2025
 - **73 Public Repositories** - Active open-source and project contributions
