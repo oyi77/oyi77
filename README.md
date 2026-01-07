@@ -215,10 +215,10 @@ Combining technical expertise with leadership skills to deliver high-quality sof
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. 🔱 Forked [oyi77/Mole](https://github.com/oyi77/Mole) from [tw93/Mole](https://github.com/tw93/Mole)<br>
-2. ⬆️ Pushed commits to [oyi77/AlgoExpertHub](https://github.com/oyi77/AlgoExpertHub)<br>
+1. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+2. 🔱 Forked [oyi77/Mole](https://github.com/oyi77/Mole) from [tw93/Mole](https://github.com/tw93/Mole)<br>
 3. ⬆️ Pushed commits to [oyi77/AlgoExpertHub](https://github.com/oyi77/AlgoExpertHub)<br>
-4. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+4. ⬆️ Pushed commits to [oyi77/AlgoExpertHub](https://github.com/oyi77/AlgoExpertHub)<br>
 5. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 <!--RECENT_ACTIVITY:end-->
   
