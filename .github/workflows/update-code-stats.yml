@@ -31,7 +31,8 @@ jobs:
             const fs = require('fs');
             const path = require('path');
             
-            // Fetch WakaTime stats
+            // Fetch WakaTime all_time stats (includes lines of code)
+            // Reference: https://github.com/anmol098/waka-readme-stats
             async function fetchWakaStats() {
               return new Promise((resolve, reject) => {
                 const options = {
@@ -62,7 +63,8 @@ jobs:
               });
             }
             
-            // Fetch all time since today
+            // Fetch all time since today (total coding hours)
+            // Reference: https://github.com/anmol098/waka-readme-stats
             async function fetchAllTime() {
               return new Promise((resolve, reject) => {
                 const options = {
@@ -93,23 +95,145 @@ jobs:
               });
             }
             
+            // Calculate lines of code from GitHub commits (like waka-readme-stats does)
+            // Reference: https://github.com/anmol098/waka-readme-stats
+            async function calculateLinesFromGitHub() {
+              try {
+                // Get all repositories for the user
+                const repos = await github.paginate(github.rest.repos.listForUser, {
+                  username: 'oyi77',
+                  per_page: 100,
+                  type: 'all'
+                });
+                
+                let totalAdditions = 0;
+                let repoCount = 0;
+                
+                // Sample repositories to avoid rate limits (waka-readme-stats samples)
+                const sampleSize = Math.min(repos.length, 100);
+                const sampledRepos = repos.slice(0, sampleSize);
+                
+                for (const repo of sampledRepos) {
+                  try {
+                    // Get stats for this repository
+                    const stats = await github.rest.repos.getContributorsStats({
+                      owner: repo.owner.login,
+                      repo: repo.name
+                    });
+                    
+                    if (stats.data && Array.isArray(stats.data)) {
+                      // Find contributions by oyi77
+                      const myContribs = stats.data.find(c => c.author && c.author.login === 'oyi77');
+                      if (myContribs && myContribs.weeks) {
+                        const repoAdditions = myContribs.weeks.reduce((sum, week) => sum + (week.a || 0), 0);
+                        totalAdditions += repoAdditions;
+                        repoCount++;
+                      }
+                    }
+                  } catch (repoError) {
+                    // Skip if can't access repo stats
+                    continue;
+                  }
+                }
+                
+                // Extrapolate if we sampled
+                if (repos.length > sampleSize && repoCount > 0) {
+                  const avgPerRepo = totalAdditions / repoCount;
+                  totalAdditions = Math.floor(avgPerRepo * repos.length);
+                }
+                
+                console.log(`Calculated from GitHub: ${totalAdditions} lines (sampled ${repoCount}/${repos.length} repos)`);
+                return totalAdditions;
+              } catch (error) {
+                console.warn('GitHub API error for LOC calculation:', error.message);
+                return 0;
+              }
+            }
+            
             async function updateReadme() {
               try {
-                const stats = await fetchWakaStats();
-                const allTime = await fetchAllTime();
+                // Read README first to extract existing values as fallback
+                const readmePath = path.join(process.cwd(), 'README.md');
+                let readmeContent = fs.readFileSync(readmePath, 'utf8');
                 
-                // Calculate years of experience from 2017-01-01
-                const startDate = new Date('2017-01-01');
+                // Calculate years of experience from 2017-08-01
+                const startDate = new Date('2017-08-01');
                 const today = new Date();
                 const yearsDiff = (today - startDate) / (1000 * 60 * 60 * 24 * 365.25);
                 const yearsExperience = Math.floor(yearsDiff);
                 const yearsText = `${yearsExperience}+`;
                 
-                // Extract lines of code
+                console.log(`Calculated years of experience: ${yearsExperience} (from 2017-08-01)`);
+                
+                // Fetch from WakaTime API (same approach as waka-readme-stats)
+                // Reference: https://github.com/anmol098/waka-readme-stats
                 let linesOfCode = 0;
-                if (stats.data && stats.data.lines) {
-                  linesOfCode = stats.data.lines.code || 0;
+                let totalSeconds = 0;
+                
+                // First, try to extract from existing CODE_STATS section (if already populated)
+                const codeStatsMatch = readmeContent.match(/<!--CODE_STATS:start-->[\s\S]*?<!--CODE_STATS:end-->/);
+                if (codeStatsMatch) {
+                  // Extract code time: Code%20Time-1%2C637%20hrs%2028%20mins
+                  const codeTimeMatch = codeStatsMatch[0].match(/Code%20Time-([\d,]+)%2C(\d+)\s+hrs\s+(\d+)\s+mins/);
+                  if (codeTimeMatch) {
+                    const hours = parseInt(codeTimeMatch[1].replace(/,/g, ''), 10);
+                    const mins = parseInt(codeTimeMatch[3], 10);
+                    totalSeconds = (hours * 3600) + (mins * 60);
+                    console.log(`Extracted from CODE_STATS: ${hours} hrs ${mins} mins`);
+                  }
+                  
+                  // Extract lines of code: Written-35.65%20million
+                  const locMatch = codeStatsMatch[0].match(/Written-([\d.]+)%20(million|thousand|K)/);
+                  if (locMatch) {
+                    const num = parseFloat(locMatch[1]);
+                    const unit = locMatch[2].toLowerCase();
+                    linesOfCode = unit.includes('million') ? Math.floor(num * 1000000) : 
+                                 (unit.includes('thousand') || unit === 'k') ? Math.floor(num * 1000) : 
+                                 Math.floor(num);
+                    console.log(`Extracted from CODE_STATS: ${locMatch[1]} ${unit}`);
+                  }
                 }
+                
+                // If not found in CODE_STATS, fetch from APIs
+                if (totalSeconds === 0 || linesOfCode === 0) {
+                  try {
+                    console.log('Fetching from WakaTime API...');
+                    const stats = await fetchWakaStats();
+                    const allTime = await fetchAllTime();
+                    
+                    // Extract total code time from all_time_since_today endpoint
+                    // Reference: waka-readme-stats uses this for SHOW_TOTAL_CODE_TIME
+                    if (allTime && allTime.data && totalSeconds === 0) {
+                      totalSeconds = allTime.data.total_seconds || 0;
+                      console.log(`Total seconds from WakaTime API: ${totalSeconds}`);
+                    }
+                    
+                    // Calculate lines of code from GitHub commits (like waka-readme-stats)
+                    // Reference: waka-readme-stats calculates this from GitHub when SHOW_LINES_OF_CODE=True
+                    if (linesOfCode === 0) {
+                      console.log('Calculating lines of code from GitHub commits...');
+                      linesOfCode = await calculateLinesFromGitHub();
+                      
+                      // Fallback: Try WakaTime API if GitHub calculation fails
+                      if (linesOfCode === 0 && stats && stats.data) {
+                        console.log('GitHub calculation returned 0, trying WakaTime API...');
+                        if (stats.data.lines) {
+                          if (typeof stats.data.lines === 'object') {
+                            linesOfCode = stats.data.lines.code || stats.data.lines.total || 0;
+                          } else if (typeof stats.data.lines === 'number') {
+                            linesOfCode = stats.data.lines;
+                          }
+                        }
+                      }
+                    }
+                    
+                  } catch (apiError) {
+                    console.error('API error:', apiError.message);
+                    // Keep existing values or 0
+                  }
+                }
+                
+                console.log(`Final Results - Lines: ${linesOfCode}, Total Seconds: ${totalSeconds}`);
                 
                 // Format lines of code (matching WAKA format: "35.65 million")
                 let locFormatted = '';
@@ -123,21 +247,13 @@ jobs:
                   locFormatted = linesOfCode.toString();
                 }
                 
-                // Extract total code time
-                let totalSeconds = 0;
-                if (allTime.data && allTime.data.total_seconds) {
-                  totalSeconds = allTime.data.total_seconds;
-                }
-                
                 const totalHours = Math.floor(totalSeconds / 3600);
                 const totalMins = Math.floor((totalSeconds % 3600) / 60);
                 
                 // Format hours with comma separator for thousands (e.g., 1,637)
                 const hoursFormatted = totalHours.toLocaleString();
                 
-                // Read README
-                const readmePath = path.join(process.cwd(), 'README.md');
-                let readmeContent = fs.readFileSync(readmePath, 'utf8');
+                console.log(`Final values - Hours: ${totalHours}, Mins: ${totalMins}, LOC: ${locFormatted}`);
                 
                 // Format hours for badge (replace comma with %2C for URL encoding)
                 const hoursForBadge = hoursFormatted.replace(/,/g, '%2C');
