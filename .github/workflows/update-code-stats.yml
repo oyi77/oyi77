@@ -1,13 +1,13 @@
-name: Update Code Stats
+name: Update Code Stats and Years
 
 on:
   schedule:
-    - cron: '0 0 */3 * * *'  # Every 3 hours
+    - cron: '0 */3 * * *'  # Every 3 hours
   workflow_dispatch:
 
 jobs:
   update-code-stats:
-    name: Update Code Stats in README
+    name: Update Code Stats and Years in README
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -98,6 +98,13 @@ jobs:
                 const stats = await fetchWakaStats();
                 const allTime = await fetchAllTime();
                 
+                // Calculate years of experience from 2017-01-01
+                const startDate = new Date('2017-01-01');
+                const today = new Date();
+                const yearsDiff = (today - startDate) / (1000 * 60 * 60 * 24 * 365.25);
+                const yearsExperience = Math.floor(yearsDiff);
+                const yearsText = `${yearsExperience}+`;
+                
                 // Extract lines of code
                 let linesOfCode = 0;
                 if (stats.data && stats.data.lines) {
@@ -158,6 +165,49 @@ jobs:
                   );
                 }
                 
+                // Update SEO Meta Description with dynamic years
+                readmeContent = readmeContent.replace(
+                  /(SEO Meta Description: TechLead & Full-Stack Developer with )\d+\+( years experience)/,
+                  `$1${yearsText}$2`
+                );
+                
+                // Update typing SVG URL with dynamic years (URL encoded %2B)
+                const yearsEncoded = yearsText.replace('+', '%2B');
+                readmeContent = readmeContent.replace(
+                  /(readme-typing-svg\.demolab\.com\/\?lines=Full-stack%20Developer%20and%20app%20developer;Experienced%20IT%2FConsultant%20;)\d+%2B%20years%20of%20coding%20experience/,
+                  `$1${yearsEncoded}%20years%20of%20coding%20experience`
+                );
+                
+                // Update typing SVG alt text
+                readmeContent = readmeContent.replace(
+                  /(Professional title animation: Full-stack Developer, Experienced IT\/Consultant, )\d+\+( years coding experience)/,
+                  `$1${yearsText}$2`
+                );
+                
+                // Update Professional Summary with dynamic years
+                readmeContent = readmeContent.replace(
+                  /(\*\*TechLead & Full-Stack Developer\*\* with \*\*)\d+\+(\s+years of experience\*\*)/,
+                  `$1${yearsText}$2`
+                );
+                
+                // Update Python image alt text
+                readmeContent = readmeContent.replace(
+                  /(Python Programming Language - )\d+\+( years experience)/,
+                  `$1${yearsText}$2`
+                );
+                
+                // Update achievements section "5+ Years"
+                readmeContent = readmeContent.replace(
+                  /(\*\*)\d+\+(\s+Years\*\*)/g,
+                  `$1${yearsText}$2`
+                );
+                
+                // Update detailed achievements "5+ Years"
+                readmeContent = readmeContent.replace(
+                  /(\*\*)\d+\+(\s+Years\s+of\s+software)/,
+                  `$1${yearsText}$2`
+                );
+                
                 // Write updated README
                 fs.writeFileSync(readmePath, readmeContent, 'utf8');
                 
@@ -168,7 +218,7 @@ jobs:
                 execSync('git add README.md', { stdio: 'inherit' });
                 
                 try {
-                  execSync('git diff --staged --quiet || git commit -m "⚡ Update code stats"', { stdio: 'inherit' });
+                  execSync('git diff --staged --quiet || git commit -m "⚡ Update code stats and years of experience"', { stdio: 'inherit' });
                   execSync('git push', { stdio: 'inherit' });
                 } catch (e) {
                   // No changes to commit
