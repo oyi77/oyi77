@@ -215,10 +215,10 @@ Combining technical expertise with leadership skills to deliver high-quality sof
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [nibzard/awesome-agentic-patterns](https://github.com/nibzard/awesome-agentic-patterns)<br>
-2. ⭐ Starred [danielmiessler/Personal_AI_Infrastructure](https://github.com/danielmiessler/Personal_AI_Infrastructure)<br>
-3. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
-4. ⭐ Starred [fighting41love/funNLP](https://github.com/fighting41love/funNLP)<br>
+1. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+2. ⬆️ Pushed commits to [oyi77/AlgoExpertHub](https://github.com/oyi77/AlgoExpertHub)<br>
+3. ⭐ Starred [nibzard/awesome-agentic-patterns](https://github.com/nibzard/awesome-agentic-patterns)<br>
+4. ⭐ Starred [danielmiessler/Personal_AI_Infrastructure](https://github.com/danielmiessler/Personal_AI_Infrastructure)<br>
 5. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 <!--RECENT_ACTIVITY:end-->
   
