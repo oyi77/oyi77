@@ -220,40 +220,13 @@ Combining technical expertise with leadership skills to deliver high-quality sof
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C637%20hrs%2028%20mins-blue?style=flat)
-
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-35.65%20million%20lines%20of%20code-blue?style=flat)
-
-**🐱 My GitHub Data** 
-
-> 📦 803.2 kB Used in GitHub's Storage 
- > 
-> 🏆 111 Contributions in the Year 2026
- > 
-> 💼 Opted to Hire
- > 
-> 📜 84 Public Repositories 
- > 
-> 🔑 20 Private Repositories 
- > 
 **I'm a Night 🦉** 
 
 ```text
 🌞 Morning                5288 commits        ███░░░░░░░░░░░░░░░░░░░░░░   11.92 % 
-🌆 Daytime                12482 commits       ███████░░░░░░░░░░░░░░░░░░   28.15 % 
+🌆 Daytime                12484 commits       ███████░░░░░░░░░░░░░░░░░░   28.15 % 
 🌃 Evening                15427 commits       █████████░░░░░░░░░░░░░░░░   34.79 % 
 🌙 Night                  11150 commits       ██████░░░░░░░░░░░░░░░░░░░   25.14 % 
-```
-📅 **I'm Most Productive on Wednesday** 
-
-```text
-Monday                   6959 commits        ████░░░░░░░░░░░░░░░░░░░░░   15.69 % 
-Tuesday                  7661 commits        ████░░░░░░░░░░░░░░░░░░░░░   17.28 % 
-Wednesday                8322 commits        █████░░░░░░░░░░░░░░░░░░░░   18.77 % 
-Thursday                 6380 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.39 % 
-Friday                   5059 commits        ███░░░░░░░░░░░░░░░░░░░░░░   11.41 % 
-Saturday                 4247 commits        ██░░░░░░░░░░░░░░░░░░░░░░░   09.58 % 
-Sunday                   5719 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.90 % 
 ```
 
 
@@ -286,7 +259,7 @@ Linux                    2 hrs 51 mins       ███████████�
 ![Lines of Code chart](https://raw.githubusercontent.com/oyi77/oyi77/main/assets/bar_graph.png)
 
 
- Last Updated on 07/01/2026 07:25:23 UTC
+ Last Updated on 07/01/2026 08:27:04 UTC
 <!--END_SECTION:waka-->
 
 
