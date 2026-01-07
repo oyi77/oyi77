@@ -234,10 +234,10 @@ I'm actively seeking new challenges and opportunities in software engineering, t
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⭐ Starred [danielmiessler/Personal_AI_Infrastructure](https://github.com/danielmiessler/Personal_AI_Infrastructure)<br>
-2. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
-3. ⭐ Starred [fighting41love/funNLP](https://github.com/fighting41love/funNLP)<br>
-4. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+1. ⭐ Starred [nibzard/awesome-agentic-patterns](https://github.com/nibzard/awesome-agentic-patterns)<br>
+2. ⭐ Starred [danielmiessler/Personal_AI_Infrastructure](https://github.com/danielmiessler/Personal_AI_Infrastructure)<br>
+3. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+4. ⭐ Starred [fighting41love/funNLP](https://github.com/fighting41love/funNLP)<br>
 5. ⬆️ Pushed undefined commit(s) to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 <!--RECENT_ACTIVITY:end-->
   
