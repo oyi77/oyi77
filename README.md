@@ -213,11 +213,11 @@ Combining technical expertise with leadership skills to deliver high-quality sof
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
-2. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
-3. ⭐ Starred [PaulMcInnis/JobFunnel](https://github.com/PaulMcInnis/JobFunnel)<br>
-4. ⭐ Starred [joeyism/linkedin_scraper](https://github.com/joeyism/linkedin_scraper)<br>
-5. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+1. 🔱 Forked [oyi77/1Panel](https://github.com/oyi77/1Panel) from [1Panel-dev/1Panel](https://github.com/1Panel-dev/1Panel)<br>
+2. ⭐ Starred [1Panel-dev/1Panel](https://github.com/1Panel-dev/1Panel)<br>
+3. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+4. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+5. ⭐ Starred [PaulMcInnis/JobFunnel](https://github.com/PaulMcInnis/JobFunnel)<br>
 <!--RECENT_ACTIVITY:end-->
   
   <!--START_SECTION:waka-->
