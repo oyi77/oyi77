@@ -258,12 +258,12 @@ jobs:
                 // Format hours for badge (replace comma with %2C for URL encoding)
                 const hoursForBadge = hoursFormatted.replace(/,/g, '%2C');
                 
-                // Create stats section (matching the format from WAKA section)
-                // Using variable to avoid YAML parsing issues with ! character
-                const imgPrefix = '!';
+                // Create stats section with WakaTime badge and lines of code on one line
+                // WakaTime user ID: 9d22e269-d74d-422e-9ce3-70986941d3ba
+                const wakatimeUserId = '9d22e269-d74d-422e-9ce3-70986941d3ba';
                 const statsSection = '<!--CODE_STATS:start-->\n' +
-                  imgPrefix + '[Code Time](http://img.shields.io/badge/Code%20Time-' + hoursForBadge + '%20hrs%20' + totalMins + '%20mins-blue?style=flat)\n\n' +
-                  imgPrefix + '[Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-' + locFormatted + '%20lines%20of%20code-blue?style=flat)\n' +
+                  '[![wakatime](https://wakatime.com/badge/user/' + wakatimeUserId + '.svg)](https://wakatime.com/@' + wakatimeUserId + ') ' +
+                  '[![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-' + locFormatted + '%20lines%20of%20code-blue?style=flat)](https://github.com/oyi77)\n' +
                   '<!--CODE_STATS:end-->';
                 
                 // Check if CODE_STATS section exists

@@ -17,9 +17,7 @@
 ![](https://visitor-badge.laobi.icu/badge?page_id=oyi77.oyi77) [![Github](https://img.shields.io/github/followers/oyi77?label=Followers&logo=Github)](https://github.com/oyi77) [![Open to Opportunities](https://img.shields.io/badge/Status-Open%20to%20Opportunities-success?style=flat-square)](mailto:mbahkoe.pendekar@gmail.com) [![Remote](https://img.shields.io/badge/Location-Remote-blue?style=flat-square)](https://github.com/oyi77) [![Timezone](https://img.shields.io/badge/Timezone-Asia%2FJakarta%20(GMT%2B7)-orange?style=flat-square)](https://github.com/oyi77)
 
 <!--CODE_STATS:start-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20hrs%200%20mins-blue?style=flat)
-
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.58%20million%20lines%20of%20code-blue?style=flat)
+[![wakatime](https://wakatime.com/badge/user/9d22e269-d74d-422e-9ce3-70986941d3ba.svg)](https://wakatime.com/@9d22e269-d74d-422e-9ce3-70986941d3ba) [![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-1.58%20million%20lines%20of%20code-blue?style=flat)](https://github.com/oyi77)
 <!--CODE_STATS:end-->
 
 ## 👨‍💻 Professional Summary
