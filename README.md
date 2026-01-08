@@ -213,10 +213,10 @@ Combining technical expertise with leadership skills to deliver high-quality sof
   <h2>⚡ Recent GitHub Activity</h2>
 
   <!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
-2. 🔱 Forked [oyi77/1Panel](https://github.com/oyi77/1Panel) from [1Panel-dev/1Panel](https://github.com/1Panel-dev/1Panel)<br>
-3. ⭐ Starred [1Panel-dev/1Panel](https://github.com/1Panel-dev/1Panel)<br>
-4. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+1. ⭐ Starred [RAYDENFLY/quantumterminal](https://github.com/RAYDENFLY/quantumterminal)<br>
+2. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
+3. 🔱 Forked [oyi77/1Panel](https://github.com/oyi77/1Panel) from [1Panel-dev/1Panel](https://github.com/1Panel-dev/1Panel)<br>
+4. ⭐ Starred [1Panel-dev/1Panel](https://github.com/1Panel-dev/1Panel)<br>
 5. ⬆️ Pushed commits to [oyi77/oyi77.github.io](https://github.com/oyi77/oyi77.github.io)<br>
 <!--RECENT_ACTIVITY:end-->
   
