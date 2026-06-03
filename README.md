@@ -1,13 +1,4 @@
-
-```json
-{"@context":"https://schema.org","@type":"Person","name":"Paijo (oyi77)","description":"OSS Contributor — built 1ai-skills (1282+ agent skills), contributed to OmniRoute, next.js, trpc, vuejs, prisma. PolyEdge trading bot.","url":"https://github.com/oyi77","sameAs":["https://oyi77.is-a.dev","https://linkedin.com/in/fikriizzuddin"]}
-```
-
-[![wakatime](https://wakatime.com/badge/user/9d22e269-d74d-422e-9ce3-70986941d3ba.svg?style=flat-square)](https://wakatime.com/@9d22e269-d74d-422e-9ce3-70986941d3ba)
-[![GitHub followers](https://img.shields.io/github/followers/oyi77?style=flat-square&label=followers&logo=github&color=333)](https://github.com/oyi77)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Foyi77&count_bg=%23222222&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=profile+views&edge_flat=true)](https://hits.seeyoufarm.com)
-[![website](https://img.shields.io/badge/is--a--dev-333?style=flat-square&logo=githubpages)](https://oyi77.is-a.dev)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-333?style=flat-square&logo=linkedin)](https://linkedin.com/in/fikriizzuddin)
+[![wakatime](https://wakatime.com/badge/user/9d22e269-d74d-422e-9ce3-70986941d3ba.svg?style=flat-square)](https://wakatime.com/@9d22e269-d74d-422e-9ce3-70986941d3ba) [![GitHub followers](https://img.shields.io/github/followers/oyi77?style=flat-square&label=followers&logo=github&color=333)](https://github.com/oyi77) [![website](https://img.shields.io/badge/is--a--dev-333?style=flat-square&logo=githubpages)](https://oyi77.is-a.dev) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-333?style=flat-square&logo=linkedin)](https://linkedin.com/in/fikriizzuddin)
 
 ---
 
